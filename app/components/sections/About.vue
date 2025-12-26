@@ -1,49 +1,67 @@
 <template>
-    <section id="about" class="py-24 px-6 md:px-12 border-b border-border bg-secondary/30">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+    <section id="about" class="py-24 bg-background">
+        <div class="container mx-auto px-6 max-w-5xl">
 
-            <div class="md:col-span-4">
-                <span class="text-xs font-bold uppercase tracking-widest text-muted-foreground block mb-4">
-                    ( {{ $t('about.title') }} )
-                </span>
-                <div
-                    class="text-8xl font-black text-foreground/5 dark:text-foreground/10 leading-[0.8] select-none -ml-1">
-                    BIO
+            <div class="grid md:grid-cols-2 gap-16 items-start">
+
+                <!-- Bio Column -->
+                <div>
+                    <span class="inline-block text-sm font-bold tracking-wider text-primary uppercase mb-4">{{
+                        $t('about.title') }}</span>
+                    <h3 class="text-3xl font-bold leading-tight mb-6">
+                        {{ $t('about.bio_intro') }}
+                    </h3>
+                    <p class="text-muted-foreground leading-relaxed text-lg">
+                        {{ $t('about.bio_text') }}
+                    </p>
                 </div>
-            </div>
 
-            <div class="md:col-span-8">
-                <h3 class="text-3xl md:text-5xl font-bold leading-tight mb-12">
-                    {{ $t('about.bio_intro') }}
-                </h3>
+                <!-- Skills Column -->
+                <div class="bg-secondary/30 rounded-2xl p-8 border border-border">
+                    <h4 class="font-bold text-lg mb-6 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="text-primary">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        Technical Stack
+                    </h4>
 
-                <div class="grid md:grid-cols-2 gap-12">
-                    <div class="text-lg text-muted-foreground leading-relaxed">
-                        <p class="mb-6">{{ $t('about.bio_text') }}</p>
-                    </div>
-
-                    <div class="space-y-8">
+                    <div class="space-y-6">
                         <div>
-                            <h4 class="text-sm font-bold uppercase tracking-widest mb-4 border-b border-border pb-2">{{
-                                $t('about.skills.backend') }}</h4>
-                            <ul class="space-y-2 text-sm font-mono">
-                                <li>Laravel / PHP 8.2</li>
-                                <li>Go (Golang)</li>
-                                <li>PostgreSQL / MySQL</li>
-                                <li>System Architecture</li>
-                            </ul>
+                            <p class="text-sm font-semibold text-foreground mb-3 uppercase tracking-wider">{{
+                                $t('about.skills.backend') }}</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">Laravel</span>
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">PHP
+                                    8.2</span>
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">Go</span>
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">PostgreSQL</span>
+                            </div>
                         </div>
+
+                        <div class="w-full h-px bg-border/50"></div>
+
                         <div>
-                            <h4 class="text-sm font-bold uppercase tracking-widest mb-4 border-b border-border pb-2">{{
-                                $t('about.skills.devops') }}</h4>
-                            <ul class="space-y-2 text-sm font-mono">
-                                <li>Docker / Podman</li>
-                                <li>CI/CD Pipelines</li>
-                                <li>Linux Administration</li>
-                            </ul>
+                            <p class="text-sm font-semibold text-foreground mb-3 uppercase tracking-wider">{{
+                                $t('about.skills.devops') }}</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">Docker</span>
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">CI/CD</span>
+                                <span
+                                    class="px-3 py-1.5 bg-background border border-border rounded-md text-sm font-medium">Linux</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>

@@ -3,7 +3,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useHead({
-  title: 'Jude Mpoyo | Architect',
+  title: 'Jude Mpoyo | Backend Architect & Solution',
   meta: [
     { name: 'description', content: t('hero.subheadline') }
   ]
@@ -11,34 +11,37 @@ useHead({
 </script>
 
 <template>
-  <div
-    class="min-h-screen bg-background text-foreground font-sans selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+  <div class="bg-background text-foreground font-sans selection:bg-primary/20 selection:text-primary">
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 border-b border-border">
-      <div>
-        <h1 class="text-[12vw] leading-[0.8] font-bold tracking-tighter mb-8">
-          JUDE<br>MPOYO
-        </h1>
-        <div class="max-w-xl">
-          <p class="text-xl md:text-2xl font-medium leading-tight mb-8">
-            {{ $t('hero.role') }}
-          </p>
-          <p class="text-muted-foreground text-lg leading-relaxed mb-8">
-            {{ $t('hero.subheadline') }}
-          </p>
+    <section class="pt-32 pb-20 md:pt-48 md:pb-32 px-6">
+      <div class="container mx-auto max-w-5xl text-center">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-sm font-medium mb-8">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          Available for freelance projects
         </div>
-      </div>
 
-      <div class="flex items-center gap-6">
-        <NuxtLink :to="localePath('/') + '#projects'"
-          class="text-sm font-bold tracking-widest uppercase hover:underline underline-offset-4">
-          ( {{ $t('hero.cta_projects') }} )
-        </NuxtLink>
-        <NuxtLink :to="localePath('/') + '#contact'"
-          class="text-sm font-bold tracking-widest uppercase hover:underline underline-offset-4">
-          ( {{ $t('hero.cta_contact') }} )
-        </NuxtLink>
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 text-foreground">
+          {{ $t('hero.role') }}
+        </h1>
+
+        <p class="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
+          {{ $t('hero.subheadline') }}
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <NuxtLink :to="localePath('/') + '#projects'"
+            class="inline-flex items-center justify-center h-12 px-8 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+            {{ $t('hero.cta_projects') }}
+          </NuxtLink>
+
+          <NuxtLink :to="localePath('/') + '#contact'"
+            class="inline-flex items-center justify-center h-12 px-8 rounded-lg border border-input bg-background hover:bg-muted font-medium transition-colors">
+            {{ $t('hero.cta_contact') }}
+          </NuxtLink>
+        </div>
       </div>
     </section>
 
