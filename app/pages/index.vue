@@ -3,7 +3,7 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 useHead({
-  title: 'Jude Mpoyo | Backend Architect & Dev',
+  title: 'Jude Mpoyo_ [SYSTEM ARCHITECT]',
   meta: [
     { name: 'description', content: t('hero.subheadline') }
   ]
@@ -12,103 +12,56 @@ useHead({
 
 <template>
   <div
-    class="relative min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-primary-foreground">
-    <!-- Grid Pattern Background -->
-    <div class="fixed inset-0 z-0 pointer-events-none opacity-[0.03] dark:opacity-[0.05]"
-      style="background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(to right, currentColor 1px, transparent 1px); background-size: 40px 40px;">
+    class="relative min-h-screen bg-background text-foreground font-mono selection:bg-primary selection:text-primary-foreground">
+    <!-- Grid Overlay -->
+    <div class="fixed inset-0 pointer-events-none z-0"
+      style="background-image: linear-gradient(to right, oklch(var(--border)) 1px, transparent 1px), linear-gradient(to bottom, oklch(var(--border)) 1px, transparent 1px); background-size: 80px 80px; opacity: 0.1;">
     </div>
 
     <!-- Hero Section -->
-    <section class="relative z-10 min-h-screen flex items-center pt-20">
-      <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
+    <section class="relative z-10 min-h-screen flex flex-col justify-center pt-20 border-b border-border">
+      <div class="container mx-auto px-4">
 
-          <!-- Content Left -->
-          <div class="max-w-3xl">
-            <!-- Terminal Badge -->
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-muted text-primary border border-border font-mono text-xs font-bold tracking-wide mb-8">
-              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              {{ $t('hero.greeting') }}
-            </div>
-
-            <h1 class="text-5xl lg:text-7xl font-bold tracking-tight mb-8 leading-[1.1] text-foreground">
-              {{ $t('hero.role') }}
-            </h1>
-
-            <p class="text-xl text-muted-foreground mb-10 leading-relaxed max-w-xl border-l-4 border-primary pl-6 py-2">
-              {{ $t('hero.subheadline') }}
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink :to="localePath('/') + '#projects'"
-                class="inline-flex items-center justify-center h-12 px-8 rounded-md bg-primary text-primary-foreground font-medium transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                {{ $t('hero.cta_projects') }}
-              </NuxtLink>
-
-              <NuxtLink :to="localePath('/') + '#contact'"
-                class="inline-flex items-center justify-center h-12 px-8 rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-                {{ $t('hero.cta_contact') }}
-              </NuxtLink>
-            </div>
+        <div class="max-w-5xl border-l border-border pl-8 ml-4 md:ml-0">
+          <div class="text-xs md:text-sm text-muted-foreground mb-4 tracking-widest uppercas flex items-center gap-2">
+            <span class="w-2 h-2 bg-green-500 animate-pulse"></span>
+            {{ $t('hero.greeting') }}
           </div>
 
-          <!-- Technical Visual Right (Abstract System Architecture) -->
-          <div class="hidden lg:block relative">
-            <div
-              class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-20 blur-2xl dark:opacity-40">
-            </div>
+          <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] text-foreground">
+            BACKEND<br>
+            <span class="text-stroke text-transparent"
+              style="-webkit-text-stroke: 2px currentColor; opacity: 0.5">ARCHITECT</span><br>
+            & DEV_
+          </h1>
 
-            <div class="relative bg-card border border-border rounded-xl p-8 shadow-2xl font-mono text-sm">
-              <!-- Header -->
-              <div class="flex justify-between items-center mb-8 pb-4 border-b border-border">
-                <div class="flex gap-2">
-                  <div class="w-3 h-3 rounded-full bg-destructive"></div>
-                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-                <span class="text-muted-foreground">system_monitor.sh</span>
-              </div>
+          <p class="text-lg md:text-2xl text-muted-foreground mb-12 max-w-2xl leading-relaxed font-light">
+            {{ $t('hero.subheadline') }}
+          </p>
 
-              <!-- Metrics -->
-              <div class="space-y-6">
-                <div>
-                  <div class="flex justify-between mb-2">
-                    <span class="text-muted-foreground">CLUSTER_STATUS</span>
-                    <span class="text-green-500 font-bold">HEALTHY</span>
-                  </div>
-                  <div class="h-2 bg-muted rounded-full overflow-hidden">
-                    <div class="h-full bg-green-500 w-full animate-pulse"></div>
-                  </div>
-                </div>
+          <div class="flex flex-col sm:flex-row gap-0 border border-border w-fit">
+            <NuxtLink :to="localePath('/') + '#projects'"
+              class="inline-flex items-center justify-center h-16 px-10 bg-primary text-primary-foreground text-lg font-bold hover:bg-primary/90 transition-colors border-b sm:border-b-0 sm:border-r border-border">
+              {{ $t('hero.cta_projects') }}
+              <span class="ml-2">-></span>
+            </NuxtLink>
 
-                <div class="grid grid-cols-2 gap-4">
-                  <div class="p-4 bg-muted/50 rounded-lg border border-border">
-                    <span class="block text-xs text-muted-foreground mb-1">UPTIME</span>
-                    <span class="text-xl font-bold text-foreground">99.99%</span>
-                  </div>
-                  <div class="p-4 bg-muted/50 rounded-lg border border-border">
-                    <span class="block text-xs text-muted-foreground mb-1">REQ/SEC</span>
-                    <span class="text-xl font-bold text-foreground">14.5K</span>
-                  </div>
-                </div>
-
-                <div class="pt-4 border-t border-border">
-                  <div class="flex items-center gap-2 text-xs text-muted-foreground mb-2">
-                    <span class="text-primary">➜</span>
-                    <span>detecting_stack...</span>
-                  </div>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-primary/10 text-primary border border-primary/20 rounded">Laravel</span>
-                    <span class="px-2 py-1 bg-primary/10 text-primary border border-primary/20 rounded">Go</span>
-                    <span class="px-2 py-1 bg-primary/10 text-primary border border-primary/20 rounded">Docker</span>
-                    <span class="px-2 py-1 bg-primary/10 text-primary border border-primary/20 rounded">Nuxt</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <NuxtLink :to="localePath('/') + '#contact'"
+              class="inline-flex items-center justify-center h-16 px-10 bg-background text-foreground text-lg font-bold hover:bg-muted transition-colors">
+              {{ $t('hero.cta_contact') }}
+            </NuxtLink>
           </div>
+        </div>
 
+      </div>
+
+      <!-- Scrolling Ticker -->
+      <div class="mt-auto w-full overflow-hidden border-t border-border py-4 bg-muted/20">
+        <div class="whitespace-nowrap animate-marquee text-xs font-bold tracking-[0.2em] text-muted-foreground">
+          LARAVEL // SYSTEM DESIGN // GOLANG // DOCKER // KUBERNETES // POSTGRESQL // VUE.JS // NUXT // API ARCHITECTURE
+          // CI/CD // LINUX //
+          LARAVEL // SYSTEM DESIGN // GOLANG // DOCKER // KUBERNETES // POSTGRESQL // VUE.JS // NUXT // API ARCHITECTURE
+          // CI/CD // LINUX //
         </div>
       </div>
     </section>
@@ -119,3 +72,20 @@ useHead({
     <SectionsContact />
   </div>
 </template>
+
+<style scoped>
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+</style>

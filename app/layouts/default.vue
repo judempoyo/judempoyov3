@@ -2,6 +2,7 @@
 const { locale, setLocale } = useI18n()
 const localePath = useLocalePath()
 const colorMode = useColorMode()
+const isMenuOpen = ref(false)
 
 const switchLanguage = () => {
     setLocale(locale.value === 'en' ? 'fr' : 'en')
@@ -10,70 +11,112 @@ const switchLanguage = () => {
 const toggleTheme = () => {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
+
+const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value
+}
+
+// Close menu on route change
+watch(() => useRoute().path, () => {
+    isMenuOpen.value = false
+})
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col font-sans selection:bg-primary selection:text-white">
-        <header
-            class="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b border-white/5 transition-colors duration-300">
-            <div class="container mx-auto flex justify-between items-center py-4 px-6">
-                <div class="text-2xl font-bold tracking-tight text-text-main">
-                    JM<span class="text-primary">.</span>
+    <div
+        class="min-h-screen flex flex-col font-mono selection:bg-primary selection:text-primary-foreground bg-background text-foreground transition-colors duration-300">
+
+        <!-- Top Bar / System Status -->
+        <header class="fixed top-0 w-full z-50 bg-background border-b border-border">
+            <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 bg-primary animate-pulse"></div>
+                    <NuxtLink :to="localePath('/')"
+                        class="text-lg font-bold tracking-tighter hover:text-primary transition-colors">
+                        JUDEMPOYO_V3
+                    </NuxtLink>
                 </div>
 
-                <nav class="hidden md:flex items-center gap-8">
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 text-sm">
                     <NuxtLink :to="localePath('/')"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-                        {{ $t('nav.home') }}
+                        class="hover:text-primary transition-colors decoration-2 underline-offset-4 hover:underline">
+                        [{{ $t('nav.home') }}]
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#about'"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-                        {{ $t('nav.about') }}
+                        class="hover:text-primary transition-colors decoration-2 underline-offset-4 hover:underline">
+                        [{{ $t('nav.about') }}]
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#projects'"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-                        {{ $t('nav.projects') }}
+                        class="hover:text-primary transition-colors decoration-2 underline-offset-4 hover:underline">
+                        [{{ $t('nav.projects') }}]
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#contact'"
-                        class="text-sm font-medium text-text-muted hover:text-primary transition-colors">
-                        {{ $t('nav.contact') }}
+                        class="hover:text-primary transition-colors decoration-2 underline-offset-4 hover:underline">
+                        [{{ $t('nav.contact') }}]
                     </NuxtLink>
 
-                    <div class="h-6 w-px bg-white/10 mx-2"></div>
+                    <div class="h-4 w-px bg-border mx-2"></div>
 
-                    <button @click="toggleTheme"
-                        class="p-2 text-text-muted hover:text-primary transition-colors rounded-full hover:bg-white/5"
+                    <button @click="toggleTheme" class="hover:text-primary transition-colors"
                         :title="colorMode.value === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
-                        <!-- Sun Icon -->
-                        <svg v-if="colorMode.value === 'dark'" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5"
-                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                        <!-- Moon Icon -->
-                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
+                        {{ colorMode.value === 'dark' ? 'LGT' : 'DRK' }}
                     </button>
 
-                    <button @click="switchLanguage"
-                        class="px-3 py-1 text-xs font-bold border border-white/10 rounded hover:bg-white/5 transition-colors text-text-main">
+                    <button @click="switchLanguage" class="font-bold hover:text-primary transition-colors">
                         {{ locale === 'en' ? 'FR' : 'EN' }}
                     </button>
                 </nav>
+
+                <!-- Mobile Menu Toggle -->
+                <button @click="toggleMenu"
+                    class="md:hidden p-2 text-foreground hover:bg-muted transition-colors border border-border">
+                    <span v-if="!isMenuOpen">MENU</span>
+                    <span v-else>CLOSE</span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div v-if="isMenuOpen"
+                class="md:hidden absolute top-16 left-0 w-full bg-background border-b border-border p-4 flex flex-col gap-4 text-center">
+                <NuxtLink :to="localePath('/')"
+                    class="py-2 hover:bg-muted transition-colors border-b border-border border-dashed">
+                    {{ $t('nav.home') }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/') + '#about'"
+                    class="py-2 hover:bg-muted transition-colors border-b border-border border-dashed">
+                    {{ $t('nav.about') }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/') + '#projects'"
+                    class="py-2 hover:bg-muted transition-colors border-b border-border border-dashed">
+                    {{ $t('nav.projects') }}
+                </NuxtLink>
+                <NuxtLink :to="localePath('/') + '#contact'"
+                    class="py-2 hover:bg-muted transition-colors border-b border-border border-dashed">
+                    {{ $t('nav.contact') }}
+                </NuxtLink>
+
+                <div class="flex justify-center gap-8 mt-4">
+                    <button @click="toggleTheme" class="hover:text-primary">
+                        THEME: {{ colorMode.value === 'dark' ? 'DARK' : 'LIGHT' }}
+                    </button>
+                    <button @click="switchLanguage" class="hover:text-primary">
+                        LANG: {{ locale.toUpperCase() }}
+                    </button>
+                </div>
             </div>
         </header>
 
-        <main class="flex-grow pt-20">
+        <main class="flex-grow pt-16">
             <slot />
         </main>
 
         <footer
-            class="py-8 border-t border-white/5 text-center text-text-muted text-sm bg-background transition-colors duration-300">
-            <div class="container">
-                <p>&copy; {{ new Date().getFullYear() }} Jude Mpoyo. All rights reserved.</p>
+            class="py-12 border-t border-border bg-background text-center text-muted-foreground text-xs uppercase tracking-widest">
+            <div class="container hover:text-primary transition-colors cursor-default">
+                &copy; {{ new Date().getFullYear() }} Jude Mpoyo. System Architect.
             </div>
         </footer>
     </div>
