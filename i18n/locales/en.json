@@ -1,0 +1,74 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Work",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "hero": {
+        "greeting": "Hi, I am {name}.",
+        "role": "Full-stack Developer",
+        "headline": "Transforming complex challenges into elegant digital solutions.",
+        "subheadline": "I specialize in building robust, scalable web applications with Laravel and Vue.js. Helping businesses grow through high-performance technology.",
+        "cta_projects": "View Selected Work",
+        "cta_contact": "Let's Collaborate"
+    },
+    "about": {
+        "title": "About Me",
+        "bio_intro": "I am a Full-stack Developer based in Kolwezi, DRC, with a deep passion for clean code and problem-solving.",
+        "bio_text": "With expertise in Laravel, Vue.js, and Cloud Architecture, I don't just write code—I build reliable systems that solve real business problems. Currently exploring the frontiers of AI and DevOps to deliver even more value.",
+        "stats": {
+            "exp": "Years Experience",
+            "projects": "Projects Delivered",
+            "clients": "Happy Clients"
+        },
+        "skills": {
+            "title": "Technical Expertise",
+            "frontend": "Frontend Development",
+            "backend": "Backend Architecture",
+            "devops": "DevOps & Tools"
+        }
+    },
+    "projects": {
+        "title": "Selected Works",
+        "subtitle": "A collection of projects delivering tangible business value.",
+        "view_project": "View Case Study",
+        "items": {
+            "uzaraka": {
+                "title": "Uzaraka Marketplace",
+                "description": "A comprehensive multi-vendor marketplace platform connecting buyers and sellers.",
+                "solution": "Built a scalable Nuxt 3 frontend with role-based access control and real-time messaging, enabling seamless transactions."
+            },
+            "jumpmanagement": {
+                "title": "Jump Management",
+                "description": "Enterprise resource planning solution for hardware businesses.",
+                "solution": "Developed a robust Laravel/Filament dashboard for inventory and sales tracking, improving operational efficiency."
+            },
+            "jumpdatatable": {
+                "title": "Jump Datatable",
+                "description": "Open-source PHP package for dynamic data presentation.",
+                "solution": "Created a developer-friendly tool to rapidly integrate complex sortable/filterable tables in PHP projects."
+            },
+            "learn2code": {
+                "title": "Learn2Code App",
+                "description": "Educational mobile platform for aspiring developers.",
+                "solution": "Designed an interactive Flutter app with quizzes and progress tracking to democratize programming education."
+            }
+        }
+    },
+    "experience": {
+        "title": "Experience",
+        "role_jkantech": "Full-stack Developer",
+        "role_freelance": "Freelance Web Developer",
+        "role_intern": "Web Developer Intern",
+        "current": "Present"
+    },
+    "contact": {
+        "title": "Start a Project",
+        "description": "Have an idea or a business challenge? Let's discuss how we can solve it.",
+        "email": "Email Me",
+        "whatsapp": "Chat on WhatsApp",
+        "linkedin": "Connect on LinkedIn",
+        "github": "View Code"
+    }
+}
