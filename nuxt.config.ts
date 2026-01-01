@@ -6,20 +6,22 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+
   colorMode: {
     classSuffix: '',
     preference: 'system',
     fallback: 'dark'
   },
+
+
   i18n: {
-    //lazy: true,
     langDir: 'locales',
     strategy: 'prefix_except_default',
+    defaultLocale: 'en',
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'fr', iso: 'fr-FR', file: 'fr.json', name: 'Français' }
     ],
-    defaultLocale: 'en',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
