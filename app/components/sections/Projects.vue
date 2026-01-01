@@ -1,79 +1,82 @@
 <script setup lang="ts">
+const { t } = useI18n()
 const projects = [
     {
-        id: 'uzaraka',
-        tags: ['Nuxt', 'Tailwind', 'Marketplace'],
-        image: 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
+        title: t('projects.uzaraka.title'),
+        description: t('projects.uzaraka.description'),
+        stack: ['Laravel', 'Vue.js', 'MySQL', 'Docker'],
+        metrics: {
+            loadTime: '< 250ms',
+            dockerSize: '142MB (Compressed)',
+            infra: t('projects.uzaraka.infra')
+        },
+        archDiagram: 'CLIENT --> NGINX --> LARAVEL_CONTAINER --> MYSQL'
     },
     {
-        id: 'jumpmanagement',
-        tags: ['Laravel', 'Filament', 'ERP'],
-        image: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)'
+        title: t('projects.jumpmanagement.title'),
+        description: t('projects.jumpmanagement.description'),
+        stack: ['Laravel', 'Filament', 'Alpine.js', 'Docker'],
+        metrics: {
+            loadTime: '~180ms',
+            dockerSize: '128MB',
+            infra: t('projects.jumpmanagement.infra')
+        },
+        archDiagram: 'ERP_CORE (PHP) --> WORK_QUEUE (REDIS) --> PHP_WORKER (AUDIT_LOGS)'
     },
     {
-        id: 'jumpdatatable',
-        tags: ['PHP', 'Package', 'Open Source'],
-        image: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)'
-    },
-    {
-        id: 'learn2code',
-        tags: ['Flutter', 'Mobile', 'Education'],
-        image: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)'
+        title: t('projects.jumpdatatable.title'),
+        description: t('projects.jumpdatatable.description'),
+        stack: ['PHP 8.x', 'TypeScript', 'Benchmarks'],
+        metrics: {
+            loadTime: 'Latency_Optimized',
+            infra: t('projects.jumpdatatable.infra')
+        }
     }
 ]
 </script>
 
 <template>
-    <section id="projects" class="py-24 bg-muted/30">
-        <div class="container mx-auto px-6 max-w-6xl">
+    <section id="projects" class="py-24 px-6 bg-background dark:bg-zinc-900 text-foreground">
+        <div class="container mx-auto max-w-6xl">
 
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold tracking-tight mb-4">
-                    {{ $t('projects.title') }}
-                </h2>
-                <p class="text-lg text-muted-foreground w-full max-w-2xl">
-                    {{ $t('projects.subtitle') }}
-                </p>
+            <!-- Section Header -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs font-black text-primary dark:text-green-500 uppercase tracking-[0.3em]">
+                            {{ t('projects.section_id') }}
+                        </span>
+                        <div class="h-[1px] w-12 bg-primary dark:bg-green-500"></div>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-foreground dark:text-zinc-100">
+                        {{ t('projects.title') }}
+                    </h2>
+                    <p class="text-sm text-muted-foreground dark:text-zinc-400 uppercase tracking-widest font-bold">
+                        {{ t('projects.listing', { count: projects.length }) }}
+                    </p>
+                </div>
+
+                <div class="text-[10px] font-mono text-zinc-500 dark:text-zinc-400 max-w-xs text-right hidden lg:block">
+                    {{ t('projects.debug_note') }}
+                </div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div v-for="project in projects" :key="project.id"
-                    class="group bg-card rounded-xl border border-border overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <!-- Image Area (Abstract Gradient for now) -->
-                    <div class="h-48 w-full relative overflow-hidden" :style="{ background: project.image }">
-                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
-                    </div>
+            <!-- Project List -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <ProjectSheet v-for="project in projects" :key="project.title" :project="project"
+                    class="bg-muted/10 dark:bg-zinc-800 border border-border dark:border-zinc-700 rounded-md p-6 transition-colors" />
+            </div>
 
-                    <div class="p-6">
-                        <div class="flex items-start justify-between mb-4">
-                            <h3 class="text-xl font-bold text-foreground">
-                                {{ $t(`projects.items.${project.id}.title`) }}
-                            </h3>
-                            <span
-                                class="text-xs font-semibold px-2 py-1 rounded bg-secondary text-secondary-foreground">
-                                {{ project.tags[0] }}
-                            </span>
-                        </div>
-
-                        <p class="text-muted-foreground mb-6 line-clamp-2">
-                            {{ $t(`projects.items.${project.id}.description`) }}
-                        </p>
-
-                        <div class="mb-6 p-4 bg-muted rounded-lg border border-border/50">
-                            <span class="text-xs font-bold text-primary uppercase mb-1 block">Solution</span>
-                            <p class="text-sm text-foreground">
-                                {{ $t(`projects.items.${project.id}.solution`) }}
-                            </p>
-                        </div>
-
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span v-for="tag in project.tags" :key="tag"
-                                class="px-2 py-1 rounded text-xs font-medium text-muted-foreground bg-muted hover:bg-muted/80">
-                                {{ tag }}
-                            </span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Footer CTA -->
+            <div
+                class="mt-16 p-8 border border-border border-dashed dark:border-zinc-700 flex flex-col items-center gap-4 text-center rounded-md">
+                <span class="text-xs font-bold text-muted-foreground dark:text-zinc-400 uppercase">
+                    {{ t('projects.cta_footer') }}
+                </span>
+                <a href="#"
+                    class="text-sm font-black uppercase underline decoration-primary dark:decoration-green-500 decoration-4 underline-offset-4 hover:text-primary dark:hover:text-green-500 transition-colors">
+                    {{ t('projects.cta_pdf') }}
+                </a>
             </div>
 
         </div>
