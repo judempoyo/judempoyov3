@@ -41,11 +41,11 @@ onUnmounted(() => {
     <div class="relative inline-block text-left" ref="dropdownRef">
         <!-- Technical Terminal Trigger -->
         <button @click="toggleDropdown"
-            class="flex items-center gap-3 px-3 py-1.5 border bg-zinc-100 dark:bg-zinc-950/50 hover:bg-zinc-50 dark:hover:bg-zinc-950/40 rounded-md transition-all duration-300 group overflow-hidden relative">
+            class="flex items-center gap-3 px-3 py-1.5  bg-zinc-100 dark:bg-zinc-950/50 hover:bg-zinc-50 dark:hover:bg-zinc-950/40 rounded-md transition-all duration-300 group overflow-hidden relative">
 
             <div class="flex flex-col items-start leading-none">
                 <span
-                    class="text-[7px] font-black text-muted-foreground uppercase tracking-tighter mb-0.5">Locale_ID</span>
+                    class="text-[7px] hidden sm:block font-black text-muted-foreground uppercase tracking-tighter mb-0.5">Locale_ID</span>
                 <span
                     class="text-[11px] font-black uppercase text-foreground group-hover:text-primary transition-colors">
                     {{ locale }}

@@ -13,15 +13,15 @@ const toggleTheme = () => {
 <template>
   <button
     @click="toggleTheme"
-    class="group relative flex items-center bg-zinc-100 dark:bg-zinc-800/60 p-1 rounded-md w-20 h-8 transition-all duration-300 overflow-hidden select-none"
+    class="group relative flex items-center bg-zinc-100 dark:bg-zinc-800/60 p-1 rounded-md w-20 h-8 transition-all duration-300 overflow-hidden select-none "
     :title="colorMode.value === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
   >
 
     <div
-      class="absolute inset-y-1 w-[38px] bg-zinc-300 dark:bg-zinc-600/60 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] rounded-md flex items-center justify-center shadow-md dark:shadow-sm z-10"
+      class="absolute inset-y-1 w-[38px] bg-zinc-300 dark:bg-zinc-600/80 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] rounded-md flex items-center justify-center shadow-md dark:shadow-sm z-10"
       :class="colorMode.value === 'dark' ? 'left-1' : 'left-[calc(100%-42px)]'"
     >
-      <div class="relative w-4 h-4 text-primary-foreground ">
+      <div class="relative w-4 h-4 text-zinc-900 dark:text-zinc-300 ">
 
         <svg
           viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
@@ -44,15 +44,15 @@ const toggleTheme = () => {
       </div>
     </div>
 
-    <div class="flex justify-between w-full px-2.5 font-black text-[8px] tracking-tighter">
+    <div class="flex justify-between w-full px-2.5 font-black text-[8px] tracking-tighter text-zinc-900 dark:text-zinc-300">
       <span
         class="transition-all duration-500"
-        :class="colorMode.value === 'dark' ? 'text-zinc-100 opacity-0' : 'text-zinc-600 opacity-100'"
+       
       >DARK</span>
 
       <span
         class="transition-all duration-500"
-        :class="colorMode.value === 'light' ? 'text-zinc-100 opacity-100' : 'text-zinc-900 opacity-100'"
+       
       >LIGHT</span>
     </div>
 

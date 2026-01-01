@@ -25,9 +25,9 @@ const { level, toggleLevel } = useLogLevel()
 
             <div class="flex justify-between w-full px-2 pointer-events-none">
                 <span class="text-[8px] font-bold transition-opacity duration-300"
-                    :class="level === 'INFO' ? 'opacity-0' : 'opacity-40 dark:opacity-20 text-zinc-700 dark:text-white'">INFO</span>
+                    :class="level === 'INFO' ? 'opacity-0' : 'opacity-70 dark:opacity-50 text-zinc-700 dark:text-white'">INFO</span>
                 <span class="text-[8px] font-bold transition-opacity duration-300"
-                    :class="level === 'DEBUG' ? 'opacity-0' : 'opacity-40 dark:opacity-20 text-zinc-700 dark:text-white'">DEBUG</span>
+                    :class="level === 'DEBUG' ? 'opacity-0' : 'opacity-70 dark:opacity-50 text-zinc-700 dark:text-white'">DEBUG</span>
             </div>
 
             <div v-if="level === 'DEBUG'"
