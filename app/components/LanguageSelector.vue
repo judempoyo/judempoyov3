@@ -41,7 +41,7 @@ onUnmounted(() => {
     <div class="relative inline-block text-left" ref="dropdownRef">
         <!-- Technical Terminal Trigger -->
         <button @click="toggleDropdown"
-            class="flex items-center gap-3 px-3 py-1.5  bg-zinc-100 dark:bg-zinc-950/50 hover:bg-zinc-50 dark:hover:bg-zinc-950/40 rounded-md transition-all duration-300 group overflow-hidden relative">
+            class="flex items-center gap-3 px-3 py-1.5  bg-zinc-200 dark:bg-zinc-950/50 hover:bg-zinc-50 dark:hover:bg-zinc-950/40 rounded-md transition-all duration-300 group overflow-hidden relative">
 
             <div class="flex flex-col items-start leading-none">
                 <span

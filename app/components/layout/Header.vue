@@ -18,6 +18,9 @@ onMounted(() => {
     })
 })
 
+const closeMenu = (() => {
+    if (isMenuOpen)  isMenuOpen.value = false 
+})
 </script>
 
 <template>
@@ -66,7 +69,7 @@ onMounted(() => {
                 </nav>
 
                 <div class="md:hidden flex items-center gap-2 scale-90 origin-right">
-                    <LanguageSelector />
+                    <LanguageSelector class="z-50" @click="closeMenu"/>
                     <!-- <ToggleTheme /> -->
                 <button @click="toggleMenu"
                     class="md:hidden flex items-center gap-2 px-2 py-1 text-xs font-black uppercase  bg-muted/50 rounded-xs">

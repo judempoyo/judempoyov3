@@ -11,9 +11,10 @@ const toggleTheme = () => {
 </script>
 
 <template>
+    <ClientOnly>
   <button
     @click="toggleTheme"
-    class="group relative flex items-center bg-zinc-100 dark:bg-zinc-800/60 p-1 rounded-md w-20 h-8 transition-all duration-300 overflow-hidden select-none "
+    class="group relative flex items-center bg-zinc-200 dark:bg-zinc-800/60 p-1 rounded-md w-20 h-8 transition-all duration-300 overflow-hidden select-none "
     :title="colorMode.value === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
   >
 
@@ -57,4 +58,6 @@ const toggleTheme = () => {
     </div>
 
   </button>
+    </ClientOnly>
+
 </template>
