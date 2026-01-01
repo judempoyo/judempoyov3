@@ -4,7 +4,7 @@
 
 @theme inline {
     --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
@@ -20,30 +20,41 @@
 
 :root {
     /* Industrial Light Palette (Blueprint/Concrete) */
-    --background: #F5F5F7; /* Bleached Concrete */
-    --foreground: #121212; /* Coal */
-    --primary: #0055FF;    /* Engineering Blue */
+    --background: #F5F5F7;
+    /* Bleached Concrete */
+    --foreground: #121212;
+    /* Coal */
+    --primary: #0055FF;
+    /* Engineering Blue */
     --primary-foreground: #FFFFFF;
-    --secondary: #E5E5E5;  /* Light Grey */
+    --secondary: #E5E5E5;
+    /* Light Grey */
     --secondary-foreground: #121212;
     --muted: #EDEDED;
     --muted-foreground: #666666;
-    --border: #D1D1D1;     /* Technical line */
+    --border: #D1D1D1;
+    /* Technical line */
+    --border-rgb: 209, 209, 209;
     --accent: #0055FF;
     --accent-foreground: #FFFFFF;
 }
 
 .dark {
     /* Industrial Dark Palette (Cold Steel) */
-    --background: #0D0D0F; /* Deep Abyss */
-    --foreground: #E0E0E0; /* Aluminum */
-    --primary: #3B82F6;    /* Vivid Blue */
+    --background: #0D0D0F;
+    /* Deep Abyss */
+    --foreground: #E0E0E0;
+    /* Aluminum */
+    --primary: #3B82F6;
+    /* Vivid Blue */
     --primary-foreground: #000000;
     --secondary: #1A1A1E;
     --secondary-foreground: #E0E0E0;
     --muted: #141417;
     --muted-foreground: #888888;
-    --border: #2A2A2E;     /* Dark Steel line */
+    --border: #2A2A2E;
+    /* Dark Steel line */
+    --border-rgb: 42, 42, 46;
     --accent: #3B82F6;
     --accent-foreground: #000000;
 }
@@ -52,17 +63,22 @@
     html {
         font-family: var(--font-mono);
     }
-    
+
     body {
-        @apply bg-background text-foreground antialiased selection:bg-primary/20;
-        background-image: 
-            linear-gradient(var(--border) 1px, transparent 1px),
-            linear-gradient(90deg, var(--border) 1px, transparent 1px);
+        @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+        background-image:
+            linear-gradient(rgba(var(--border-rgb), 0.5) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(var(--border-rgb), 0.5) 1px, transparent 1px);
         background-size: 40px 40px;
         background-attachment: fixed;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         @apply font-bold tracking-tight uppercase;
     }
 
@@ -75,7 +91,7 @@
     .glass-industrial {
         @apply bg-background/80 backdrop-blur-md border border-border;
     }
-    
+
     .technical-border {
         @apply border border-border/50;
     }
