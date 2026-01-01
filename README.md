@@ -1,10 +1,10 @@
-# Jude Mpoyo | Industrial Minimalist Portfolio
+# Jude Mpoyo | Backend Systems Engineer
 
 [![Nuxt](https://img.shields.io/badge/Nuxt-4.2-00DC82?logo=nuxt.js&logoColor=white)](https://nuxt.com)
 [![Expertise](https://img.shields.io/badge/Expertise-PHP%20%2F%20Laravel-8892BF?logo=laravel&logoColor=white)](https://laravel.com)
 [![Learning](https://img.shields.io/badge/Learning-Go%20%2F%20Docker-00ADD8?logo=go&logoColor=white)](https://go.dev)
 
-A highly technical, "Industrial Minimalist" portfolio designed for system architects and backend engineers. This project serves as a technical manifesto, documenting the transition from deep PHP/Laravel expertise to a cloud-native future with Go and Docker.
+A highly technical, "Industrial Minimalist" portfolio for a Backend Systems Engineer. This project documents my transition from deep PHP/Laravel expertise to a cloud-native future with Go, Docker, and DevOps.
 
 ## 🏗 Concept: "Proof by Infrastructure"
 
