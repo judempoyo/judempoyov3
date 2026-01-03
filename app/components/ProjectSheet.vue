@@ -47,7 +47,7 @@ const linkUrl = computed(() => {
       </p>
 
       <!-- Debug Meta -->
-      <div v-if="isDebug" class="space-y-4 pt-4 border-t border-dashed
+      <div v-if="isDebug" class="space-y-4 border-t border-dashed
     border-zinc-300 dark:border-zinc-700
     md:pt-4 pt-3 md:gap-6 gap-3">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
