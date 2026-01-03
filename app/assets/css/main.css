@@ -86,4 +86,32 @@
     .technical-border {
         @apply border border-border/50;
     }
+
+    /* Global Scrollbar Styles - Industrial Aesthetic */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-zinc-300 dark:bg-zinc-800 rounded-full border-2 border-transparent bg-clip-content;
+        transition: background 0.2s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-zinc-400 dark:bg-zinc-700;
+    }
+
+    
+
+    /* Firefox Support */
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: var(--border) transparent;
+    }
+    
 }
