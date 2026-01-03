@@ -64,15 +64,6 @@
         font-family: var(--font-mono);
     }
 
-    body {
-        @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
-        background-image:
-            linear-gradient(rgba(var(--border-rgb), 0.5) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(var(--border-rgb), 0.5) 1px, transparent 1px);
-        background-size: 40px 40px;
-        background-attachment: fixed;
-    }
-
     h1,
     h2,
     h3,
