@@ -31,6 +31,26 @@ const methods = [
                         {{ t('contact.description') }}
                     </p>
 
+                    <!-- Availability Indicators -->
+                    <div class="flex flex-wrap gap-3 pt-2">
+                        <div
+                            class="flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg">
+                            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                            <span class="text-xs font-bold text-green-700 dark:text-green-400">{{
+                                t('contact.availability') }}</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg">
+                            <svg class="w-3 h-3 text-zinc-600 dark:text-zinc-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300">{{
+                                t('contact.response_time') }}</span>
+                        </div>
+                    </div>
+
                     <div class="space-y-4 pt-4">
                         <a v-for="m in methods" :key="m.label" :href="m.action" target="_blank" class="flex items-center justify-between p-4 border
               border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900

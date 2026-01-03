@@ -1,20 +1,23 @@
 <script setup lang="ts">
+import type { Project } from '~/composables/useProjects'
+
 const { t } = useI18n()
 const { isDebug } = useLogLevel()
 
-defineProps<{
-  project: {
-    title: string
-    description: string
-    stack: string[]
-    metrics?: {
-      loadTime?: string
-      dockerSize?: string
-      infra: string
-    }
-    archDiagram?: string
-  }
+const props = defineProps<{
+  project: Project
 }>()
+
+const linkText = computed(() => {
+  if (props.project.isLive) {
+    return t('projects.cta_live')
+  }
+  return t('projects.cta_docs')
+})
+
+const linkUrl = computed(() => {
+  return props.project.isLive ? props.project.liveUrl : props.project.docsUrl
+})
 </script>
 
 <template>
@@ -27,7 +30,7 @@ defineProps<{
     <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-800
       flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/40 rounded-t-2xl">
       <h3 class="text-lg font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
-        {{ project.title }}
+        {{ t(project.titleKey) }}
       </h3>
       <div class="flex gap-2">
         <span v-for="tag in project.stack.slice(0, 3)" :key="tag" class="text-[9px] font-bold px-2 py-1 border border-zinc-300 dark:border-zinc-700
@@ -40,7 +43,7 @@ defineProps<{
     <!-- Body -->
     <div class="p-6 space-y-5">
       <p class="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
-        {{ project.description }}
+        {{ t(project.descriptionKey) }}
       </p>
 
       <!-- Debug Meta -->
@@ -49,18 +52,18 @@ defineProps<{
           <div class="space-y-1">
             <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">INFRA:</span>
             <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 whitespace-pre-line">
-              {{ project.metrics?.infra }}
+              {{ t(project.metrics.infraKey) }}
             </p>
           </div>
 
           <div class="space-y-2">
-            <div v-if="project.metrics?.dockerSize" class="space-y-1">
+            <div v-if="project.metrics.dockerSize" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">DOCKER SIZE:</span>
               <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400">
                 {{ project.metrics.dockerSize }}
               </p>
             </div>
-            <div v-if="project.metrics?.loadTime" class="space-y-1">
+            <div v-if="project.metrics.loadTime" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">LATENCY:</span>
               <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400">
                 {{ project.metrics.loadTime }}
@@ -86,17 +89,27 @@ defineProps<{
       flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/30 rounded-b-2xl
       group-hover:bg-green-50 dark:group-hover:bg-green-900/10 transition-colors duration-200">
 
-      <span class="text-[10px] font-bold text-zinc-500 dark:text-zinc-600">
-        STATUS: PRODUCTION
-      </span>
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] font-bold text-zinc-500 dark:text-zinc-600">
+          STATUS:
+        </span>
+        <span v-if="project.isLive"
+          class="flex items-center gap-1.5 text-[10px] font-black uppercase text-green-600 dark:text-green-400">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+          LIVE
+        </span>
+        <span v-else class="text-[10px] font-black uppercase text-zinc-500 dark:text-zinc-600">
+          DOCS_ONLY
+        </span>
+      </div>
 
-      <button class="text-[10px] font-black uppercase tracking-widest
+      <a v-if="linkUrl" :href="linkUrl" target="_blank" rel="noopener noreferrer" class="text-[10px] font-black uppercase tracking-widest
         text-green-600 dark:text-green-400
         flex items-center gap-2
         transition-transform duration-150 ease-out
         hover:translate-x-0.5 active:translate-x-1">
 
-        {{ t('projects.cta_doc') }}
+        {{ linkText }}
 
         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none"
           stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
@@ -105,7 +118,7 @@ defineProps<{
           <path d="m12 5 7 7-7 7" />
         </svg>
 
-      </button>
+      </a>
 
     </div>
   </div>

@@ -1,74 +1,118 @@
 {
+    "common": {
+        "menu": "Menu"
+    },
     "nav": {
-        "home": "Home",
-        "projects": "Work",
-        "about": "About",
+        "home": "Index",
+        "about": "Identity",
+        "projects": "Production",
         "contact": "Contact"
     },
+    "system_status": {
+        "online": "SYS_ONLINE",
+        "location": "LOC: KOLWEZI, DRC",
+        "tz": "TZ: CAT (UTC+2)",
+        "learning": "TRANSITION: [GO, DOCKER, NUXT]",
+        "uptime": "UPTIME: 99.9%"
+    },
     "hero": {
-        "greeting": "Hi, I am {name}.",
-        "role": "Full-stack Developer",
-        "headline": "Transforming complex challenges into elegant digital solutions.",
-        "subheadline": "I specialize in building robust, scalable web applications with Laravel and Vue.js. Helping businesses grow through high-performance technology.",
-        "cta_projects": "View Selected Work",
-        "cta_contact": "Let's Collaborate"
+        "role_primary": "BACKEND_SYSTEMS_ENGINEER",
+        "role_secondary": "FULLSTACK_DEVELOPER",
+        "manifesto_ver": "Manifesto_v1.0",
+        "description_1": "// Specialization: Building robust architectures with Laravel.",
+        "description_2": "// Major Upgrade: Migrating core engine to {target}.",
+        "description_3": "// Focus: Performance, code integrity and high availability.",
+        "social_proof": "4+ Years | 15+ Production Systems | 99.9% Uptime",
+        "cta_services": "[Browse_Production]",
+        "cta_connect": "[Init_Connection]"
     },
     "about": {
-        "title": "About Me",
-        "bio_intro": "I am a Full-stack Developer based in Kolwezi, DRC, with a deep passion for clean code and problem-solving.",
-        "bio_text": "With expertise in Laravel, Vue.js, and Cloud Architecture, I don't just write code—I build reliable systems that solve real business problems. Currently exploring the frontiers of AI and DevOps to deliver even more value.",
-        "stats": {
-            "exp": "Years Experience",
-            "projects": "Projects Delivered",
-            "clients": "Happy Clients"
+        "section_id": "02/IDENTITY",
+        "title": "ARCHITECTING_SYSTEMS. NOT_JUST_APPS.",
+        "bio_1": "Based in Kolwezi, DRC, I forged my initial expertise in the PHP ecosystem, engineering complex ERPs and marketplace backends.",
+        "bio_2": "I am currently in a major recalibration phase: migrating my technical base towards Go and containerized workflows. I believe that code is just a component; architecture is the engine.",
+        "specs": {
+            "title": "System_Specs_Snapshot:",
+            "os": "LINUX_DEBIAN",
+            "phase": "BETA_GO_MIGRATION",
+            "arch": "CLEAN_ARCHITECTURE",
+            "reg": "KOL_CENTRAL_01"
         },
-        "skills": {
-            "title": "Technical Expertise",
-            "frontend": "Frontend Development",
-            "backend": "Backend Architecture",
-            "devops": "DevOps & Tools"
+        "stats": {
+            "exp": "Compile_Time_Years",
+            "services": "Services_Deployed"
         }
+    },
+    "journey": {
+        "title": "Sequence_Evolution.log",
+        "mode": "READ_ONLY",
+        "logs": [
+            {
+                "date": "2021",
+                "event": "INIT_PHP_ENV",
+                "detail": "Laravel ecosystem mastery. First deployments of enterprise-grade ERP systems."
+            },
+            {
+                "date": "2023",
+                "event": "API_OPTIMIZATION",
+                "detail": "Standardizing data REST flows for high-load multi-vendor platforms."
+            },
+            {
+                "date": "2025",
+                "event": "GO_MIGRATION",
+                "detail": "Transitioning core modules to Go and Docker for scalable performance."
+            }
+        ]
+    },
+    "tech_stack": {
+        "config_file": "config_stack.yaml",
+        "languages": "core_languages",
+        "frameworks": "frameworks",
+        "infrastructure": "infrastructure",
+        "learning": "[ACCELERATING]",
+        "proficiency": "# Current Proficiency",
+        "end_config": "# End of Configuration"
     },
     "projects": {
-        "title": "Selected Works",
-        "subtitle": "A collection of projects delivering tangible business value.",
-        "view_project": "View Case Study",
-        "items": {
-            "uzaraka": {
-                "title": "Uzaraka Marketplace",
-                "description": "A comprehensive multi-vendor marketplace platform connecting buyers and sellers.",
-                "solution": "Built a scalable Nuxt 3 frontend with role-based access control and real-time messaging, enabling seamless transactions."
-            },
-            "jumpmanagement": {
-                "title": "Jump Management",
-                "description": "Enterprise resource planning solution for hardware businesses.",
-                "solution": "Developed a robust Laravel/Filament dashboard for inventory and sales tracking, improving operational efficiency."
-            },
-            "jumpdatatable": {
-                "title": "Jump Datatable",
-                "description": "Open-source PHP package for dynamic data presentation.",
-                "solution": "Created a developer-friendly tool to rapidly integrate complex sortable/filterable tables in PHP projects."
-            },
-            "learn2code": {
-                "title": "Learn2Code App",
-                "description": "Educational mobile platform for aspiring developers.",
-                "solution": "Designed an interactive Flutter app with quizzes and progress tracking to democratize programming education."
-            }
-        }
-    },
-    "experience": {
-        "title": "Experience",
-        "role_jkantech": "Full-stack Developer",
-        "role_freelance": "Freelance Web Developer",
-        "role_intern": "Web Developer Intern",
-        "current": "Present"
+        "section_id": "03/PRODUCTION",
+        "title": "SELECTED_OUTPUT.",
+        "listing": "Inventory: {count} active services // Source: Production_Node",
+        "debug_note": "TIP: TOGGLE DEBUG MODE TO ACCESS INFRASTRUCTURE SCHEMATICS AND LATENCY METRICS.",
+        "uzaraka": {
+            "title": "Uzaraka Marketplace",
+            "description": "Multi-vendor platform with real-time transactional logistics.",
+            "infra": "Service: API_Gateway\nStorage: MySQL_Cluster\nCache: Redis_Session"
+        },
+        "jumpmanagement": {
+            "title": "Jump Management ERP",
+            "description": "Inventory orchestration for large-scale hardware supply chains.",
+            "infra": "Service: ERP_Core\nWorkers: PHP_Job_Processor\nPipelines: GH_Actions"
+        },
+        "jumpdatatable": {
+            "title": "Jump Datatable Engine",
+            "description": "High-performance data orchestrator for rapid PHP deployment cycles.",
+            "infra": "Type: OpenSource_Library\nTests: PHPUnit_Quality (100%)"
+        },
+        "cta_doc": "[Access_Doc]",
+        "cta_live": "[Visit_Live_Site]",
+        "cta_docs": "[View_Documentation]",
+        "cta_footer": "Interested in deep system design?",
+        "cta_pdf": "Request Full Architecture Portfolio [.PDF]"
     },
     "contact": {
-        "title": "Start a Project",
-        "description": "Have an idea or a business challenge? Let's discuss how we can solve it.",
-        "email": "Email Me",
-        "whatsapp": "Chat on WhatsApp",
-        "linkedin": "Connect on LinkedIn",
-        "github": "View Code"
+        "section_id": "04/CONTACT",
+        "title": "COLLAB_INVITATION.",
+        "description": "Looking for an architect who understands both the monolithic legacy and the cloud-native future? Let's connect our infrastructures.",
+        "availability": "Available for freelance projects",
+        "response_time": "Response within 24h",
+        "shell_id": "Interactive_Shell",
+        "shell_msg": "Awaiting technical transmission...",
+        "privacy": "NO_TRACKERS_ALLOWED // PRIVACY_BY_DEFAULT"
+    },
+    "mobile_menu": {
+        "system_config": "System_Configuration",
+        "layout_init": "Layout_Init: OK",
+        "module_nav": "Module_Nav: LOADED",
+        "state": "State: ACTIVE"
     }
 }

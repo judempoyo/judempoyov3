@@ -15,18 +15,28 @@ useHead({
 
     <!-- Hero Section / Manifest -->
     <section
-      class="pt-24 pb-16 px-6 border-b border-zinc-300 dark:border-zinc-700 relative overflow-hidden bg-zinc-50  dark:bg-zinc-800">
+      class="relative pt-24 pb-16 px-6 border-b border-zinc-300 dark:border-zinc-700 overflow-hidden bg-gradient-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black">
 
       <!-- Background ID Watermark -->
       <div
-        class="absolute -top-12 -right-12 text-[12vw] text-zinc-300 dark:text-zinc-700 opacity-10 select-none pointer-events-none">
+        class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20 select-none pointer-events-none">
         0xJM93
       </div>
 
-      <div class="container mx-auto max-w-9xl">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
+      <!-- Decorative Grid Lines -->
+      <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div
+          class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+        </div>
+        <div
+          class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+        </div>
+      </div>
 
-          <div class="lg:col-span-8 space-y-8 relative z-10 ">
+      <div class="container mx-auto max-w-[1400px] px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-20 items-start lg:items-center">
+
+          <div class="lg:col-span-8 space-y-6 lg:space-y-8 relative z-10">
 
             <!-- Badge Registry -->
             <div class="flex flex-wrap gap-2 mb-4">
@@ -45,17 +55,19 @@ useHead({
             </div>
 
             <!-- Hero Titles -->
-            <div class="space-y-4">
+            <div class="space-y-6">
               <h1
-                class="text-4xl md:text-6xl lg:text-7xl tracking-tighter uppercase leading-[0.85] text-zinc-900 dark:text-zinc-100">
-                <span class="text-green-600 dark:text-green-400 italic">{{ t('hero.role_primary') }}</span>
-                <span class="block">
-                {{ t('hero.role_secondary') }}.
+                class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tighter uppercase leading-[0.85] text-zinc-900 dark:text-zinc-100">
+                <span
+                  class="inline-block bg-gradient-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300 bg-clip-text text-transparent italic">{{
+                    t('hero.role_primary') }}</span>
+                <span class="block mt-2">
+                  {{ t('hero.role_secondary') }}.
                 </span>
               </h1>
-              <div class="flex items-center gap-4 py-2">
-                <div class="h-[2px] w-24 bg-zinc-900 dark:bg-zinc-100"></div>
-                <span class="text-xs font-bold uppercase tracking-[0.4em] text-zinc-500 dark:text-zinc-400">
+              <div class="flex items-center gap-4 py-3">
+                <div class="h-0.5 w-20 bg-gradient-to-r from-green-600 to-transparent dark:from-green-400"></div>
+                <span class="text-xs font-black uppercase tracking-[0.4em] text-zinc-500 dark:text-zinc-400">
                   {{ t('hero.manifesto_ver') }}
                 </span>
               </div>
@@ -69,6 +81,21 @@ useHead({
                 {{ t('hero.description_2', { target: 'Go & Docker' }) }} <br />
                 {{ t('hero.description_3') }}
               </p>
+
+              <!-- Social Proof -->
+              <div class="flex items-center gap-3 pt-2">
+                <div class="h-px flex-1 bg-gradient-to-r from-zinc-300 dark:from-zinc-700 to-transparent"></div>
+                <span
+                  class="text-xs font-black uppercase tracking-wider text-green-600 dark:text-green-400 flex items-center gap-2">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd" />
+                  </svg>
+                  {{ t('hero.social_proof') }}
+                </span>
+                <div class="h-px flex-1 bg-gradient-to-l from-zinc-300 dark:from-zinc-700 to-transparent"></div>
+              </div>
             </div>
 
             <!-- Call to Actions -->
@@ -103,7 +130,7 @@ useHead({
           </div>
 
           <!-- Configuration / Stack Visual -->
-          <div class="lg:col-span-4 relative scale-95 lg:scale-100 origin-center">
+          <div class="lg:col-span-4 relative mt-8 lg:mt-0">
             <YAMLStack />
 
             <!-- Floating Badge -->

@@ -1,74 +1,118 @@
 {
+    "common": {
+        "menu": "Menu"
+    },
     "nav": {
-        "home": "Accueil",
-        "projects": "Réalisations",
-        "about": "À propos",
+        "home": "Sommaire",
+        "about": "Identité",
+        "projects": "Production",
         "contact": "Contact"
     },
+    "system_status": {
+        "online": "STATUT_ACTIF",
+        "location": "LOC: KOLWEZI, RDC",
+        "tz": "TZ: CAT (UTC+2)",
+        "learning": "TRANSITION: [GO, DOCKER, NUXT]",
+        "uptime": "UPTIME: 99.9%"
+    },
     "hero": {
-        "greeting": "Bonjour, je suis {name}.",
-        "role": "Développeur Full-stack",
-        "headline": "Je transforme vos défis complexes en solutions digitales élégantes.",
-        "subheadline": "Spécialisé dans la création d'applications web robustes et évolutives avec Laravel et Vue.js. J'aide les entreprises à croître grâce à des technologies performantes.",
-        "cta_projects": "Voir mes projets",
-        "cta_contact": "Collaborons ensemble"
+        "role_primary": "INGÉNIEUR_SYSTÈMES_BACKEND",
+        "role_secondary": "DÉVELOPPEUR_FULLSTACK",
+        "manifesto_ver": "Manifeste_v1.0",
+        "description_1": "// Spécialité : Ingénierie de systèmes robustes sous Laravel.",
+        "description_2": "// Pilotage : Migration de l'infrastructure vers {target}.",
+        "description_3": "// Focus : Performance brute, stabilité et intégrité du code.",
+        "social_proof": "4+ Ans | 15+ Systèmes en Production | 99.9% Disponibilité",
+        "cta_services": "[Dossier_Production]",
+        "cta_connect": "[Établir_Connexion]"
     },
     "about": {
-        "title": "À propos de moi",
-        "bio_intro": "Je suis Développeur Full-stack basé à Kolwezi, RDC, passionné par le code propre et la résolution de problèmes.",
-        "bio_text": "Avec une expertise en Laravel, Vue.js et Architecture Cloud, je ne me contente pas d'écrire du code : je conçois des systèmes fiables qui résolvent de vrais problèmes business. J'explore actuellement l'IA et le DevOps pour apporter encore plus de valeur.",
-        "stats": {
-            "exp": "Années d'expérience",
-            "projects": "Projets livrés",
-            "clients": "Clients satisfaits"
+        "section_id": "02/IDENTITÉ",
+        "title": "L'ARCHITECTURE_D'ABORD. LE_CODE_ENSUITE.",
+        "bio_1": "Basé à Kolwezi, RDC, j'ai forgé mon expertise dans l'écosystème PHP, en concevant des moteurs transactionnels complexes (ERP, Marketplaces).",
+        "bio_2": "Je traverse actuellement une phase de recalibrage technique : je migre mon socle vers Go et la conteneurisation. Pour moi, le code n'est qu'une composante ; l'architecture en est le moteur.",
+        "specs": {
+            "title": "Architecture_Snapshot :",
+            "os": "LINUX_DEBIAN",
+            "phase": "MIGRATION_GO_BETA",
+            "arch": "CLEAN_ARCHITECTURE",
+            "reg": "KOL_CENTRAL_01"
         },
-        "skills": {
-            "title": "Expertise Technique",
-            "frontend": "Développement Frontend",
-            "backend": "Architecture Backend",
-            "devops": "DevOps & Outils"
+        "stats": {
+            "exp": "Expérience_Compilée",
+            "services": "Projets_Déployés"
         }
+    },
+    "journey": {
+        "title": "Sequence_Evolution.log",
+        "mode": "LECTURE_SEULE",
+        "logs": [
+            {
+                "date": "2021",
+                "event": "INIT_ENV_PHP",
+                "detail": "Maîtrise Laravel. Déploiement des premiers systèmes ERP critiques."
+            },
+            {
+                "date": "2023",
+                "event": "OPT_API_REST",
+                "detail": "Optimisation des flux de données pour plateformes multi-vendeurs."
+            },
+            {
+                "date": "2025",
+                "event": "GO_MIGRATION",
+                "detail": "Réusinage du backend. Intégration de Docker pour la montée en charge."
+            }
+        ]
+    },
+    "tech_stack": {
+        "config_file": "config_stack.yaml",
+        "languages": "langages_coeur",
+        "frameworks": "frameworks",
+        "infrastructure": "infrastructure",
+        "learning": "[EN_COURS]",
+        "proficiency": "# Niveau de maîtrise",
+        "end_config": "# Fin du fichier"
     },
     "projects": {
-        "title": "Projets Sélectionnés",
-        "subtitle": "Une collection de projets apportant une valeur commerciale concrète.",
-        "view_project": "Voir l'étude de cas",
-        "items": {
-            "uzaraka": {
-                "title": "Uzaraka Marketplace",
-                "description": "Une plateforme complète de marketplace multi-vendeurs connectant acheteurs et vendeurs.",
-                "solution": "Développement d'un frontend Nuxt 3 évolutif avec gestion des rôles et messagerie temps réel."
-            },
-            "jumpmanagement": {
-                "title": "Jump Management",
-                "description": "Solution ERP pour les quincailleries et commerces.",
-                "solution": "Création d'un tableau de bord Laravel/Filament robuste pour le suivi des stocks et ventes."
-            },
-            "jumpdatatable": {
-                "title": "Jump Datatable",
-                "description": "Package PHP open-source pour la présentation dynamique de données.",
-                "solution": "Outil conçu pour intégrer rapidement des tableaux complexes triables/filtrables."
-            },
-            "learn2code": {
-                "title": "Application Learn2Code",
-                "description": "Plateforme mobile éducative pour les futurs développeurs.",
-                "solution": "Application Flutter interactive avec quiz et suivi de progression pour démocratiser l'apprentissage du code."
-            }
-        }
-    },
-    "experience": {
-        "title": "Expérience",
-        "role_jkantech": "Développeur Full-stack",
-        "role_freelance": "Développeur Web Freelance",
-        "role_intern": "Stagiaire Développeur Web",
-        "current": "Présent"
+        "section_id": "03/PRODUCTION",
+        "title": "UNITÉS_DE_PRODUCTION.",
+        "listing": "Inventaire : {count} services actifs // Source : Node_Production",
+        "debug_note": "TIP : ACTIVEZ LE MODE DEBUG POUR ACCÉDER AUX SCHÉMAS D'INFRASTRUCTURE ET AUX LATENCES.",
+        "uzaraka": {
+            "title": "Uzaraka Marketplace",
+            "description": "Moteur transactionnel multi-vendeurs avec acheminement logistique temps réel.",
+            "infra": "Service : Passerelle_API\nStockage : MySQL_Cluster\nCache : Session_Redis"
+        },
+        "jumpmanagement": {
+            "title": "Jump Management ERP",
+            "description": "Orchestration des stocks pour flux logistiques industriels.",
+            "infra": "Service : Noyau_ERP\nWorkers : Processeur_PHP\nPipelines : GH_Actions"
+        },
+        "jumpdatatable": {
+            "title": "Jump Datatable Engine",
+            "description": "Package d'orchestration de données haute performance pour cycles rapides.",
+            "infra": "Type : Bibliothèque_OS\nTests : Qualité_PHPUnit (100%)"
+        },
+        "cta_doc": "[Accéder_Doc]",
+        "cta_live": "[Visiter_le_Site]",
+        "cta_docs": "[Voir_Documentation]",
+        "cta_footer": "Besoin d'un audit sur votre architecture ?",
+        "cta_pdf": "Consulter le portfolio complet [.PDF]"
     },
     "contact": {
-        "title": "Lancer un projet",
-        "description": "Vous avez une idée ou un défi business ? Discutons de la solution.",
-        "email": "M'envoyer un email",
-        "whatsapp": "Discuter sur WhatsApp",
-        "linkedin": "Profil LinkedIn",
-        "github": "Voir mon code"
+        "section_id": "04/CONTACT",
+        "title": "INVITATION_COLLAB.",
+        "description": "Vous recherchez un architecte capable de gérer l'héritage PHP et l'avenir Cloud-Native ? Connectons nos infrastructures.",
+        "availability": "Disponible pour projets freelance",
+        "response_time": "Réponse sous 24h",
+        "shell_id": "Console_Interactive",
+        "shell_msg": "En attente de transmission...",
+        "privacy": "AUCUN_TRACKER_AUTORISÉ // SÉCURITÉ_PAR_DÉFAUT"
+    },
+    "mobile_menu": {
+        "system_config": "Configuration_Système",
+        "layout_init": "Layout_Init: OK",
+        "module_nav": "Module_Nav: CHARGÉ",
+        "state": "État: ACTIF"
     }
 }
