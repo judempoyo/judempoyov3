@@ -19,7 +19,7 @@ onMounted(() => {
 })
 
 const closeMenu = (() => {
-    if (isMenuOpen)  isMenuOpen.value = false 
+    if (isMenuOpen) isMenuOpen.value = false
 })
 </script>
 
@@ -28,36 +28,36 @@ const closeMenu = (() => {
         <SystemNavBar />
 
         <div
-            class="fixed top-8 w-full z-50 bg-zinc-100/80 dark:bg-zinc-800/90 backdrop-blur-sm shadow-md transition-all duration-300 text-zinc-900 dark:text-zinc-300">
+            class="fixed top-8 w-full z-50 bg-zinc-100/90 dark:bg-zinc-800/95 backdrop-blur-md border-b border-zinc-300/50 dark:border-zinc-700/50 shadow-sm dark:shadow-md transition-all duration-300 text-zinc-900 dark:text-zinc-300">
             <div class="container mx-auto px-6 h-14 flex justify-between items-center">
                 <div class="flex items-center gap-6">
                     <NuxtLink :to="localePath('/')"
-                        class="flex items-center gap-2 text-sm tracking-tight hover:opacity-70 transition">
+                        class="flex items-center gap-2 text-sm tracking-tight hover:opacity-80 transition-opacity duration-200">
                         <span
-                            class="bg-black dark:bg-white text-white dark:text-black px-1.5 py-0.5 rounded-md">JM</span>
-                        <span class="hidden sm:inline">JUDE_MPOYO</span>
+                            class="bg-black dark:bg-white text-white dark:text-black px-1.5 py-0.5 rounded-md font-black">JM</span>
+                        <span class="hidden sm:inline font-black">JUDE_MPOYO</span>
                     </NuxtLink>
 
                     <div class="hidden md:block">
                         <LogLevelToggle />
                     </div>
                 </div>
-               
+
                 <nav class="hidden md:flex items-center gap-1 text-[11px] font-bold uppercase">
                     <NuxtLink :to="localePath('/')"
-                        class="px-3 py-1.5 hover:bg-muted border border-transparent hover:border-border transition-all">
+                        class="px-3 py-1.5 rounded-sm hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-transparent hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-200">
                         01/{{ $t('nav.home') }}
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#about'"
-                        class="px-3 py-1.5 hover:bg-muted border border-transparent hover:border-border transition-all">
+                        class="px-3 py-1.5 rounded-sm hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-transparent hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-200">
                         02/{{ $t('nav.about') }}
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#projects'"
-                        class="px-3 py-1.5 hover:bg-muted border border-transparent hover:border-border transition-all">
+                        class="px-3 py-1.5 rounded-sm hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-transparent hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-200">
                         03/{{ $t('nav.projects') }}
                     </NuxtLink>
                     <NuxtLink :to="localePath('/') + '#contact'"
-                        class="px-3 py-1.5 hover:bg-muted border border-transparent hover:border-border transition-all">
+                        class="px-3 py-1.5 rounded-sm hover:bg-zinc-200 dark:hover:bg-zinc-700 border border-transparent hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-200">
                         04/{{ $t('nav.contact') }}
                     </NuxtLink>
 
@@ -70,25 +70,25 @@ const closeMenu = (() => {
                 </nav>
 
                 <div class="md:hidden flex items-center gap-2 scale-90 origin-right">
-                    <LanguageSelector class="z-50" @click="closeMenu"/>
+                    <LanguageSelector class="z-50" @click="closeMenu" />
                     <!-- <ToggleTheme /> -->
-                <button @click="toggleMenu"
-                    class="md:hidden flex items-center gap-2 px-2 py-1 text-xs font-black uppercase  bg-muted/50 rounded-xs">
-                    <span>Menu</span>
-                    <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <line x1="4" x2="20" y1="9" y2="9" />
-                        <line x1="4" x2="20" y1="15" y2="15" />
-                    </svg>
-                    <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M18 6 6 18" />
-                        <path d="m6 6 12 12" />
-                    </svg>
-                </button>
-            </div>
+                    <button @click="toggleMenu"
+                        class="md:hidden flex items-center gap-2 px-3 py-1.5 text-xs font-black uppercase bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 rounded-md transition-all duration-200 border border-zinc-300 dark:border-zinc-600">
+                        <span>{{ $t('common.menu') }}</span>
+                        <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" x2="20" y1="9" y2="9" />
+                            <line x1="4" x2="20" y1="15" y2="15" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
 
             <MobileMenu :is-open="isMenuOpen" />
