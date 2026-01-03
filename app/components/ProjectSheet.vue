@@ -32,12 +32,20 @@ const linkUrl = computed(() => {
       <h3 class="text-lg font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
         {{ t(project.titleKey) }}
       </h3>
-      <div class="flex gap-2">
-        <span v-for="tag in project.stack.slice(0, 3)" :key="tag" class="text-[9px] font-bold px-2 py-1 border border-zinc-300 dark:border-zinc-700
-          text-zinc-700 dark:text-zinc-300 uppercase rounded-md">
-          {{ tag }}
-        </span>
-      </div>
+     <div class="flex flex-wrap gap-2 justify-end max-w-full">
+  <span
+    v-for="tag in project.stack"
+    :key="tag"
+    class="text-[9px] sm:text-[8px] md:text-[9px]
+      font-bold px-2 sm:px-1.5 md:px-2
+      py-1 sm:py-0.5 md:py-1
+      border border-zinc-300 dark:border-zinc-700
+      text-zinc-700 dark:text-zinc-300
+      uppercase rounded-md whitespace-nowrap">
+    {{ tag }}
+  </span>
+</div>
+
     </div>
 
     <!-- Body -->
