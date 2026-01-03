@@ -5,11 +5,11 @@ const { isDebug } = useLogLevel()
 
 <template>
   <section id="about" class="py-24 px-6 relative overflow-hidden bg-background dark:bg-zinc-900 text-foreground">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    <div class="container mx-auto max-w-[1400px]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
 
         <!-- Left Side: Narrative -->
-        <div class="lg:col-span-12 xl:col-span-7 space-y-10">
+        <div class="lg:col-span-12 xl:col-span-8 space-y-10">
           <div class="space-y-4">
             <div class="flex items-center gap-3">
               <span class="text-xs font-black text-primary dark:text-primary-light uppercase tracking-[0.3em]">
@@ -67,7 +67,7 @@ const { isDebug } = useLogLevel()
         </div>
 
         <!-- Right Side: Technical Journey Logs -->
-        <div class="lg:col-span-12 xl:col-span-5 space-y-8">
+        <div class="lg:col-span-12 xl:col-span-4 space-y-8">
           <div
             class="p-8 border border-border dark:border-zinc-700 bg-background dark:bg-zinc-900 shadow-technical rounded-md">
             <div class="flex items-center justify-between mb-8 pb-4 border-b border-border/50 dark:border-zinc-700">

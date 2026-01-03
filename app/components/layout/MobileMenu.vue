@@ -28,51 +28,16 @@ State: ACTIVE
         </pre>
             </div>
 
-            <div class="flex flex-col gap-1 font-black uppercase">
-                <NuxtLink :to="localePath('/')" @click="closeMenu"
-                    class="group py-1.5 border-b border-zinc-300/30 dark:border-zinc-700/40 flex justify-between items-end hover:text-zinc-950 dark:hover:text-white transition-all">
-                    <div class="flex flex-col">
-                        <span class="text-[10px] text-zinc-600 dark:text-zinc-400 font-bold mb-[-4px]">01/INDEX</span>
-                        <span>{{ $t('nav.home') }}</span>
-                    </div>
-                    <span
-                        class="text-xs font-bold text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity">#ROOT_DIR</span>
-                </NuxtLink>
-
-                <NuxtLink :to="localePath('/') + '#about'" @click="closeMenu"
-                    class="group py-1.5 border-b border-zinc-300/30 dark:border-zinc-700/40 flex justify-between items-end hover:text-zinc-950 dark:hover:text-white transition-all">
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] text-zinc-600 dark:text-zinc-400 font-bold mb-[-4px]">02/IDENTITY</span>
-                        <span>{{ $t('nav.about') }}</span>
-                    </div>
-                    <span
-                        class="text-xs font-bold text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity">#BIO_DATA</span>
-                </NuxtLink>
-
+            <div class="flex flex-col gap-2 font-black uppercase text-xs">
+                <NuxtLink :to="localePath('/')" @click="closeMenu" class="py-2 border-b border-zinc-300/20">01/{{
+                    $t('nav.home') }}</NuxtLink>
+                <NuxtLink :to="localePath('/') + '#about'" @click="closeMenu" class="py-2 border-b border-zinc-300/20">
+                    02/{{ $t('nav.about') }}</NuxtLink>
                 <NuxtLink :to="localePath('/') + '#projects'" @click="closeMenu"
-                    class="group py-1.5 border-b border-zinc-300/30 dark:border-zinc-700/40 flex justify-between items-end hover:text-zinc-950 dark:hover:text-white transition-all">
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] text-zinc-600 dark:text-zinc-400 font-bold mb-[-4px]">03/PRODUCTION</span>
-                        <span>{{ $t('nav.projects') }}</span>
-                    </div>
-                    <span
-                        class="text-xs font-bold text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity">#WORK_LOGS</span>
-                </NuxtLink>
-
+                    class="py-2 border-b border-zinc-300/20">03/{{ $t('nav.projects') }}</NuxtLink>
                 <NuxtLink :to="localePath('/') + '#contact'" @click="closeMenu"
-                    class="group py-1.5 border-b border-zinc-300/30 dark:border-zinc-700/40 flex justify-between items-end hover:text-zinc-950 dark:hover:text-white transition-all">
-                    <div class="flex flex-col">
-                        <span
-                            class="text-[10px] text-zinc-600 dark:text-zinc-400 font-bold mb-[-4px]">04/COMMUNICATION</span>
-                        <span>{{ $t('nav.contact') }}</span>
-                    </div>
-                    <span
-                        class="text-xs font-bold text-zinc-500 opacity-0 group-hover:opacity-100 transition-opacity">#PING_SYS</span>
-                </NuxtLink>
+                    class="py-2 border-b border-zinc-300/20">04/{{ $t('nav.contact') }}</NuxtLink>
             </div>
-
             <div class="mt-auto space-y-4">
                 <div class="flex flex-col gap-4">
                     <div class="flex items-center justify-between">
@@ -82,27 +47,13 @@ State: ACTIVE
                         </span>
                     </div>
 
-                    <div class="bg-zinc-200/40 dark:bg-zinc-950/50 p-4 rounded-lg flex flex-col gap-6">
+                    <div
+                        class="mt-auto pt-4 border-t border-dashed border-zinc-300/30 dark:border-zinc-800 flex justify-end">
+                        <LogLevelToggle />
+                    </div>
 
-                        <div class="flex items-center justify-between">
-                            <span
-                                class="text-[9px] font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-widest">
-                                Engine_Output
-                            </span>
-                            <LogLevelToggle />
-                        </div>
-
-                        <div
-                            class="flex items-center justify-end pt-4 border-t border-zinc-300/30 dark:border-zinc-700/30">
-                            <div class="flex flex-col gap-1 items-end">
-                                <span
-                                    class="text-[8px] font-bold text-zinc-500 dark:text-zinc-600 uppercase tracking-widest">
-                                    Power_Switch
-                                </span>
-                                <ToggleTheme />
-                            </div>
-                        </div>
-
+                    <div class="pt-4 flex justify-end">
+                        <ToggleTheme />
                     </div>
                 </div>
             </div>

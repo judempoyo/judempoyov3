@@ -32,12 +32,13 @@ const closeMenu = (() => {
             <div class="container mx-auto px-6 h-14 flex justify-between items-center">
                 <div class="flex items-center gap-6">
                     <NuxtLink :to="localePath('/')"
-                        class="text-sm  tracking-tighter hover:text-primary transition-all flex items-center gap-2">
-                        <span class="bg-foreground text-background px-1.5 py-0.5 select-none">JM</span>
+                        class="flex items-center gap-2 text-sm tracking-tight hover:opacity-70 transition">
+                        <span
+                            class="bg-black dark:bg-white text-white dark:text-black px-1.5 py-0.5 rounded-md">JM</span>
                         <span class="hidden sm:inline">JUDE_MPOYO</span>
                     </NuxtLink>
 
-                    <div class="hidden md:block scale-90 origin-left">
+                    <div class="hidden md:block">
                         <LogLevelToggle />
                     </div>
                 </div>
