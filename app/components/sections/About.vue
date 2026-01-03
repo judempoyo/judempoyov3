@@ -17,7 +17,7 @@ const { isDebug } = useLogLevel()
               </span>
               <div class="h-[1px] w-12 bg-primary dark:bg-primary-light"></div>
             </div>
-            <h2 class="text-4xl md:text-5xl font-black tracking-tighter max-w-xl text-foreground dark:text-zinc-100">
+            <h2 class="text-2xl md:text-4xl font-black tracking-tighter max-w-xl text-foreground dark:text-zinc-100">
               {{ t('about.title') }}
             </h2>
           </div>

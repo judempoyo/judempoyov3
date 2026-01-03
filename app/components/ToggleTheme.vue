@@ -13,7 +13,7 @@ const toggleTheme = () => {
 <template>
   <ClientOnly>
     <button @click="toggleTheme" class="group relative flex items-center w-20 h-8 p-1 rounded-lg
-        bg-zinc-200 dark:bg-zinc-800/60
+        bg-zinc-200 dark:bg-zinc-700
         transition-all duration-200 ease-out
         hover:bg-zinc-400/80 dark:hover:bg-zinc-700
         active:scale-95 overflow-hidden"

@@ -32,7 +32,7 @@ onUnmounted(() => window.removeEventListener('click', clickOutside))
 
 <template>
     <div ref="root" class="relative inline-block text-left">
-        <button @click="toggle" class="flex items-center gap-3 px-3 py-1.5 bg-zinc-200 dark:bg-zinc-800/60
+        <button @click="toggle" class="flex items-center gap-3 px-3 py-1.5 bg-zinc-200 dark:bg-zinc-700
         rounded-lg border border-zinc-300 dark:border-zinc-800
         transition-all duration-200 ease-out
         hover:bg-zinc-300/80 dark:hover:bg-zinc-800

@@ -6,21 +6,60 @@ const closeMenu = () => {
     const event = new CustomEvent('close-mobile-menu')
     window.dispatchEvent(event)
 }
+const emitClose = () => {
+  window.dispatchEvent(new CustomEvent('close-mobile-menu'))
+}
+
+const onKey = (e: KeyboardEvent) => {
+  if (e.key === 'Escape') emitClose()
+}
+
+let ignoreClick = false
+watch(() => props.isOpen, (open) => {
+  if (open) {
+    ignoreClick = true
+    nextTick(() => {
+      setTimeout(() => { ignoreClick = false }, 150)
+    })
+  }
+})
+
+const onClick = (e: MouseEvent) => {
+  if (ignoreClick) return
+  const menu = document.getElementById('mobile-debug-menu')
+  if (menu && !menu.contains(e.target as Node)) emitClose()
+}
+
+onMounted(() => {
+  window.addEventListener('keydown', onKey)
+  window.addEventListener('click', onClick)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('keydown', onKey)
+  window.removeEventListener('click', onClick)
+})
 </script>
 
+
 <template>
-    <Transition enter-active-class="transition duration-500 ease-out"
-        enter-from-class="transform -translate-y-8 opacity-0 blur-lg"
-        enter-to-class="transform translate-y-0 opacity-100 blur-0" leave-active-class="transition duration-300 ease-in"
-        leave-from-class="transform translate-y-0 opacity-100 blur-0"
-        leave-to-class="transform -translate-y-8 opacity-0 blur-lg">
-        <div v-show="isOpen" class="md:hidden absolute top-14 left-0 w-full min-h-[50vh]
-        bg-white/95 dark:bg-zinc-900/95
-        backdrop-blur-xl
-        shadow-[0_8px_32px_rgba(0,0,0,0.08)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)]
-        border-b border-zinc-200 dark:border-zinc-700
-        p-6 flex flex-col gap-6 overflow-hidden
-        rounded-b-2xl text-zinc-800 dark:text-zinc-200">
+  <Transition
+    enter-active-class="transition duration-500 ease-out"
+    enter-from-class="transform -translate-y-8 opacity-0 blur-lg"
+    enter-to-class="transform translate-y-0 opacity-100 blur-0"
+    leave-active-class="transition duration-300 ease-in"
+    leave-from-class="transform translate-y-0 opacity-100 blur-0"
+    leave-to-class="transform -translate-y-8 opacity-0 blur-lg"
+  >
+    <div
+      id="mobile-debug-menu"
+      v-show="isOpen"
+      class="md:hidden absolute top-14 left-0 w-full min-h-[50vh]
+      bg-white/95 dark:bg-zinc-900/95 backdrop-blur-xl
+      border-b border-zinc-200 dark:border-zinc-700
+      p-4 sm:p-6 flex flex-col gap-5 sm:gap-6 overflow-hidden
+      rounded-b-2xl text-zinc-800 dark:text-zinc-200"
+    >
 
             <div class="absolute top-0 right-0 p-4 opacity-20 pointer-events-none">
                 <pre class="text-[8px] leading-tight font-mono uppercase text-zinc-500 dark:text-zinc-600">{{ $t('mobile_menu.layout_init') }}

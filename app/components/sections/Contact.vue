@@ -22,7 +22,7 @@ const methods = [
                             </span>
                             <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
                         </div>
-                        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+                        <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">
                             {{ t('contact.title') }}
                         </h2>
                     </div>

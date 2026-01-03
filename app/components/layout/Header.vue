@@ -28,7 +28,7 @@ const closeMenu = (() => {
         <SystemNavBar />
 
         <div
-            class="fixed top-8 w-full z-50 bg-zinc-100/90 dark:bg-zinc-800/95 backdrop-blur-md border-b border-zinc-300/50 dark:border-zinc-700/50 shadow-sm dark:shadow-md transition-all duration-300 text-zinc-900 dark:text-zinc-300">
+            class="fixed top-8 w-full z-50 bg-zinc-100/90 dark:bg-zinc-800/95 backdrop-blur-md border-b border-zinc-300/50 dark:border-zinc-700/50 shadow-sm dark:shadow-md transition-all duration-300 text-zinc-900 dark:text-zinc-300 py-1">
             <div class="container mx-auto px-6 h-14 flex justify-between items-center">
                 <div class="flex items-center gap-6">
                     <NuxtLink :to="localePath('/')"

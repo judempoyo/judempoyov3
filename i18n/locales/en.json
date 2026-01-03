@@ -16,8 +16,8 @@
         "uptime": "UPTIME: 99.9%"
     },
     "hero": {
-        "role_primary": "BACKEND_SYSTEMS_ENGINEER",
-        "role_secondary": "FULLSTACK_DEVELOPER",
+        "role_primary": "BACKEND SYSTEMS ENGINEER",
+        "role_secondary": "FULLSTACK DEVELOPER",
         "manifesto_ver": "Manifesto_v1.0",
         "description_1": "// Specialization: Building robust architectures with Laravel.",
         "description_2": "// Major Upgrade: Migrating core engine to {target}.",

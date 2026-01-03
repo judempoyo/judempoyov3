@@ -16,8 +16,8 @@
         "uptime": "UPTIME: 99.9%"
     },
     "hero": {
-        "role_primary": "INGÉNIEUR_SYSTÈMES_BACKEND",
-        "role_secondary": "DÉVELOPPEUR_FULLSTACK",
+        "role_primary": "INGÉNIEUR SYSTÈMES BACKEND",
+        "role_secondary": "DÉVELOPPEUR FULLSTACK",
         "manifesto_ver": "Manifeste_v1.0",
         "description_1": "// Spécialité : Ingénierie de systèmes robustes sous Laravel.",
         "description_2": "// Pilotage : Migration de l'infrastructure vers {target}.",

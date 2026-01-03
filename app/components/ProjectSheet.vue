@@ -47,11 +47,13 @@ const linkUrl = computed(() => {
       </p>
 
       <!-- Debug Meta -->
-      <div v-if="isDebug" class="space-y-4 pt-4 border-t border-zinc-300 dark:border-zinc-700 border-dashed">
-        <div class="grid grid-cols-2 gap-6">
+      <div v-if="isDebug" class="space-y-4 pt-4 border-t border-dashed
+    border-zinc-300 dark:border-zinc-700
+    md:pt-4 pt-3 md:gap-6 gap-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div class="space-y-1">
             <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">INFRA:</span>
-            <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 whitespace-pre-line">
+            <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 whitespace-pre-line break-words">
               {{ t(project.metrics.infraKey) }}
             </p>
           </div>
@@ -59,13 +61,13 @@ const linkUrl = computed(() => {
           <div class="space-y-2">
             <div v-if="project.metrics.dockerSize" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">DOCKER SIZE:</span>
-              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400">
+              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 break-words">
                 {{ project.metrics.dockerSize }}
               </p>
             </div>
             <div v-if="project.metrics.loadTime" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">LATENCY:</span>
-              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400">
+              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 break-words">
                 {{ project.metrics.loadTime }}
               </p>
             </div>
@@ -76,12 +78,17 @@ const linkUrl = computed(() => {
           <span class="text-[9px] font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-600">
             BLUEPRINT:
           </span>
-          <pre class="mt-2 p-3 bg-zinc-100 dark:bg-zinc-950 text-green-700 dark:text-green-500/90
-            text-[9px] overflow-x-auto border border-zinc-300 dark:border-zinc-800 rounded-lg">
-          <code>{{ project.archDiagram }}</code>
-        </pre>
+
+          <pre class="mt-2 p-3 bg-zinc-100 dark:bg-zinc-950
+        text-green-700 dark:text-green-500/90
+        text-[9px] overflow-x-auto border
+        border-zinc-300 dark:border-zinc-800 rounded-lg
+        max-w-full whitespace-pre-wrap">
+      <code>{{ project.archDiagram }}</code>
+    </pre>
         </div>
       </div>
+
     </div>
 
     <!-- Footer -->

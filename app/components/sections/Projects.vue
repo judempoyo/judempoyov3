@@ -16,7 +16,7 @@ const { t } = useI18n()
                         </span>
                         <div class="h-[1px] w-12 bg-primary dark:bg-green-500"></div>
                     </div>
-                    <h2 class="text-4xl md:text-5xl font-black tracking-tighter text-foreground dark:text-zinc-100">
+                    <h2 class="text-2xl md:text-4xl font-black tracking-tighter text-foreground dark:text-zinc-100">
                         {{ t('projects.title') }}
                     </h2>
                     <p class="text-sm text-muted-foreground dark:text-zinc-400 uppercase tracking-widest font-bold">

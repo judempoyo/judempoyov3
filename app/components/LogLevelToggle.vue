@@ -7,7 +7,7 @@ const { level, toggleLevel } = useLogLevel()
         <span class="text-[10px] font-black tracking-widest uppercase italic">Sys_Output:</span>
 
         <button @click="toggleLevel" class="group relative flex items-center w-28 h-8 p-1 rounded-lg
-        bg-zinc-300/40 dark:bg-zinc-800/60 border border-zinc-300 dark:border-zinc-700
+        bg-zinc-300/40 dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-700
         transform transition-all duration-200 ease-out
         hover:scale-[1.02] active:scale-[0.96] overflow-hidden">
 
