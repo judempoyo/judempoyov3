@@ -1,118 +1,143 @@
 {
-    "common": {
-        "menu": "Menu"
+  "common": {
+    "menu": "Menu"
+  },
+  "nav": {
+    "home": "Index",
+    "about": "Identité",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "system_status": {
+    "online": "SYS_EN_LIGNE",
+    "location": "LOC: KOLWEZI, RDC",
+    "tz": "TZ: CAT (UTC+2)",
+    "learning": "MODE_APPRENTISSAGE: [GO, DOCKER, CLEAN_ARCH] // orientation future",
+    "uptime": "DISPONIBILITÉ: 99.9%",
+    "version": "ENGINE_v2.5.1"
+  },
+  "hero": {
+    "role_primary": "INGÉNIEUR SYSTÈMES BACKEND",
+    "role_secondary": "DÉVELOPPEUR FULLSTACK",
+    "manifesto_ver": "Manifeste_v1.0",
+    "description_1": "// Domaine: Services backend distribués & résilience API.",
+    "description_2": "// Objectif futur: Concevoir des systèmes performants avec {target}.",
+    "description_3": "// Focus: Performance, intégrité du code et haute disponibilité.",
+    "description_4": "// Principe: Design orienté conteneurs et services évolutifs (vision future).",
+    "social_proof": "4+ Ans d'expérience | 15+ Systèmes construits | Spécialiste Laravel | Future Stack: Go + Docker",
+    "cta_services": "[Parcourir_Projets]",
+    "cta_connect": "[Init_Connexion]"
+  },
+  "about": {
+    "section_id": "02/IDENTITÉ",
+    "title": "CONSTRUIRE_DES_SOLUTIONS_ROBUSTES. ESPRIT_CODE_PROPRE.",
+    "bio_1": "Développeur full-stack passionné par la création de solutions web robustes et élégantes. Stack principal : Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
+    "bio_2": "Basé à Kolwezi, RDC. Fort engagement pour le code propre, la résolution de problèmes et la livraison de systèmes prêts pour la production. Exploration du Cloud, IA et DevOps pour l'innovation évolutive.",
+    "bio_3": "Valeurs fondamentales : Construire des applications fiables, contribuer à l'open source, et explorer l'avenir de l'IT avec curiosité et ambition.",
+    "specs": {
+      "title": "Aperçu_Specs_Système:",
+      "os": "LINUX_UBUNTU",
+      "phase": "GO_LEARNING_BETA",
+      "arch": "CLEAN_ARCHITECTURE",
+      "reg": "KOL_CENTRAL_01",
+      "cluster_ready": "MULTI_SERVICE_READY (conceptuel)"
     },
-    "nav": {
-        "home": "Sommaire",
-        "about": "Identité",
-        "projects": "Production",
-        "contact": "Contact"
-    },
-    "system_status": {
-        "online": "STATUT_ACTIF",
-        "location": "LOC: KOLWEZI, RDC",
-        "tz": "TZ: CAT (UTC+2)",
-        "learning": "TRANSITION: [GO, DOCKER, NUXT]",
-        "uptime": "UPTIME: 99.9%"
-    },
-    "hero": {
-        "role_primary": "INGÉNIEUR SYSTÈMES BACKEND",
-        "role_secondary": "DÉVELOPPEUR FULLSTACK",
-        "manifesto_ver": "Manifeste_v1.0",
-        "description_1": "// Spécialité : Ingénierie de systèmes robustes sous Laravel.",
-        "description_2": "// Pilotage : Migration de l'infrastructure vers {target}.",
-        "description_3": "// Focus : Performance brute, stabilité et intégrité du code.",
-        "social_proof": "4+ Ans | 15+ Systèmes en Production | 99.9% Disponibilité",
-        "cta_services": "[Dossier_Production]",
-        "cta_connect": "[Établir_Connexion]"
-    },
-    "about": {
-        "section_id": "02/IDENTITÉ",
-        "title": "L'ARCHITECTURE_D'ABORD. LE_CODE_ENSUITE.",
-        "bio_1": "Basé à Kolwezi, RDC, j'ai forgé mon expertise dans l'écosystème PHP, en concevant des moteurs transactionnels complexes (ERP, Marketplaces).",
-        "bio_2": "Je traverse actuellement une phase de recalibrage technique : je migre mon socle vers Go et la conteneurisation. Pour moi, le code n'est qu'une composante ; l'architecture en est le moteur.",
-        "specs": {
-            "title": "Architecture_Snapshot :",
-            "os": "LINUX_DEBIAN",
-            "phase": "MIGRATION_GO_BETA",
-            "arch": "CLEAN_ARCHITECTURE",
-            "reg": "KOL_CENTRAL_01"
-        },
-        "stats": {
-            "exp": "Expérience_Compilée",
-            "services": "Projets_Déployés"
-        }
-    },
-    "journey": {
-        "title": "Sequence_Evolution.log",
-        "mode": "LECTURE_SEULE",
-        "logs": [
-            {
-                "date": "2021",
-                "event": "INIT_ENV_PHP",
-                "detail": "Maîtrise Laravel. Déploiement des premiers systèmes ERP critiques."
-            },
-            {
-                "date": "2023",
-                "event": "OPT_API_REST",
-                "detail": "Optimisation des flux de données pour plateformes multi-vendeurs."
-            },
-            {
-                "date": "2025",
-                "event": "GO_MIGRATION",
-                "detail": "Réusinage du backend. Intégration de Docker pour la montée en charge."
-            }
-        ]
-    },
-    "tech_stack": {
-        "config_file": "config_stack.yaml",
-        "languages": "langages_coeur",
-        "frameworks": "frameworks",
-        "infrastructure": "infrastructure",
-        "learning": "[EN_COURS]",
-        "proficiency": "# Niveau de maîtrise",
-        "end_config": "# Fin du fichier"
-    },
-    "projects": {
-        "section_id": "03/PRODUCTION",
-        "title": "UNITÉS_DE_PRODUCTION.",
-        "listing": "Inventaire : {count} services actifs // Source : Node_Production",
-        "debug_note": "TIP : ACTIVEZ LE MODE DEBUG POUR ACCÉDER AUX SCHÉMAS D'INFRASTRUCTURE ET AUX LATENCES.",
-        "uzaraka": {
-            "title": "Uzaraka Marketplace",
-            "description": "Moteur transactionnel multi-vendeurs avec acheminement logistique temps réel.",
-            "infra": "Service : Passerelle_API\nStockage : MySQL_Cluster\nCache : Session_Redis"
-        },
-        "jumpmanagement": {
-            "title": "Jump Management ERP",
-            "description": "Orchestration des stocks pour flux logistiques industriels.",
-            "infra": "Service : Noyau_ERP\nWorkers : Processeur_PHP\nPipelines : GH_Actions"
-        },
-        "jumpdatatable": {
-            "title": "Jump Datatable Engine",
-            "description": "Package d'orchestration de données haute performance pour cycles rapides.",
-            "infra": "Type : Bibliothèque_OS\nTests : Qualité_PHPUnit (100%)"
-        },
-        "cta_doc": "[Accéder_Doc]",
-        "cta_live": "[Visiter_le_Site]",
-        "cta_docs": "[Voir_Documentation]",
-        "cta_footer": "Besoin d'un audit sur votre architecture ?",
-        "cta_pdf": "Consulter le portfolio complet [.PDF]"
-    },
-    "contact": {
-        "section_id": "04/CONTACT",
-        "title": "INVITATION_COLLAB.",
-        "description": "Vous recherchez un architecte capable de gérer l'héritage PHP et l'avenir Cloud-Native ? Connectons nos infrastructures.",
-        "availability": "Disponible pour projets freelance",
-        "response_time": "Réponse sous 24h",
-        "shell_id": "Console_Interactive",
-        "shell_msg": "En attente de transmission...",
-        "privacy": "AUCUN_TRACKER_AUTORISÉ // SÉCURITÉ_PAR_DÉFAUT"
-    },
-    "mobile_menu": {
-        "system_config": "Configuration_Système",
-        "layout_init": "Layout_Init: OK",
-        "module_nav": "Module_Nav: CHARGÉ",
-        "state": "État: ACTIF"
+    "stats": {
+      "exp": "Temps_Compilation_Années",
+      "services": "Services_Construits",
+      "repositories": "Modules_OpenSource"
     }
+  },
+  "journey": {
+    "title": "Sequence_Evolution.log",
+    "mode": "LECTURE_SEULE",
+    "logs": [
+      {
+        "date": "2025",
+        "event": "RÔLE_FULLSTACK",
+        "detail": "Rejoint Jkantech comme Développeur Full-stack. Systèmes production avec Laravel, Vue.js, TypeScript."
+      },
+      {
+        "date": "2025",
+        "event": "APPRENTISSAGE_GO_DOCKER",
+        "detail": "Apprentissage de Go et Docker pour architecture backend moderne et conteneurisation."
+      },
+      {
+        "date": "2024",
+        "event": "DIPLÔME",
+        "detail": "Diplômé de l'ISC Lubumbashi. Lancement carrière freelance avec apps web et APIs."
+      },
+      {
+        "date": "2024",
+        "event": "PREMIER_STAGE",
+        "detail": "Stagiaire Dev Web Afrisoft. Outils internes, amélioration UI, collaboration équipe."
+      },
+      {
+        "date": "2022",
+        "event": "INIT_ÉTUDES",
+        "detail": "Début diplôme programmation ISC Lubumbashi. Dev logiciel, BDD, tech web."
+      }
+    ]
+  },
+  "tech_stack": {
+    "config_file": "config_stack.yaml",
+    "languages": "langages_principaux",
+    "frameworks": "frameworks_utilisés",
+    "infrastructure": "outils_infrastructure",
+    "orientation": "direction_backend_future",
+    "learning": "[ACCÉLÉRATION_GO_DOCKER]",
+    "proficiency": "# Niveau de Compétence Actuel",
+    "end_config": "# Fin de Configuration"
+  },
+  "projects": {
+    "section_id": "03/PRODUCTION",
+    "title": "PROJETS_PHARES.",
+    "listing": "Sélection : {count} projets phares // Source : Portfolio_Vitrine",
+    "debug_note": "TIP: BASCULER LE MODE DEBUG POUR ACCÉDER AUX SCHÉMAS ET MÉTRIQUES FUTURES.",
+    "uzaraka": {
+      "title": "Uzaraka",
+      "description": "Plateforme moderne de petites annonces pour RDC. Publiez, explorez et gérez vos annonces facilement. Fonctionnalités : recherche intelligente, messagerie sécurisée et suivi des performances.",
+      "infra": "Frontend_Nuxt3 / MySQL / Redis"
+    },
+    "jumpdatatable": {
+      "title": "Jump Datatable",
+      "description": "Package Composer pour intégrer des tableaux dynamiques en PHP. Tables responsives, triables, filtrables et paginées. Optimisé pour TailwindCSS et Bootstrap.",
+      "infra": "Librairie Open Source / PHPUnit"
+    },
+    "jumpapi": {
+      "title": "Jump API",
+      "description": "API REST PHP pour gérer utilisateurs et produits. CRUD structuré, JSON request/response et intégration MySQL. Scalabilité et sécurité intégrées.",
+      "infra": "PHP / MySQL / PDO"
+    },
+    "cta_doc": "[Accès_Doc]",
+    "cta_live": "[Visiter_le_Site]",
+    "cta_docs": "[Voir_Documentation]",
+    "cta_footer": "Envie de voir plus de mon travail ?",
+    "cta_github": "Explorer Mon Code sur GitHub"
+  },
+  "contact": {
+    "section_id": "04/CONTACT",
+    "title": "CONSTRUISONS_ENSEMBLE.",
+    "description": "Vous cherchez un développeur qui comprend le code propre et l'architecture évolutive ? Connectons-nous et construisons quelque chose de génial.",
+    "availability": "Disponible pour projets freelance",
+    "response_time": "Réponse sous 24h",
+    "shell_id": "Shell_Interactif",
+    "shell_msg": "En attente de transmission technique...",
+    "privacy": "NO_TRACKERS_ALLOWED // PRIVACY_BY_DEFAULT",
+    "channels": [
+      "Email",
+      "LinkedIn",
+      "GitHub",
+      "WhatsApp",
+      "API_Handshake"
+    ]
+  },
+  "mobile_menu": {
+    "system_config": "Configuration_Système",
+    "layout_init": "Initialisation_Layout: OK",
+    "module_nav": "Navigation_Modules: CHARGÉE",
+    "state": "État: ACTIF",
+    "viewport": "OPTIMISÉ_MOBILE",
+    "animations": "ANIMATIONS_LÉGÈRES_ACTIVÉES"
+  }
 }
