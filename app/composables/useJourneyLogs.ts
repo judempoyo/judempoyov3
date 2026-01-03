@@ -7,19 +7,29 @@ export interface JourneyLog {
 export const useJourneyLogs = () => {
     const logs: JourneyLog[] = [
         {
-            date: '2021',
+            date: '2025',
             eventKey: 'journey.logs.0.event',
             detailKey: 'journey.logs.0.detail'
         },
         {
-            date: '2023',
+            date: '2025',
             eventKey: 'journey.logs.1.event',
             detailKey: 'journey.logs.1.detail'
         },
         {
-            date: '2025',
+            date: '2024',
             eventKey: 'journey.logs.2.event',
             detailKey: 'journey.logs.2.detail'
+        },
+        {
+            date: '2024',
+            eventKey: 'journey.logs.3.event',
+            detailKey: 'journey.logs.3.detail'
+        },
+        {
+            date: '2022',
+            eventKey: 'journey.logs.4.event',
+            detailKey: 'journey.logs.4.detail'
         }
     ]
 

@@ -9,61 +9,55 @@ export interface Project {
         infraKey: string
     }
     archDiagram?: string
+    archKey?: string
     isLive: boolean
     liveUrl?: string
     docsUrl?: string
 }
 
 export const useProjects = () => {
-    const { t } = useI18n()
-
     const projects = computed<Project[]>(() => [
         {
             id: 'uzaraka',
             titleKey: 'projects.uzaraka.title',
             descriptionKey: 'projects.uzaraka.description',
-            stack: ['Laravel', 'Vue.js', 'MySQL', 'Docker'],
+            stack: ['Nuxt 3', 'Vue.js', 'TailwindCSS', 'TypeScript'],
             metrics: {
-                loadTime: '< 250ms',
-                dockerSize: '142MB (Compressed)',
+                loadTime: '< 300ms (local render)',
                 infraKey: 'projects.uzaraka.infra'
             },
-            archDiagram: 'CLIENT --> NGINX --> LARAVEL_CONTAINER --> MYSQL',
+            archDiagram: 'UI_ONLY (Front built with Nuxt 3)',
+            archKey: 'projects.uzaraka.arch',
             isLive: true,
-            liveUrl: 'https://uzaraka.com',
+            liveUrl: 'https://jude.jkantech.net/jude',
             docsUrl: undefined
-        },
-        {
-            id: 'jumpmanagement',
-            titleKey: 'projects.jumpmanagement.title',
-            descriptionKey: 'projects.jumpmanagement.description',
-            stack: ['Laravel', 'Filament', 'Alpine.js', 'Docker'],
-            metrics: {
-                loadTime: '~180ms',
-                dockerSize: '128MB',
-                infraKey: 'projects.jumpmanagement.infra'
-            },
-            archDiagram: 'ERP_CORE (PHP) --> WORK_QUEUE (REDIS) --> PHP_WORKER (AUDIT_LOGS)',
-            isLive: false,
-            liveUrl: undefined,
-            docsUrl: 'https://github.com/judempoyo/jump-management'
         },
         {
             id: 'jumpdatatable',
             titleKey: 'projects.jumpdatatable.title',
             descriptionKey: 'projects.jumpdatatable.description',
-            stack: ['PHP 8.x', 'TypeScript', 'Benchmarks'],
+            stack: ['PHP 8.x', 'TypeScript', 'TailwindCSS', 'Bootstrap'],
             metrics: {
-                loadTime: 'Latency_Optimized',
+                loadTime: 'Latency Optimized',
                 infraKey: 'projects.jumpdatatable.infra'
             },
             isLive: false,
-            liveUrl: undefined,
-            docsUrl: 'https://github.com/judempoyo/jump-datatable'
+            docsUrl: 'https://github.com/judempoyo/jumpDatatable'
+        },
+        {
+            id: 'jumpapi',
+            titleKey: 'projects.jumpapi.title',
+            descriptionKey: 'projects.jumpapi.description',
+            stack: ['PHP', 'MySQL', 'PDO', 'REST API'],
+            metrics: {
+                loadTime: 'Low latency',
+                infraKey: 'projects.jumpapi.infra'
+            },
+            archDiagram: 'PHP --> MySQL --> PDO --> JSON API',
+            isLive: false,
+            docsUrl: 'https://github.com/judempoyo/JumpApi'
         }
     ])
 
-    return {
-        projects
-    }
+    return { projects }
 }

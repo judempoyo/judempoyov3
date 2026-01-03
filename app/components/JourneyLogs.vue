@@ -4,9 +4,9 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="space-y-6">
+  <div class="space-y-3">
     <div v-for="(log, index) in logs" :key="index"
-      class="group relative pl-6 pb-6 border-l-2 border-zinc-300 dark:border-zinc-700 last:border-transparent hover:border-green-500 dark:hover:border-green-400 transition-colors">
+      class="group relative pl-6 pb-3 border-l-2 border-zinc-300 dark:border-zinc-700 last:border-transparent hover:border-green-500 dark:hover:border-green-400 transition-colors">
 
       <div
         class="absolute -left-[9px] top-0 w-4 h-4 rounded-full border-2 border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-900 group-hover:border-green-500 dark:group-hover:border-green-400 group-hover:bg-green-500 dark:group-hover:bg-green-400 transition-all">
