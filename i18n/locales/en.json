@@ -17,8 +17,8 @@
     "version": "ENGINE_v2.5.1"
   },
   "hero": {
-    "role_primary": "BACKEND SYSTEMS ENGINEER",
-    "role_secondary": "FULLSTACK DEVELOPER",
+    "role_primary": "FULLSTACK_DEVELOPER",
+    "role_secondary": "BACKEND_FOCUS",
     "manifesto_ver": "Manifesto_v1.0",
     "description_1": "// Domain: Backend systems, API resilience, modular architectures.",
     "description_2": "// Future Target: Designing high-performance services with {target}.",
@@ -37,9 +37,9 @@
     "specs": {
       "title": "System_Specs_Snapshot:",
       "os": "LINUX_UBUNTU",
-      "phase": "GO_LEARNING_BETA",
+      "phase": "GO_DOCKER_LEARNING",
       "arch": "CLEAN_ARCHITECTURE",
-      "reg": "KOL_CENTRAL_01",
+      "reg": "KWZ_DRC",
       "cluster_ready": "MULTI_SERVICE_READY (conceptual)"
     },
     "stats": {
@@ -54,28 +54,23 @@
     "logs": [
       {
         "date": "2025",
-        "event": "FULLSTACK_ROLE",
-        "detail": "Joined Jkantech as Full-stack Developer. Production systems with Laravel, Vue.js, TypeScript."
-      },
-      {
-        "date": "2025",
-        "event": "GO_DOCKER_LEARNING",
-        "detail": "Learning Go and Docker for modern backend architecture and containerization."
+        "event": "JKANTECH_FULLSTACK",
+        "detail": "Joined Jkantech as Full-stack Developer. Building production systems with Laravel, Vue.js, TypeScript. Learning Go & Docker."
       },
       {
         "date": "2024",
-        "event": "GRADUATION",
-        "detail": "Graduated from ISC Lubumbashi. Launched freelance career delivering web apps and APIs."
+        "event": "GRADUATION_FREELANCE",
+        "detail": "Graduated from ISC Lubumbashi. Launched freelance career delivering web apps, dashboards, and APIs."
       },
       {
-        "date": "2024",
-        "event": "FIRST_INTERNSHIP",
-        "detail": "Web Dev Intern at Afrisoft. Internal tools, UI improvements, team collaboration."
+        "date": "2023",
+        "event": "LARAVEL_AFRISOFT",
+        "detail": "Deep dive into Laravel ecosystem. Internship at Afrisoft building internal tools and improving UIs."
       },
       {
         "date": "2022",
-        "event": "INIT_STUDIES",
-        "detail": "Started programming degree at ISC Lubumbashi. Software dev, databases, web tech."
+        "event": "INIT_STUDIES_PHP",
+        "detail": "Started programming studies at ISC Lubumbashi. Learning PHP, MySQL, and web development fundamentals."
       }
     ]
   },

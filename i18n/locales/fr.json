@@ -17,8 +17,8 @@
     "version": "ENGINE_v2.5.1"
   },
   "hero": {
-    "role_primary": "INGÉNIEUR SYSTÈMES BACKEND",
-    "role_secondary": "DÉVELOPPEUR FULLSTACK",
+    "role_primary": "DÉVELOPPEUR_FULLSTACK",
+    "role_secondary": "FOCUS_BACKEND",
     "manifesto_ver": "Manifeste_v1.0",
     "description_1": "// Domaine: Services backend distribués & résilience API.",
     "description_2": "// Objectif futur: Concevoir des systèmes performants avec {target}.",
@@ -37,9 +37,9 @@
     "specs": {
       "title": "Aperçu_Specs_Système:",
       "os": "LINUX_UBUNTU",
-      "phase": "GO_LEARNING_BETA",
+      "phase": "APPRENTISSAGE_GO_DOCKER",
       "arch": "CLEAN_ARCHITECTURE",
-      "reg": "KOL_CENTRAL_01",
+      "reg": "KWZ_RDC",
       "cluster_ready": "MULTI_SERVICE_READY (conceptuel)"
     },
     "stats": {
@@ -54,28 +54,23 @@
     "logs": [
       {
         "date": "2025",
-        "event": "RÔLE_FULLSTACK",
-        "detail": "Rejoint Jkantech comme Développeur Full-stack. Systèmes production avec Laravel, Vue.js, TypeScript."
-      },
-      {
-        "date": "2025",
-        "event": "APPRENTISSAGE_GO_DOCKER",
-        "detail": "Apprentissage de Go et Docker pour architecture backend moderne et conteneurisation."
+        "event": "JKANTECH_FULLSTACK",
+        "detail": "Rejoint Jkantech comme Développeur Full-stack. Construction systèmes production avec Laravel, Vue.js, TypeScript. Apprentissage Go & Docker."
       },
       {
         "date": "2024",
-        "event": "DIPLÔME",
-        "detail": "Diplômé de l'ISC Lubumbashi. Lancement carrière freelance avec apps web et APIs."
+        "event": "DIPLÔME_FREELANCE",
+        "detail": "Diplômé de l'ISC Lubumbashi. Lancement carrière freelance avec livraison d'apps web, dashboards et APIs."
       },
       {
-        "date": "2024",
-        "event": "PREMIER_STAGE",
-        "detail": "Stagiaire Dev Web Afrisoft. Outils internes, amélioration UI, collaboration équipe."
+        "date": "2023",
+        "event": "LARAVEL_AFRISOFT",
+        "detail": "Immersion dans l'écosystème Laravel. Stage chez Afrisoft pour outils internes et amélioration UIs."
       },
       {
         "date": "2022",
-        "event": "INIT_ÉTUDES",
-        "detail": "Début diplôme programmation ISC Lubumbashi. Dev logiciel, BDD, tech web."
+        "event": "INIT_ÉTUDES_PHP",
+        "detail": "Début études programmation ISC Lubumbashi. Apprentissage PHP, MySQL et fondamentaux développement web."
       }
     ]
   },

@@ -62,7 +62,7 @@ useHead({
 
             <div class="space-y-6">
               <h1
-                class="text-[2rem] sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-[0.95] text-zinc-900 dark:text-zinc-100">
+                class="text-2xl sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-[0.95] text-zinc-900 dark:text-zinc-100">
                 <span
                   class="inline-block bg-gradient-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300 bg-clip-text text-transparent italic">{{
                     t("hero.role_primary") }}</span>
