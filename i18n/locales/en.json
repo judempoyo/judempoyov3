@@ -104,10 +104,10 @@
       "description": "Composer package for dynamic tables in PHP. Responsive, sortable, searchable, and paginated tables. Optimized for TailwindCSS and Bootstrap.",
       "infra": "OpenSource Library / PHPUnit"
     },
-    "jumpapi": {
-      "title": "Jump API",
-      "description": "PHP REST API for user and product management. Structured CRUD, JSON handling, MySQL integration. Built for scalability and security.",
-      "infra": "PHP / MySQL / PDO"
+    "laraapistarter": {
+      "title": "LaraApiStarter",
+      "description": "Production-ready Laravel 12 REST API starter with clean Action & DTO architecture. Focused on security, performance, and developer experience.",
+      "infra": "Laravel 12 / Actions / DTOs / Security-First"
     },
     "cta_doc": "[Access_Doc]",
     "cta_live": "[Visit_Live_Site]",

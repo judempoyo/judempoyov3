@@ -104,10 +104,10 @@
       "description": "Package Composer pour intégrer des tableaux dynamiques en PHP. Tables responsives, triables, filtrables et paginées. Optimisé pour TailwindCSS et Bootstrap.",
       "infra": "Librairie Open Source / PHPUnit"
     },
-    "jumpapi": {
-      "title": "Jump API",
-      "description": "API REST PHP pour gérer utilisateurs et produits. CRUD structuré, JSON request/response et intégration MySQL. Scalabilité et sécurité intégrées.",
-      "infra": "PHP / MySQL / PDO"
+    "laraapistarter": {
+      "title": "LaraApiStarter",
+      "description": "Starter Laravel 12 REST API prêt pour production avec architecture Actions & DTO propre. Focus sur sécurité, performance et expérience développeur.",
+      "infra": "Laravel 12 / Actions / DTOs / Sécurité-First"
     },
     "cta_doc": "[Accès_Doc]",
     "cta_live": "[Visiter_le_Site]",

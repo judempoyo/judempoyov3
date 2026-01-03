@@ -21,7 +21,7 @@ export const useProjects = () => {
             id: 'uzaraka',
             titleKey: 'projects.uzaraka.title',
             descriptionKey: 'projects.uzaraka.description',
-            stack: ['Nuxt 3', 'Vue.js', 'TailwindCSS', 'TypeScript'],
+            stack: ['Nuxt', 'TailwindCSS', 'TypeScript'],
             metrics: {
                 loadTime: '< 300ms (local render)',
                 infraKey: 'projects.uzaraka.infra'
@@ -29,14 +29,14 @@ export const useProjects = () => {
             archDiagram: 'UI_ONLY (Front built with Nuxt 3)',
             archKey: 'projects.uzaraka.arch',
             isLive: true,
-            liveUrl: 'https://jude.jkantech.net/jude',
+            liveUrl: 'https://uzaraka.com',
             docsUrl: undefined
         },
         {
             id: 'jumpdatatable',
             titleKey: 'projects.jumpdatatable.title',
             descriptionKey: 'projects.jumpdatatable.description',
-            stack: ['PHP 8.x', 'TypeScript', 'TailwindCSS', 'Bootstrap'],
+            stack: ['PHP 8.x', 'TailwindCSS', 'Bootstrap'],
             metrics: {
                 loadTime: 'Latency Optimized',
                 infraKey: 'projects.jumpdatatable.infra'
@@ -45,17 +45,16 @@ export const useProjects = () => {
             docsUrl: 'https://github.com/judempoyo/jumpDatatable'
         },
         {
-            id: 'jumpapi',
-            titleKey: 'projects.jumpapi.title',
-            descriptionKey: 'projects.jumpapi.description',
-            stack: ['PHP', 'MySQL', 'PDO', 'REST API'],
+            id: 'laraapistarter',
+            titleKey: 'projects.laraapistarter.title',
+            descriptionKey: 'projects.laraapistarter.description',
+            stack: ['Laravel 12', 'Actions', 'DTOs', 'REST API'],
             metrics: {
-                loadTime: 'Low latency',
-                infraKey: 'projects.jumpapi.infra'
+                infraKey: 'projects.laraapistarter.infra'
             },
-            archDiagram: 'PHP --> MySQL --> PDO --> JSON API',
+            archDiagram: 'Laravel 12 --> Actions/DTOs --> REST API',
             isLive: false,
-            docsUrl: 'https://github.com/judempoyo/JumpApi'
+            docsUrl: 'https://github.com/judempoyo/laraApiStarter'
         }
     ])
 
