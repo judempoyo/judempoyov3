@@ -27,7 +27,7 @@ useHead({
 <template>
   <div class="font-mono">
     <section
-      class="relative pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 overflow-hidden bg-gradient-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl">
+      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 overflow-hidden bg-gradient-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center" >
       <div
         class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20 select-none pointer-events-none">
         0xJM93

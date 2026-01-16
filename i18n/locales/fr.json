@@ -14,7 +14,7 @@
     "tz": "TZ: CAT (UTC+2)",
     "learning": "MODE_APPRENTISSAGE: [GO, DOCKER, CLEAN_ARCH] // orientation future",
     "uptime": "DISPONIBILITÉ: 99.9%",
-    "version": "ENGINE_v2.5.1"
+    "version": "ENGINE_v0.0.1"
   },
   "hero": {
     "role_primary": "DÉVELOPPEUR_FULLSTACK",
@@ -31,7 +31,7 @@
   "about": {
     "section_id": "02/IDENTITÉ",
     "title": "CONSTRUIRE_DES_SOLUTIONS_ROBUSTES. ESPRIT_CODE_PROPRE.",
-    "bio_1": "Développeur full-stack passionné par la création de solutions web robustes et élégantes. Stack principal : Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
+    "bio_1": "Développeur full-stack passionné par la création de solutions web robustes et élégantes. Stack principal : Laravel, Vue.js, TypeScript, Go, Docker.",
     "bio_2": "Basé à Kolwezi, RDC. Fort engagement pour le code propre, la résolution de problèmes et la livraison de systèmes prêts pour la production. Exploration du Cloud, IA et DevOps pour l'innovation évolutive.",
     "bio_3": "Valeurs fondamentales : Construire des applications fiables, contribuer à l'open source, et explorer l'avenir de l'IT avec curiosité et ambition.",
     "specs": {
@@ -64,13 +64,8 @@
       },
       {
         "date": "2023",
-        "event": "LARAVEL_AFRISOFT",
-        "detail": "Immersion dans l'écosystème Laravel. Stage chez Afrisoft pour outils internes et amélioration UIs."
-      },
-      {
-        "date": "2022",
-        "event": "INIT_ÉTUDES_PHP",
-        "detail": "Début études programmation ISC Lubumbashi. Apprentissage PHP, MySQL et fondamentaux développement web."
+        "event": "PHP_LARAVEL_AFRISOFT",
+        "detail": "Début études programmation ISC Lubumbashi. Apprentissage PHP, MySQL et fondamentaux développement web. Immersion dans l'écosystème Laravel. Stage chez Afrisoft pour outils internes et amélioration UIs."
       }
     ]
   },
@@ -92,12 +87,12 @@
     "uzaraka": {
       "title": "Uzaraka",
       "description": "Plateforme moderne de petites annonces pour RDC. Publiez, explorez et gérez vos annonces facilement. Fonctionnalités : recherche intelligente, messagerie sécurisée et suivi des performances.",
-      "infra": "Frontend_Nuxt3 / MySQL / Redis"
+      "infra": "Nuxt3"
     },
     "jumpdatatable": {
       "title": "Jump Datatable",
       "description": "Package Composer pour intégrer des tableaux dynamiques en PHP. Tables responsives, triables, filtrables et paginées. Optimisé pour TailwindCSS et Bootstrap.",
-      "infra": "Librairie Open Source / PHPUnit"
+      "infra": "Librairie Open Source / PHP"
     },
     "laraapistarter": {
       "title": "LaraApiStarter",

@@ -14,7 +14,7 @@
     "tz": "TZ: CAT (UTC+2)",
     "learning": "LEARNING_MODE: [GO, DOCKER, CLEAN_ARCH] // future backend direction",
     "uptime": "AVAILABILITY: 99.9%",
-    "version": "ENGINE_v2.5.1"
+    "version": "ENGINE_v0.0 .1"
   },
   "hero": {
     "role_primary": "FULLSTACK_DEVELOPER",
@@ -64,13 +64,8 @@
       },
       {
         "date": "2023",
-        "event": "LARAVEL_AFRISOFT",
-        "detail": "Deep dive into Laravel ecosystem. Internship at Afrisoft building internal tools and improving UIs."
-      },
-      {
-        "date": "2022",
-        "event": "INIT_STUDIES_PHP",
-        "detail": "Started programming studies at ISC Lubumbashi. Learning PHP, MySQL, and web development fundamentals."
+        "event": "PHP_LARAVEL_AFRISOFT",
+        "detail": "Started programming studies at ISC Lubumbashi. Learning PHP, MySQL, and web development fundamentals. Deep dive into Laravel ecosystem. Internship at Afrisoft building internal tools and improving UIs."
       }
     ]
   },
@@ -92,12 +87,12 @@
     "uzaraka": {
       "title": "Uzaraka",
       "description": "Modern classifieds platform for DRC. Post, browse, and manage listings easily. Features include smart search, secure messaging, and performance tracking.",
-      "infra": "Frontend_Nuxt3 / MySQL / Redis"
+      "infra": "Nuxt3"
     },
     "jumpdatatable": {
       "title": "Jump Datatable",
       "description": "Composer package for dynamic tables in PHP. Responsive, sortable, searchable, and paginated tables. Optimized for TailwindCSS and Bootstrap.",
-      "infra": "OpenSource Library / PHPUnit"
+      "infra": "OpenSource Library / PHP"
     },
     "laraapistarter": {
       "title": "LaraApiStarter",
