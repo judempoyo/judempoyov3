@@ -7,7 +7,6 @@ const { t } = useI18n()
     <section id="projects" class="py-24 px-6 bg-background dark:bg-zinc-900 text-foreground">
         <div class="container mx-auto max-w-[1400px]">
 
-            <!-- Section Header -->
             <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
@@ -29,13 +28,11 @@ const { t } = useI18n()
                 </div>
             </div>
 
-            <!-- Project List -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <ProjectSheet v-for="project in projects" :key="project.id" :project="project"
                     class="bg-muted/10 dark:bg-zinc-800 border border-border dark:border-zinc-700 rounded-md p-6 transition-colors" />
             </div>
 
-            <!-- Footer CTA -->
             <div
                 class="mt-16 p-8 bg-zinc-50 dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 border-dashed flex flex-col items-center gap-4 text-center rounded-lg hover:border-green-500 dark:hover:border-green-400 transition-all duration-300">
                 <span class="text-sm font-bold text-zinc-600 dark:text-zinc-400 uppercase tracking-wide">

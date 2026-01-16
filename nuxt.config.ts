@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    baseUrl: 'https://jude.jkantech.net/jude', // Replace with your actual domain
+    baseUrl: 'https://jude.jkantech.net/jude', 
     langDir: 'locales',
     strategy: 'prefix_except_default',
     defaultLocale: 'en',

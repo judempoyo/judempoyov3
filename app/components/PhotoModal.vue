@@ -9,7 +9,7 @@ const close = () => {
   emit('update:show', false)
 }
 
-// Close on ESC
+
 onMounted(() => {
   const handleEsc = (e: KeyboardEvent) => {
     if (e.key === 'Escape') close()
@@ -26,7 +26,6 @@ onMounted(() => {
         class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer">
         <div class="relative max-w-md w-full mx-4" @click.stop>
           <div class="bg-zinc-900 border-2 border-green-500 rounded-2xl p-6 shadow-2xl">
-            <!-- Header -->
             <div class="flex items-center justify-between mb-4">
               <div class="flex items-center gap-3">
                 <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
@@ -40,7 +39,6 @@ onMounted(() => {
               </button>
             </div>
             
-            <!-- Photo -->
             <div class="relative overflow-hidden rounded-xl border border-zinc-700">
               <img src="/judepic.jpeg" alt="Jude Mpoyo" 
                 class="w-full h-auto object-cover" />
@@ -50,7 +48,6 @@ onMounted(() => {
               </div>
             </div>
             
-            <!-- Footer -->
             <div class="mt-4 text-center">
               <p class="text-xs text-zinc-500 font-mono">
                 Easter egg activated! Press ESC or click outside to close.

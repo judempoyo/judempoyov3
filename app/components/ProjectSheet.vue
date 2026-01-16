@@ -26,7 +26,6 @@ const linkUrl = computed(() => {
     group hover:border-green-500 dark:hover:border-green-400
     transition-all duration-200 ease-out">
 
-    <!-- Header -->
     <div class="px-6 py-4 border-b border-zinc-200 dark:border-zinc-800
       flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/40 rounded-t-2xl">
       <h3 class="text-lg font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100">
@@ -48,13 +47,11 @@ const linkUrl = computed(() => {
 
     </div>
 
-    <!-- Body -->
     <div class="p-6 space-y-5">
       <p class="text-sm leading-relaxed text-zinc-700 dark:text-zinc-300">
         {{ t(project.descriptionKey) }}
       </p>
 
-      <!-- Debug Meta -->
       <div v-if="isDebug" class="space-y-4 border-t border-dashed
     border-zinc-300 dark:border-zinc-700
     md:pt-4 pt-3 md:gap-6 gap-3">
@@ -99,7 +96,6 @@ const linkUrl = computed(() => {
 
     </div>
 
-    <!-- Footer -->
     <div class="px-6 py-3 border-t border-zinc-200 dark:border-zinc-800
       flex justify-between items-center bg-zinc-50 dark:bg-zinc-800/30 rounded-b-2xl
       group-hover:bg-green-50 dark:group-hover:bg-green-900/10 transition-colors duration-200">
