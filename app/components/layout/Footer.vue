@@ -16,11 +16,11 @@
 
             <div class="flex gap-4">
                 <a class="text-green-600 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="github.com/judempoyo"
+          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://github.com/judempoyo"
                     target="_blank">GITHUB</a>
 
                 <a class="text-green-600 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="linkedin.com/in/jude-mpoyo"
+          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://linkedin.com/in/jude-mpoyo"
                     target="_blank">LINKEDIN</a>
             </div>
 
