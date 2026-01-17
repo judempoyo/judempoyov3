@@ -1,18 +1,27 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   future: {
     compatibilityVersion: 4,
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/color-mode'],
 
   // SSG Configuration
   ssr: true,
   nitro: {
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/']
+    }
+  },
+  css: ['~/assets/css/main.css'],
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      sourcemap: false 
     }
   },
 
@@ -29,7 +38,9 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       }
-    }
+    },
+    buildAssetsDir: 'assets',
+    baseURL: '/jude/',
   },
 
   i18n: {

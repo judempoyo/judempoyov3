@@ -186,6 +186,10 @@ const methods = [
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-zinc-300 dark:bg-zinc-800;
+  background-color: var(--color-zinc-300);
+}
+
+:root.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-zinc-800);
 }
 </style>
