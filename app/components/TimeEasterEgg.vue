@@ -16,7 +16,7 @@ onMounted(() => {
                 showNotification.value = false
             }
         }, 10000)
-    }, 90)
+    })
 })
 
 const handleClick = () => {
