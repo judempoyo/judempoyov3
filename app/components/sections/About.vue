@@ -27,7 +27,12 @@ onMounted(() => {
 
   // Journey box slide in
   if (journeyRef.value) {
-    slideIn(journeyRef.value, 'right', { x: 40, duration: 0.8 })
+    const isMobile = window.innerWidth < 1024
+    if (isMobile) {
+      slideIn(journeyRef.value, 'bottom', { y: 40, duration: 0.8 })
+    } else {
+      slideIn(journeyRef.value, 'right', { x: 40, duration: 0.8 })
+    }
   }
 })
 
@@ -77,7 +82,7 @@ onMounted(() => {
         <div class="lg:col-span-8 space-y-8">
           <div ref="sectionHeaderRef" class="space-y-4">
             <div class="flex items-center gap-3">
-              <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-[0.25em]">
+              <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-widest-xl">
                 {{ t("about.section_id") }}
               </span>
               <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
@@ -105,28 +110,28 @@ onMounted(() => {
                 <span class="text-green-600 dark:text-green-400">OS_ENV:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.os")
-                  }}</span>
+                }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">ENGINE_PHASE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.phase")
-                  }}</span>
+                }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">ARCH_PREF:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.arch")
-                  }}</span>
+                }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">REG_CODE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.reg")
-                  }}</span>
+                }}</span>
               </div>
             </div>
           </div>
@@ -134,7 +139,8 @@ onMounted(() => {
 
         <div class="lg:col-span-4">
           <div ref="journeyRef" class="sticky top-24">
-            <div class="p-4 sm:p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 rounded-xl">
+            <div
+              class="p-4 sm:p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 rounded-xl w-full max-w-full">
               <div class="flex items-center justify-between mb-4">
                 <h3
                   class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-600">

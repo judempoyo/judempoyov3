@@ -34,7 +34,7 @@ onMounted(() => {
             <div ref="headerRef" class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <span class="text-xs font-black text-primary dark:text-green-500 uppercase tracking-[0.3em]">
+                        <span class="text-xs font-black text-primary dark:text-green-500 uppercase tracking-widest-2xl">
                             {{ t('projects.section_id') }}
                         </span>
                         <div class="h-[1px] w-12 bg-primary dark:bg-green-500"></div>

@@ -9,7 +9,7 @@ const { level, toggleLevel } = useLogLevel()
         <button @click="toggleLevel" class="group relative flex items-center w-28 h-8 p-1 rounded-lg
         bg-zinc-300/40 dark:bg-zinc-700 border border-zinc-300 dark:border-zinc-700
         transform transition-all duration-200 ease-out
-        hover:scale-[1.02] active:scale-[0.96] overflow-hidden">
+        hover:scale-102 active:scale-96 overflow-hidden">
 
             <div class="absolute inset-y-1 flex items-center justify-center text-[9px] font-black uppercase
           rounded-md shadow-sm transition-all duration-150 ease-out

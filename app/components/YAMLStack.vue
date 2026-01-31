@@ -3,8 +3,8 @@ const { t } = useI18n()
 </script>
 <template>
   <div class="bg-zinc-900 dark:bg-black p-4 sm:p-6 border border-zinc-800 rounded-2xl
-    shadow-[0_8px_32px_rgba(0,0,0,0.4)] dark:shadow-[0_8px_32px_rgba(0,255,120,0.08)]
-    relative overflow-hidden group transition-all duration-200 ease-out">
+    shadow-dark-xl dark:shadow-green-glow
+    relative overflow-hidden group transition-all duration-200 ease-out w-full max-w-full">
 
     <div
       class="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 opacity-50 group-hover:opacity-100 transition-opacity pointer-events-none">

@@ -39,7 +39,7 @@ onUnmounted(() => window.removeEventListener('click', clickOutside))
         rounded-lg border border-zinc-300 dark:border-zinc-800
         transition-all duration-200 ease-out
         hover:bg-zinc-300/80 dark:hover:bg-zinc-800
-        hover:scale-[1.02] active:scale-[0.97] overflow-hidden relative">
+        hover:scale-102 active:scale-97 overflow-hidden relative">
 
             <div class="flex flex-col items-start leading-none">
                 <span class="text-[7px] hidden sm:block font-black opacity-50 uppercase mb-0.5">Locale_ID</span>
@@ -63,7 +63,7 @@ onUnmounted(() => window.removeEventListener('click', clickOutside))
 
         <div v-if="isOpen" class="absolute right-0 mt-2 w-32 origin-top-right rounded-xl
         bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800
-        shadow-lg dark:shadow-[0_6px_28px_rgba(0,0,0,0.6)]
+        shadow-lg dark:shadow-dark-lg
         overflow-hidden transition-colors">
 
             <div class="p-1 font-mono">

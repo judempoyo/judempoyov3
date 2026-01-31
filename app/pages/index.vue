@@ -32,7 +32,12 @@ onMounted(() => {
   }
 
   if (yamlRef.value) {
-    slideIn(yamlRef.value, 'right', { x: 60, duration: 1, delay: 0.3 })
+    const isMobile = window.innerWidth < 1024
+    if (isMobile) {
+      slideIn(yamlRef.value, 'bottom', { y: 40, duration: 1, delay: 0.3 })
+    } else {
+      slideIn(yamlRef.value, 'right', { x: 60, duration: 1, delay: 0.3 })
+    }
   }
 })
 
@@ -103,7 +108,7 @@ useHead({
 
             <div ref="titleRef" class="space-y-6">
               <h1
-                class="text-2xl sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-[0.95] text-zinc-900 dark:text-zinc-100">
+                class="text-2xl sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-compact text-zinc-900 dark:text-zinc-100">
                 <span
                   class="inline-block bg-linear-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300 bg-clip-text text-transparent">{{
                     t("hero.role_primary") }}</span>
@@ -111,7 +116,7 @@ useHead({
               </h1>
               <div class="flex items-center gap-4 py-3">
                 <div class="h-0.5 w-20 bg-linear-to-r from-green-600 to-transparent dark:from-green-400"></div>
-                <span class="text-xs font-black uppercase tracking-[0.4em] text-zinc-500 dark:text-zinc-400">
+                <span class="text-xs font-black uppercase tracking-widest-3xl text-zinc-500 dark:text-zinc-400">
                   {{ t("hero.manifesto_ver") }}
                 </span>
               </div>
@@ -127,18 +132,18 @@ useHead({
 
             <div ref="ctaRef" class="flex flex-col sm:flex-row gap-4 pt-4">
               <NuxtLink :to="localePath('/') + '#projects'"
-                class="inline-flex items-center justify-center h-11 px-8 min-w-40 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-xs uppercase tracking-widest rounded-md shadow-sm transform transition-all duration-200 ease-out hover:bg-green-600 hover:dark:bg-green-600  hover:text-white dark:hover:text-white hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
+                class="inline-flex items-center justify-center h-11 px-8 min-w-40 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-xs uppercase tracking-widest rounded-md shadow-sm transform transition-all duration-200 ease-out hover:bg-green-600 hover:dark:bg-green-600  hover:text-white dark:hover:text-white hover:scale-103 active:scale-97 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
                 {{ t("hero.cta_services") }}
               </NuxtLink>
 
               <NuxtLink :to="localePath('/') + '#contact'"
-                class="inline-flex items-center justify-center h-11 px-8 min-w-40 border-2 border-zinc-300 dark:border-zinc-700 text-xs uppercase tracking-widest text-zinc-900 dark:text-zinc-300 rounded-md shadow-sm transform transition-all duration-200 ease-out hover:border-zinc-900 dark:hover:border-green-500 hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
+                class="inline-flex items-center justify-center h-11 px-8 min-w-40 border-2 border-zinc-300 dark:border-zinc-700 text-xs uppercase tracking-widest text-zinc-900 dark:text-zinc-300 rounded-md shadow-sm transform transition-all duration-200 ease-out hover:border-zinc-900 dark:hover:border-green-500 hover:scale-103 active:scale-97 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
                 {{ t("hero.cta_connect") }}
               </NuxtLink>
             </div>
           </div>
 
-          <div ref="yamlRef" class="lg:col-span-4 relative mt-8 lg:mt-0">
+          <div ref="yamlRef" class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
             <YAMLStack />
 
             <div class="absolute -bottom-4 -left-4 bg-green-600 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">

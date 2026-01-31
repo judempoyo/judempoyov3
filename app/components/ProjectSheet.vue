@@ -22,7 +22,7 @@ const linkUrl = computed(() => {
 
 <template>
   <div class="border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900
-    rounded-2xl shadow-sm dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)]
+    rounded-2xl shadow-sm dark:shadow-dark-sm
     group hover:border-green-500 dark:hover:border-green-400
     transition-all duration-200 ease-out">
 

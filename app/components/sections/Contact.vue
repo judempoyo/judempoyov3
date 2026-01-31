@@ -21,7 +21,12 @@ onMounted(() => {
 
   // Terminal box slide in
   if (terminalRef.value) {
-    slideIn(terminalRef.value, 'right', { x: 40, duration: 0.8 })
+    const isMobile = window.innerWidth < 1024
+    if (isMobile) {
+      slideIn(terminalRef.value, 'bottom', { y: 40, duration: 0.8 })
+    } else {
+      slideIn(terminalRef.value, 'right', { x: 40, duration: 0.8 })
+    }
   }
 })
 
@@ -44,10 +49,10 @@ const methods = [
   <section id="contact" class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors">
     <div class="container mx-auto max-w-[1400px]">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div ref="sectionHeaderRef" class="space-y-8">
+        <div ref="sectionHeaderRef" class="space-y-8 min-w-0 w-full">
           <div class="space-y-4">
             <div class="flex items-center gap-3">
-              <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-[0.25em]">
+              <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-widest-xl">
                 {{ t("contact.section_id") }}
               </span>
               <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
@@ -84,7 +89,7 @@ const methods = [
 
           <div ref="contactMethodsRef" class="space-y-4 pt-4">
             <a v-for="m in methods" :key="m.label" :href="m.action" target="_blank"
-              class="flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:scale-[1.03] active:scale-[0.97] hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black">
+              class="flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:scale-103 active:scale-97 hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black">
               <div class="space-y-1">
                 <span class="text-[10px] font-black uppercase text-zinc-500 dark:text-zinc-600">
                   {{ m.label }}
@@ -105,15 +110,9 @@ const methods = [
         </div>
 
         <div ref="terminalRef"
-          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 sm:p-8 shadow-sm dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
-          <div class="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] pointer-events-none" style="
-              background-image: radial-gradient(
-                circle,
-                currentColor 1px,
-                transparent 1px
-              );
-              background-size: 18px 18px;
-            "></div>
+          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 sm:p-8 shadow-sm dark:shadow-dark-md relative self-center overflow-hidden w-full max-w-full">
+          <div class="absolute inset-0 opacity-4 dark:opacity-2 pointer-events-none bg-dot-pattern bg-dot-pattern">
+          </div>
 
           <div class="relative space-y-5">
             <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
