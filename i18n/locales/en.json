@@ -100,8 +100,8 @@
       "infra": "Laravel 12 / Actions / DTOs / Security-First"
     },
     "cta_doc": "[Access_Doc]",
-    "cta_live": "[Visit_Live_Site]",
-    "cta_docs": "[View_Documentation]",
+    "cta_live": "[Visit_Site]",
+    "cta_docs": "[View_Source_Code]",
     "cta_footer": "Want to see more of my work?",
     "cta_github": "Explore My Code on GitHub"
   },
