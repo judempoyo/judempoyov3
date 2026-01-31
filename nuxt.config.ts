@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
-      sourcemap: false 
+      sourcemap: false
     }
   },
 
@@ -44,8 +44,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
-    baseUrl: 'https://jude.jkantech.net/jude', 
-    langDir: 'locales',
+    baseUrl: 'https://jude.jkantech.net/jude',
     strategy: 'prefix_except_default',
     defaultLocale: 'en',
     locales: [
