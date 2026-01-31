@@ -7,7 +7,9 @@ interface LocaleObject {
     [key: string]: any
 }
 
-const { locale, locales, setLocale } = useI18n()
+const { locale, locales } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+const router = useRouter()
 
 const localeList = computed(() => locales.value as LocaleObject[])
 const isOpen = ref(false)
@@ -15,8 +17,9 @@ const root = ref<HTMLElement | null>(null)
 
 const toggle = () => { isOpen.value = !isOpen.value }
 
-const select = (code: string) => {
-    setLocale(code as any)
+const select = async (code: string) => {
+    const path = switchLocalePath(code as 'en' | 'fr')
+    await router.push(path)
     isOpen.value = false
 }
 

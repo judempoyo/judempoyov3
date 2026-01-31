@@ -105,28 +105,28 @@ onMounted(() => {
                 <span class="text-green-600 dark:text-green-400">OS_ENV:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.os")
-                }}</span>
+                  }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">ENGINE_PHASE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.phase")
-                }}</span>
+                  }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">ARCH_PREF:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.arch")
-                }}</span>
+                  }}</span>
               </div>
 
               <div class="break-words">
                 <span class="text-green-600 dark:text-green-400">REG_CODE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.reg")
-                }}</span>
+                  }}</span>
               </div>
             </div>
           </div>
@@ -134,18 +134,19 @@ onMounted(() => {
 
         <div class="lg:col-span-4">
           <div ref="journeyRef" class="sticky top-24">
-            <div class="p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 rounded-xl">
+            <div class="p-4 sm:p-6 bg-zinc-50 dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-800 rounded-xl">
               <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-600">
+                <h3
+                  class="text-[10px] sm:text-xs font-black uppercase tracking-widest text-zinc-500 dark:text-zinc-600">
                   {{ t("journey.title") }}
                 </h3>
                 <span
-                  class="text-[9px] font-bold px-2 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded">
+                  class="text-[8px] sm:text-[9px] font-bold px-2 py-1 bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 rounded">
                   {{ t("journey.mode") }}
                 </span>
               </div>
 
-              <div class="overflow-y-auto pr-2 pl-4 custom-scrollbar">
+              <div class="overflow-y-auto pr-2 pl-4 custom-scrollbar max-h-[300px] sm:max-h-none">
                 <JourneyLogs />
               </div>
             </div>

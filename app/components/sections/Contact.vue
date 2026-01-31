@@ -67,7 +67,7 @@ const methods = [
               <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               <span class="text-xs font-bold text-green-700 dark:text-green-400">{{
                 t("contact.availability")
-                }}</span>
+              }}</span>
             </div>
             <div
               class="flex items-center gap-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg">
@@ -78,7 +78,7 @@ const methods = [
               </svg>
               <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300">{{
                 t("contact.response_time")
-                }}</span>
+              }}</span>
             </div>
           </div>
 
@@ -105,7 +105,7 @@ const methods = [
         </div>
 
         <div ref="terminalRef"
-          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
+          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 sm:p-8 shadow-sm dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
           <div class="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] pointer-events-none" style="
               background-image: radial-gradient(
                 circle,
@@ -117,12 +117,14 @@ const methods = [
 
           <div class="relative space-y-5">
             <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
-              <span class="text-[11px] font-black uppercase tracking-widest text-green-600 dark:text-green-400">
+              <span
+                class="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-green-600 dark:text-green-400">
                 {{ t("contact.shell_id") }}
               </span>
             </div>
 
-            <div class="font-mono text-[12px] space-y-3 h-60 overflow-y-auto text-zinc-800 dark:text-zinc-400">
+            <div
+              class="font-mono text-[10px] sm:text-[12px] space-y-3 h-48 sm:h-60 overflow-y-auto text-zinc-800 dark:text-zinc-400">
               <div class="flex gap-2">
                 <span class="opacity-60">jude@system:~$</span>
                 <span>curl -X POST /api/v1/contact</span>

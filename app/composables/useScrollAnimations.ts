@@ -27,7 +27,7 @@ export const useScrollAnimations = () => {
         if (prefersReducedMotion.value) return
 
         const defaults = {
-            duration: 0.8,
+            duration: 1.2,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: element,
@@ -86,8 +86,8 @@ export const useScrollAnimations = () => {
         if (prefersReducedMotion.value) return
 
         const defaults = {
-            duration: 0.6,
-            stagger: 0.15,
+            duration: 0.9,
+            stagger: 0.2,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: elements,

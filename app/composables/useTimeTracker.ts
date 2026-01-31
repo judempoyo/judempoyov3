@@ -6,7 +6,7 @@ export const useTimeTracker = () => {
     let startTime = Date.now()
 
     const STORAGE_KEY = 'portfolio_easter_egg_triggered'
-    const TRIGGER_TIME = 90 // seconds
+    const TRIGGER_TIME =30 // seconds
 
     onMounted(() => {
         // Check if already triggered in this session
