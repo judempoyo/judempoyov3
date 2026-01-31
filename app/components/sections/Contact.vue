@@ -1,5 +1,30 @@
 <script setup lang="ts">
 const { t } = useI18n();
+
+// Scroll animations
+const { fadeIn, staggerIn, slideIn } = useScrollAnimations()
+const sectionHeaderRef = ref<HTMLElement | null>(null)
+const contactMethodsRef = ref<HTMLElement | null>(null)
+const terminalRef = ref<HTMLElement | null>(null)
+
+onMounted(() => {
+  // Section header animation
+  if (sectionHeaderRef.value) {
+    fadeIn(sectionHeaderRef.value, { y: 30, duration: 0.8 })
+  }
+
+  // Contact methods stagger
+  if (contactMethodsRef.value) {
+    const methods = contactMethodsRef.value.querySelectorAll('a')
+    staggerIn(methods as any, { stagger: 0.15, y: 20 })
+  }
+
+  // Terminal box slide in
+  if (terminalRef.value) {
+    slideIn(terminalRef.value, 'right', { x: 40, duration: 0.8 })
+  }
+})
+
 const methods = [
   { label: "ENDPOINT_SMTP", val: "mpoyojude0@gmail.com", action: "mailto:mpoyojude0@gmail.com" },
   {
@@ -16,18 +41,13 @@ const methods = [
 </script>
 
 <template>
-  <section
-    id="contact"
-    class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors"
-  >
+  <section id="contact" class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors">
     <div class="container mx-auto max-w-[1400px]">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div class="space-y-8">
+        <div ref="sectionHeaderRef" class="space-y-8">
           <div class="space-y-4">
             <div class="flex items-center gap-3">
-              <span
-                class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-[0.25em]"
-              >
+              <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-[0.25em]">
                 {{ t("contact.section_id") }}
               </span>
               <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
@@ -37,55 +57,36 @@ const methods = [
             </h2>
           </div>
 
-          <p
-            class="text-sm md:text-base leading-relaxed text-zinc-700 dark:text-zinc-400 max-w-md"
-          >
+          <p class="text-sm md:text-base leading-relaxed text-zinc-700 dark:text-zinc-400 max-w-md">
             {{ t("contact.description") }}
           </p>
 
           <div class="flex flex-wrap gap-3 pt-2">
             <div
-              class="flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg"
-            >
+              class="flex items-center gap-2 px-3 py-1.5 bg-green-100 dark:bg-green-900/30 border border-green-300 dark:border-green-700 rounded-lg">
               <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
               <span class="text-xs font-bold text-green-700 dark:text-green-400">{{
                 t("contact.availability")
-              }}</span>
+                }}</span>
             </div>
             <div
-              class="flex items-center gap-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg"
-            >
-              <svg
-                class="w-3 h-3 text-zinc-600 dark:text-zinc-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+              class="flex items-center gap-2 px-3 py-1.5 bg-zinc-100 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 rounded-lg">
+              <svg class="w-3 h-3 text-zinc-600 dark:text-zinc-400" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <span class="text-xs font-bold text-zinc-700 dark:text-zinc-300">{{
                 t("contact.response_time")
-              }}</span>
+                }}</span>
             </div>
           </div>
 
-          <div class="space-y-4 pt-4">
-            <a
-              v-for="m in methods"
-              :key="m.label"
-              :href="m.action"
-              target="_blank"
-              class="flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:scale-[1.03] active:scale-[0.97] hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black"
-            >
+          <div ref="contactMethodsRef" class="space-y-4 pt-4">
+            <a v-for="m in methods" :key="m.label" :href="m.action" target="_blank"
+              class="flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:scale-[1.03] active:scale-[0.97] hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black">
               <div class="space-y-1">
-                <span
-                  class="text-[10px] font-black uppercase text-zinc-500 dark:text-zinc-600"
-                >
+                <span class="text-[10px] font-black uppercase text-zinc-500 dark:text-zinc-600">
                   {{ m.label }}
                 </span>
                 <p class="text-xs font-bold text-zinc-900 dark:text-zinc-200">
@@ -93,18 +94,9 @@ const methods = [
                 </p>
               </div>
 
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="opacity-60 group-hover:opacity-100 transition-opacity translate-x-0 group-hover:translate-x-1"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+                class="opacity-60 group-hover:opacity-100 transition-opacity translate-x-0 group-hover:translate-x-1">
                 <path d="M5 12h14" />
                 <path d="m12 5 7 7-7 7" />
               </svg>
@@ -112,35 +104,25 @@ const methods = [
           </div>
         </div>
 
-        <div
-          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] pointer-events-none"
-            style="
+        <div ref="terminalRef"
+          class="bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-8 shadow-sm dark:shadow-[0_4px_24px_rgba(0,0,0,0.5)] relative overflow-hidden">
+          <div class="absolute inset-0 opacity-[0.04] dark:opacity-[0.02] pointer-events-none" style="
               background-image: radial-gradient(
                 circle,
                 currentColor 1px,
                 transparent 1px
               );
               background-size: 18px 18px;
-            "
-          ></div>
+            "></div>
 
           <div class="relative space-y-5">
-            <div
-              class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4"
-            >
-              <span
-                class="text-[11px] font-black uppercase tracking-widest text-green-600 dark:text-green-400"
-              >
+            <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
+              <span class="text-[11px] font-black uppercase tracking-widest text-green-600 dark:text-green-400">
                 {{ t("contact.shell_id") }}
               </span>
             </div>
 
-            <div
-              class="font-mono text-[12px] space-y-3 h-60 overflow-y-auto text-zinc-800 dark:text-zinc-400"
-            >
+            <div class="font-mono text-[12px] space-y-3 h-60 overflow-y-auto text-zinc-800 dark:text-zinc-400">
               <div class="flex gap-2">
                 <span class="opacity-60">jude@system:~$</span>
                 <span>curl -X POST /api/v1/contact</span>
@@ -163,9 +145,7 @@ const methods = [
             </div>
 
             <div class="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-              <p
-                class="text-[10px] font-bold uppercase tracking-wide text-center opacity-60"
-              >
+              <p class="text-[10px] font-bold uppercase tracking-wide text-center opacity-60">
                 {{ t("contact.privacy") }}
               </p>
             </div>
