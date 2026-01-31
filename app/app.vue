@@ -22,6 +22,7 @@ useSeoMeta({
 
 
 <template>
+  <TimeEasterEgg />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
