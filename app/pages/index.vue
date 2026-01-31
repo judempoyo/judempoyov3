@@ -110,7 +110,7 @@ useHead({
             <div class="flex flex-col sm:flex-row gap-4 pt-4">
               <NuxtLink
                 :to="localePath('/') + '#projects'"
-                class="inline-flex items-center justify-center h-11 px-8 min-w-40 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-xs uppercase tracking-widest rounded-md shadow-sm transform transition-all duration-200 ease-out hover:bg-green-600 hover:text-white dark:hover:text-white hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900"
+                class="inline-flex items-center justify-center h-11 px-8 min-w-40 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-xs uppercase tracking-widest rounded-md shadow-sm transform transition-all duration-200 ease-out hover:bg-green-600 hover:dark:bg-green-600  hover:text-white dark:hover:text-white hover:scale-[1.03] active:scale-[0.97] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900"
               >
                 {{ t("hero.cta_services") }}
               </NuxtLink>
