@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const { t } = useI18n();
 
-// Scroll animations
 const { fadeIn, staggerIn, slideIn } = useScrollAnimations()
 const sectionHeaderRef = ref<HTMLElement | null>(null)
 const bioRef = ref<HTMLElement | null>(null)
@@ -9,39 +8,33 @@ const specsRef = ref<HTMLElement | null>(null)
 const journeyRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  // Section header animation
   if (sectionHeaderRef.value) {
-    fadeIn(sectionHeaderRef.value, { y: 30, duration: 0.8 })
+    fadeIn(sectionHeaderRef.value, { y: 30 })
   }
 
-  // Bio paragraphs stagger
   if (bioRef.value) {
     const paragraphs = bioRef.value.querySelectorAll('p')
     staggerIn(paragraphs as any, { stagger: 0.2, y: 20 })
   }
 
-  // Specs box slide in
   if (specsRef.value) {
-    slideIn(specsRef.value, 'bottom', { y: 40, duration: 0.8 })
+    slideIn(specsRef.value, 'bottom')
   }
 
-  // Journey box slide in
   if (journeyRef.value) {
     const isMobile = window.innerWidth < 1024
     if (isMobile) {
-      slideIn(journeyRef.value, 'bottom', { y: 40, duration: 0.8 })
+      slideIn(journeyRef.value, 'bottom')
     } else {
-      slideIn(journeyRef.value, 'right', { x: 40, duration: 0.8 })
+      slideIn(journeyRef.value, 'right')
     }
   }
 })
 
-// Easter egg state
 const showPhoto = ref(false);
 const clickCount = ref(0);
 let clickTimer: ReturnType<typeof setTimeout> | null = null;
 
-// Triple-click easter egg on name
 const handleNameClick = () => {
   clickCount.value++;
 
@@ -57,7 +50,6 @@ const handleNameClick = () => {
   }, 500);
 };
 
-// Keyboard shortcut: Ctrl+Shift+J
 onMounted(() => {
   const handleKeyPress = (e: KeyboardEvent) => {
     if (e.ctrlKey && e.shiftKey && e.key === "J") {

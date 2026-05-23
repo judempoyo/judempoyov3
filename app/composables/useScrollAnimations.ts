@@ -1,195 +1,113 @@
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
 export const useScrollAnimations = () => {
-    const prefersReducedMotion = ref(false)
-    const ctx = ref<gsap.Context | null>(null)
+  const prefersReducedMotion = ref(false)
+  const observers = ref<IntersectionObserver[]>([])
+  const pendingElements = ref<Array<{ el: HTMLElement; className: string }>>([])
 
-    onMounted(() => {
-        // Check for reduced motion preference
-        const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-        prefersReducedMotion.value = mediaQuery.matches
+  onMounted(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    prefersReducedMotion.value = mediaQuery.matches
 
-        // Register GSAP plugin
-        if (typeof window !== 'undefined') {
-            gsap.registerPlugin(ScrollTrigger)
-            // Use gsap.context for automatic cleanup of all animations/triggers created within it
-            ctx.value = gsap.context(() => { })
-        }
-
-        // Listen for changes
-        mediaQuery.addEventListener('change', (e) => {
-            prefersReducedMotion.value = e.matches
-        })
+    mediaQuery.addEventListener('change', (e) => {
+      prefersReducedMotion.value = e.matches
     })
+  })
 
-    const addToContext = (fn: () => void) => {
-        if (ctx.value) {
-            ctx.value.add(fn)
-        } else {
-            // Fallback if context isn't ready (shouldn't happen in onMounted)
-            fn()
-        }
+  const observe = (
+    element: HTMLElement | null,
+    animClass: string,
+    options: { delay?: number; threshold?: number } = {}
+  ) => {
+    if (!element || import.meta.server) return
+    if (prefersReducedMotion.value) {
+      element.style.opacity = '1'
+      return
     }
 
-    /**
-     * Fade in element on scroll
-     */
-    const fadeIn = (element: HTMLElement | string, options: any = {}) => {
-        if (prefersReducedMotion.value) return
+    element.classList.add(animClass, 'scroll-anim')
 
-        addToContext(() => {
-            const defaults = {
-                duration: 1.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                },
-            }
+    if (options.delay) {
+      element.style.setProperty('--anim-delay', `${options.delay}ms`)
+    }
 
-            const mergedOptions = { ...defaults, ...options }
-
-            gsap.fromTo(
-                element,
-                { opacity: 0, y: options.y || 30 },
-                { opacity: 1, y: 0, ...mergedOptions }
-            )
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
         })
-    }
+      },
+      { threshold: options.threshold ?? 0.1, rootMargin: '0px 0px -40px 0px' }
+    )
 
-    /**
-     * Slide in from direction
-     */
-    const slideIn = (
-        element: HTMLElement | string,
-        direction: 'left' | 'right' | 'bottom' | 'top' = 'bottom',
-        options: any = {}
-    ) => {
-        if (prefersReducedMotion.value) return
+    observer.observe(element)
+    observers.value.push(observer)
+  }
 
-        addToContext(() => {
-            const directionMap = {
-                left: { x: -50, y: 0 },
-                right: { x: 50, y: 0 },
-                bottom: { x: 0, y: 50 },
-                top: { x: 0, y: -50 },
-            }
 
-            const defaults = {
-                duration: 0.8,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                },
-            }
-
-            const mergedOptions = { ...defaults, ...options }
-            const from = { opacity: 0, ...directionMap[direction] }
-            const to = { opacity: 1, x: 0, y: 0, ...mergedOptions }
-
-            gsap.fromTo(element, from, to)
-        })
-    }
-
-    /**
-     * Stagger animation for multiple elements
-     */
-    const staggerIn = (elements: HTMLElement[] | string, options: any = {}) => {
-        if (prefersReducedMotion.value) return
-
-        addToContext(() => {
-            const defaults = {
-                duration: 0.9,
-                stagger: 0.2,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: elements,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                },
-            }
-
-            const mergedOptions = { ...defaults, ...options }
-
-            gsap.fromTo(
-                elements,
-                { opacity: 0, y: options.y || 30 },
-                { opacity: 1, y: 0, ...mergedOptions }
-            )
-        })
-    }
-
-    /**
-     * Scale in animation
-     */
-    const scaleIn = (element: HTMLElement | string, options: any = {}) => {
-        if (prefersReducedMotion.value) return
-
-        addToContext(() => {
-            const defaults = {
-                duration: 0.6,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                },
-            }
-
-            const mergedOptions = { ...defaults, ...options }
-
-            gsap.fromTo(
-                element,
-                { opacity: 0, scale: 0.95 },
-                { opacity: 1, scale: 1, ...mergedOptions }
-            )
-        })
-    }
-
-    /**
-     * Reveal animation (clip-path)
-     */
-    const reveal = (element: HTMLElement | string, options: any = {}) => {
-        if (prefersReducedMotion.value) return
-
-        addToContext(() => {
-            const defaults = {
-                duration: 0.8,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 85%',
-                    toggleActions: 'play none none none',
-                },
-            }
-
-            const mergedOptions = { ...defaults, ...options }
-
-            gsap.fromTo(
-                element,
-                { clipPath: 'inset(0 0 100% 0)' },
-                { clipPath: 'inset(0 0 0% 0)', ...mergedOptions }
-            )
-        })
-    }
-
-    /**
-     * Cleanup is now handled by gsap.context
-     */
-    onUnmounted(() => {
-        ctx.value?.revert()
+  const observeStagger = (
+    elements: NodeListOf<HTMLElement> | HTMLElement[],
+    animClass: string,
+    options: { staggerMs?: number; threshold?: number } = {}
+  ) => {
+    const stagger = options.staggerMs ?? 100
+    Array.from(elements).forEach((el, index) => {
+      observe(el, animClass, { delay: index * stagger, threshold: options.threshold })
     })
+  }
 
-    return {
-        fadeIn,
-        slideIn,
-        staggerIn,
-        scaleIn,
-        reveal,
-        prefersReducedMotion,
+  const fadeIn = (element: HTMLElement | null, options: { delay?: number; y?: number } = {}) => {
+    const cls = options.y && options.y > 20 ? 'anim-fade-up-lg' : 'anim-fade-up'
+    observe(element, cls, { delay: options.delay })
+  }
+
+  const slideIn = (
+    element: HTMLElement | null,
+    direction: 'left' | 'right' | 'bottom' | 'top' = 'bottom',
+    options: { delay?: number } = {}
+  ) => {
+    const dirMap = {
+      bottom: 'anim-fade-up',
+      top: 'anim-fade-down',
+      left: 'anim-fade-right',
+      right: 'anim-fade-left',
     }
+    observe(element, dirMap[direction], { delay: options.delay })
+  }
+
+
+  const staggerIn = (
+    elements: NodeListOf<HTMLElement> | HTMLElement[],
+    options: { stagger?: number; y?: number; delay?: number } = {}
+  ) => {
+    const staggerMs = (options.stagger ?? 0.2) * 1000
+    const baseDelay = (options.delay ?? 0) * 1000
+    const cls = options.y && options.y > 20 ? 'anim-fade-up-lg' : 'anim-fade-up'
+    Array.from(elements).forEach((el, index) => {
+      observe(el, cls, { delay: baseDelay + index * staggerMs })
+    })
+  }
+
+  const scaleIn = (element: HTMLElement | null, options: { delay?: number } = {}) => {
+    observe(element, 'anim-scale-in', { delay: options.delay })
+  }
+
+  const reveal = (element: HTMLElement | null, options: { delay?: number } = {}) => {
+    observe(element, 'anim-reveal', { delay: options.delay })
+  }
+
+  onUnmounted(() => {
+    observers.value.forEach((obs) => obs.disconnect())
+    observers.value = []
+  })
+
+  return {
+    fadeIn,
+    slideIn,
+    staggerIn,
+    scaleIn,
+    reveal,
+    prefersReducedMotion,
+  }
 }

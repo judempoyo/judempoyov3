@@ -15,6 +15,17 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/']
+    },
+    routeRules: {
+      '/_fonts/**': {
+        headers: { 'Cache-Control': 'public, max-age=31536000, immutable' }
+      },
+      '/assets/**': {
+        headers: { 'Cache-Control': 'public, max-age=31536000, immutable' }
+      },
+      '/**': {
+        headers: { 'Cache-Control': 'public, max-age=0, must-revalidate' }
+      }
     }
   },
   fonts: {

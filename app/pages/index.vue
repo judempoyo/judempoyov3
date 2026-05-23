@@ -3,7 +3,6 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const { level } = useLogLevel();
 
-// Scroll animations
 const { staggerIn, fadeIn, slideIn } = useScrollAnimations()
 const badgesRef = ref<HTMLElement | null>(null)
 const titleRef = ref<HTMLElement | null>(null)
@@ -12,31 +11,31 @@ const ctaRef = ref<HTMLElement | null>(null)
 const yamlRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
-  // Hero section animations
+
   if (badgesRef.value) {
     const badges = badgesRef.value.querySelectorAll('span')
     staggerIn(badges as any, { stagger: 0.1, y: 20 })
   }
 
   if (titleRef.value) {
-    fadeIn(titleRef.value, { y: 40, duration: 1 })
+    fadeIn(titleRef.value, { y: 40 })
   }
 
   if (descriptionRef.value) {
-    fadeIn(descriptionRef.value, { y: 30, duration: 0.8, delay: 0.2 })
+    fadeIn(descriptionRef.value, { y: 30, delay: 0.1 })
   }
 
   if (ctaRef.value) {
     const buttons = ctaRef.value.querySelectorAll('a')
-    staggerIn(buttons as any, { stagger: 0.15, y: 20, delay: 0.4 })
+    staggerIn(buttons as any, { stagger: 0.15, y: 20, delay: 0.2 })
   }
 
   if (yamlRef.value) {
     const isMobile = window.innerWidth < 1024
     if (isMobile) {
-      slideIn(yamlRef.value, 'bottom', { y: 40, duration: 1, delay: 0.3 })
+      slideIn(yamlRef.value, 'bottom', { delay: 0.1 })
     } else {
-      slideIn(yamlRef.value, 'right', { x: 60, duration: 1, delay: 0.3 })
+      slideIn(yamlRef.value, 'right', { delay: 0.1 })
     }
   }
 })
@@ -49,7 +48,6 @@ useHead({
       content:
         "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker. Based in Kolwezi, DRC.",
     },
-    // OpenGraph tags
     { property: "og:title", content: "Jude Mpoyo | Full-stack Developer" },
     {
       property: "og:description",
@@ -58,7 +56,6 @@ useHead({
     },
     { property: "og:image", content: "/og-image.png" },
     { property: "og:type", content: "website" },
-    // Twitter Card tags
     { name: "twitter:card", content: "summary_large_image" },
     { name: "twitter:title", content: "Jude Mpoyo | Full-stack Developer" },
     {

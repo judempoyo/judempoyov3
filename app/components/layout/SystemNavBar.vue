@@ -20,9 +20,9 @@ onUnmounted(() => {
 
 <template>
     <div class="fixed top-0 w-full z-50 h-8
-      bg-zinc-50/90 dark:bg-black/90
+      bg-zinc-50/90 dark:bg-zinc-950/90
       text-zinc-800 dark:text-zinc-200
-      backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800
+      backdrop-blur-lg border-b border-zinc-200/50 dark:border-zinc-800/50
       flex items-center justify-between px-6 font-bold text-[10px] transition-colors">
 
         <div class="flex items-center gap-6 text-[9px] sm:text-[10px]">

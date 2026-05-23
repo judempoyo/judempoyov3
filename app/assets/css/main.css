@@ -20,41 +20,30 @@
 }
 
 :root {
-    /* Industrial Light Palette (Blueprint/Concrete) */
     --background: #F5F5F7;
-    /* Bleached Concrete */
     --foreground: #121212;
-    /* Coal */
     --primary: #0055FF;
-    /* Engineering Blue */
     --primary-foreground: #FFFFFF;
     --secondary: #E5E5E5;
-    /* Light Grey */
     --secondary-foreground: #121212;
     --muted: #EDEDED;
     --muted-foreground: #666666;
     --border: #D1D1D1;
-    /* Technical line */
     --border-rgb: 209, 209, 209;
     --accent: #0055FF;
     --accent-foreground: #FFFFFF;
 }
 
 .dark {
-    /* Industrial Dark Palette (Cold Steel) */
     --background: #0D0D0F;
-    /* Deep Abyss */
     --foreground: #E0E0E0;
-    /* Aluminum */
     --primary: #3B82F6;
-    /* Vivid Blue */
     --primary-foreground: #000000;
     --secondary: #1A1A1E;
     --secondary-foreground: #E0E0E0;
     --muted: #141417;
     --muted-foreground: #888888;
     --border: #2A2A2E;
-    /* Dark Steel line */
     --border-rgb: 42, 42, 46;
     --accent: #3B82F6;
     --accent-foreground: #000000;
@@ -88,7 +77,6 @@
         @apply border border-border/50;
     }
 
-    /* Global Scrollbar Styles - Industrial Aesthetic */
     ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
@@ -108,11 +96,11 @@
     }
 
 
-
-    /* Firefox Support */
-    * {
-        scrollbar-width: thin;
-        scrollbar-color: var(--border) transparent;
+    @supports (scrollbar-color: auto) {
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
     }
 
 }
