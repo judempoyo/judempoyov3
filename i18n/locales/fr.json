@@ -3,90 +3,90 @@
     "menu": "Menu"
   },
   "nav": {
-    "home": "Index",
-    "about": "Identité",
+    "home": "Accueil",
+    "about": "À propos",
     "projects": "Projets",
     "contact": "Contact"
   },
   "system_status": {
-    "online": "SYS_EN_LIGNE",
-    "location": "LOC: KOLWEZI, RDC",
-    "tz": "TZ: CAT (UTC+2)",
-    "learning": "MODE_APPRENTISSAGE: [GO, DOCKER, CLEAN_ARCH] // orientation future",
-    "uptime": "DISPONIBILITÉ: 99.9%",
-    "version": "ENGINE_v0.0.1"
+    "online": "Système en ligne",
+    "location": "Basé à Kolwezi, RDC",
+    "tz": "Fuseau Horaire : CAT (UTC+2)",
+    "learning": "En apprentissage : Go, Docker, Clean Architecture",
+    "uptime": "Disponibilité : 99.9%",
+    "version": "Version 0.0.1"
   },
   "hero": {
-    "role_primary": "DÉVELOPPEUR_FULLSTACK",
-    "role_secondary": "FOCUS_BACKEND",
-    "manifesto_ver": "Manifeste_v1.0",
-    "description_1": "// Domaine: Services backend distribués & résilience API.",
-    "description_2": "// Objectif futur: Concevoir des systèmes performants avec {target}.",
-    "description_3": "// Focus: Performance, intégrité du code et haute disponibilité.",
-    "description_4": "// Principe: Design orienté conteneurs et services évolutifs (vision future).",
-    "social_proof": "4+ Ans d'expérience | 15+ Systèmes construits | Spécialiste Laravel | Future Stack: Go + Docker",
-    "cta_services": "[Parcourir_Projets]",
-    "cta_connect": "[Init_Connexion]"
+    "role_primary": "Développeur Full-Stack",
+    "role_secondary": "Spécialisé Backend",
+    "manifesto_ver": "Mon approche",
+    "description_1": "Expert en services backend distribués et création d'API résilientes.",
+    "description_2": "J'aspire à concevoir des systèmes performants avec {target}.",
+    "description_3": "Je mets un point d'honneur sur la performance, la lisibilité du code et la haute disponibilité.",
+    "description_4": "Je privilégie une approche orientée microservices pour des applications évolutives.",
+    "social_proof": "4+ Ans d'expérience | 15+ Systèmes construits | Spécialiste Laravel | Futures technos : Go + Docker",
+    "cta_services": "Voir mes projets",
+    "cta_connect": "Me contacter"
   },
   "about": {
-    "section_id": "02/IDENTITÉ",
-    "title": "CONSTRUIRE_DES_SOLUTIONS_ROBUSTES. ESPRIT_CODE_PROPRE.",
-    "bio_1": "Développeur full-stack passionné par la création de solutions web robustes et élégantes. Stack principal : Laravel, Vue.js, TypeScript, Go, Docker.",
-    "bio_2": "Basé à Kolwezi, RDC. Fort engagement pour le code propre, la résolution de problèmes et la livraison de systèmes prêts pour la production. Exploration du Cloud, IA et DevOps pour l'innovation évolutive.",
-    "bio_3": "Valeurs fondamentales : Construire des applications fiables, contribuer à l'open source, et explorer l'avenir de l'IT avec curiosité et ambition.",
+    "section_id": "02 / À propos",
+    "title": "Créer des solutions robustes avec un code propre.",
+    "bio_1": "Développeur full-stack passionné par la création de solutions web robustes et élégantes. Stack principal : Laravel, Nuxt, Go, Docker.",
+    "bio_2": "Basé à Kolwezi, RDC. Fort engagement pour le code propre, la résolution de problèmes et la livraison de systèmes de qualité. J'explore le Cloud, l'IA et le DevOps pour innover davantage.",
+    "bio_3": "Mes valeurs : Construire des applications fiables, contribuer à l'open source, et explorer l'avenir de la tech avec curiosité et ambition.",
     "specs": {
-      "title": "Aperçu_Specs_Système:",
-      "os": "LINUX_UBUNTU",
-      "phase": "APPRENTISSAGE_GO_DOCKER",
-      "arch": "CLEAN_ARCHITECTURE",
-      "reg": "KWZ_RDC",
-      "cluster_ready": "MULTI_SERVICE_READY (conceptuel)"
+      "title": "Mon environnement de travail :",
+      "os": "Linux / Ubuntu",
+      "phase": "Découverte de Go & Docker",
+      "arch": "Clean Architecture",
+      "reg": "Kolwezi, RDC",
+      "cluster_ready": "Architecture orientée services"
     },
     "stats": {
-      "exp": "Temps_Compilation_Années",
-      "services": "Services_Construits",
-      "repositories": "Modules_OpenSource"
+      "exp": "Années d'expérience",
+      "services": "Projets réalisés",
+      "repositories": "Contributions Open Source"
     }
   },
   "journey": {
-    "title": "Sequence_Evolution.log",
-    "mode": "LECTURE_SEULE",
+    "title": "Mon parcours",
+    "mode": "Historique",
     "logs": [
       {
         "date": "2025",
-        "event": "JKANTECH_FULLSTACK",
-        "detail": "Rejoint Jkantech comme Développeur Full-stack. Construction systèmes production avec Laravel, Vue.js, TypeScript. Apprentissage Go & Docker."
+        "event": "Développeur Full-Stack chez Jkantech",
+        "detail": "Je construis des applications de production avec Laravel, Vue.js et TypeScript. J'approfondis mes connaissances en Go & Docker."
       },
       {
         "date": "2024",
-        "event": "DIPLÔME_FREELANCE",
-        "detail": "Diplômé de l'ISC Lubumbashi. Lancement carrière freelance avec livraison d'apps web, dashboards et APIs."
+        "event": "Diplôme et débuts en Freelance",
+        "detail": "Diplômé de l'ISC Lubumbashi. J'ai lancé mon activité de freelance en créant des applications web, des tableaux de bord et des API."
       },
       {
         "date": "2023",
-        "event": "PHP_LARAVEL_AFRISOFT",
-        "detail": "Début études programmation ISC Lubumbashi. Apprentissage PHP, MySQL et fondamentaux développement web. Immersion dans l'écosystème Laravel. Stage chez Afrisoft pour outils internes et amélioration UIs."
+        "event": "Découverte de Laravel et stage chez Afrisoft",
+        "detail": "Début de mes études à l'ISC Lubumbashi. J'ai appris PHP, MySQL et les bases du web. Stage chez Afrisoft où j'ai développé des outils internes."
       }
     ]
   },
   "tech_stack": {
-    "config_file": "config_stack.yaml",
-    "languages": "langages_principaux",
-    "frameworks": "frameworks_utilisés",
-    "infrastructure": "outils_infrastructure",
-    "orientation": "direction_backend_future",
-    "learning": "[ACCÉLÉRATION_GO_DOCKER]",
-    "proficiency": "# Niveau de Compétence Actuel",
-    "end_config": "# Fin de Configuration"
+    "config_file": "Ma stack technique",
+    "languages": "Langages principaux",
+    "frameworks": "Frameworks et outils",
+    "infrastructure": "Infrastructure",
+    "orientation": "Objectifs d'apprentissage",
+    "learning": "Maîtrise de Go & Docker",
+    "proficiency": "Niveau actuel",
+    "end_config": "En constante évolution"
   },
   "projects": {
-    "section_id": "03/PRODUCTION",
-    "title": "PROJETS_PHARES.",
-    "listing": "Sélection : {count} projets phares // Source : Portfolio_Vitrine",
-    "debug_note": "TIP: BASCULER LE MODE DEBUG POUR ACCÉDER AUX SCHÉMAS ET MÉTRIQUES FUTURES.",
+    "section_id": "03 / Réalisations",
+    "title": "Projets phares.",
+    "listing": "Sélection de {count} projets pertinents",
+    "debug_note": "Note : Des détails supplémentaires sur l'architecture seront bientôt ajoutés.",
     "uzaraka": {
       "title": "Uzaraka",
-      "description": "Plateforme moderne de petites annonces pour RDC. Publiez, explorez et gérez vos annonces facilement. Fonctionnalités : recherche intelligente, messagerie sécurisée et suivi des performances.",
+      "description": "Plateforme moderne de petites annonces pour la RDC. Publiez, explorez et gérez vos annonces facilement. Fonctionnalités : recherche intelligente, messagerie sécurisée et suivi des performances.",
       "infra": "Nuxt3"
     },
     "jumpdatatable": {
@@ -96,38 +96,38 @@
     },
     "laraapistarter": {
       "title": "LaraApiStarter",
-      "description": "Starter Laravel 12 REST API prêt pour production avec architecture Actions & DTO propre. Focus sur sécurité, performance et expérience développeur.",
-      "infra": "Laravel 12 / Actions / DTOs / Sécurité-First"
+      "description": "Starter Laravel 12 REST API prêt pour la production avec une architecture propre (Actions & DTO). Focus sur la sécurité, les performances et l'expérience développeur.",
+      "infra": "Laravel 12 / Actions / DTOs / Sécurité"
     },
-    "cta_doc": "[Accès_Doc]",
-    "cta_live": "[Visiter_le_Site]",
-    "cta_docs": "[Voir_Code_Source]",
-    "cta_footer": "Envie de voir plus de mon travail ?",
-    "cta_github": "Explorer Mon Code sur GitHub"
+    "cta_doc": "Voir la documentation",
+    "cta_live": "Visiter le site",
+    "cta_docs": "Code source",
+    "cta_footer": "Vous voulez en voir plus ?",
+    "cta_github": "Découvrir mon profil GitHub"
   },
   "contact": {
-    "section_id": "04/CONTACT",
-    "title": "CONSTRUISONS_ENSEMBLE.",
-    "description": "Vous cherchez un développeur qui comprend le code propre et l'architecture évolutive ? Connectons-nous et construisons quelque chose de génial.",
-    "availability": "Disponible pour projets freelance",
+    "section_id": "04 / Contact",
+    "title": "Travaillons ensemble.",
+    "description": "Vous cherchez un développeur qui comprend les enjeux d'un code propre et d'une architecture évolutive ? Discutons de votre projet.",
+    "availability": "Disponible pour des missions freelance",
     "response_time": "Réponse sous 24h",
-    "shell_id": "Shell_Interactif",
-    "shell_msg": "En attente de transmission technique...",
-    "privacy": "NO_TRACKERS_ALLOWED // PRIVACY_BY_DEFAULT",
+    "shell_id": "Formulaire de contact",
+    "shell_msg": "En attente de votre message...",
+    "privacy": "Vos données restent privées. Aucun tracker utilisé.",
     "channels": [
       "Email",
       "LinkedIn",
       "GitHub",
       "WhatsApp",
-      "API_Handshake"
+      "Prendre rendez-vous"
     ]
   },
   "mobile_menu": {
-    "system_config": "Configuration_Système",
-    "layout_init": "Initialisation_Layout: OK",
-    "module_nav": "Navigation_Modules: CHARGÉE",
-    "state": "État: ACTIF",
-    "viewport": "OPTIMISÉ_MOBILE",
-    "animations": "ANIMATIONS_LÉGÈRES_ACTIVÉES"
+    "system_config": "Paramètres",
+    "layout_init": "Menu de navigation",
+    "module_nav": "Modules chargés",
+    "state": "En ligne",
+    "viewport": "Version mobile",
+    "animations": "Animations activées"
   }
 }

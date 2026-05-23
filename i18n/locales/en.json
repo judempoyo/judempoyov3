@@ -3,87 +3,87 @@
     "menu": "Menu"
   },
   "nav": {
-    "home": "Index",
-    "about": "Identity",
+    "home": "Home",
+    "about": "About",
     "projects": "Projects",
     "contact": "Contact"
   },
   "system_status": {
-    "online": "SYS_ONLINE",
-    "location": "LOC: KOLWEZI, DRC",
-    "tz": "TZ: CAT (UTC+2)",
-    "learning": "LEARNING_MODE: [GO, DOCKER, CLEAN_ARCH] // future backend direction",
-    "uptime": "AVAILABILITY: 99.9%",
-    "version": "ENGINE_v0.0 .1"
+    "online": "System online",
+    "location": "Based in Kolwezi, DRC",
+    "tz": "Timezone: CAT (UTC+2)",
+    "learning": "Currently learning: Go, Docker, Clean Architecture",
+    "uptime": "Uptime: 99.9%",
+    "version": "Version 0.0.1"
   },
   "hero": {
-    "role_primary": "FULLSTACK_DEVELOPER",
-    "role_secondary": "BACKEND_FOCUS",
-    "manifesto_ver": "Manifesto_v1.0",
-    "description_1": "// Domain: Backend systems, API resilience, modular architectures.",
-    "description_2": "// Future Target: Designing high-performance services with {target}.",
-    "description_3": "// Core Focus: Performance, code integrity, system availability.",
-    "description_4": "// Principle: Container-ready design and scalable system thinking (future-oriented).",
-    "social_proof": "4+ Years Experience | 15+ Systems Built | Laravel Specialist | Future Stack: Go + Docker",
-    "cta_services": "[Browse_Projects]",
-    "cta_connect": "[Init_Connection]"
+    "role_primary": "Full-Stack Developer",
+    "role_secondary": "Backend Specialist",
+    "manifesto_ver": "My Approach",
+    "description_1": "Expert in distributed backend systems and resilient APIs.",
+    "description_2": "I aim to build high-performance systems using {target}.",
+    "description_3": "I focus strongly on performance, code readability, and high availability.",
+    "description_4": "I prefer a microservices and container-ready approach for scalable applications.",
+    "social_proof": "4+ Years Experience | 15+ Systems Built | Laravel Specialist | Next: Go + Docker",
+    "cta_services": "View My Projects",
+    "cta_connect": "Get in Touch"
   },
   "about": {
-    "section_id": "02/IDENTITY",
-    "title": "BUILDING_ROBUST_SOLUTIONS. CLEAN_CODE_MINDSET.",
-    "bio_1": "Full-stack developer passionate about building robust and elegant web solutions. Main stack: Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    "bio_2": "Based in Kolwezi, DRC. Strong commitment to clean code, problem-solving, and delivering production-ready systems. Exploring Cloud, AI, and DevOps for scalable innovation.",
-    "bio_3": "Core values: Building reliable applications, contributing to open source, and exploring the future of IT with curiosity and ambition.",
+    "section_id": "02 / About",
+    "title": "Building robust solutions with clean code.",
+    "bio_1": "Full-stack developer passionate about building robust and elegant web solutions. Main stack: Laravel, Nuxt, Go, Docker.",
+    "bio_2": "Based in Kolwezi, DRC. Strong commitment to clean code, problem-solving, and delivering high-quality systems. I explore Cloud, AI, and DevOps to push innovation further.",
+    "bio_3": "My values: Building reliable applications, contributing to open source, and exploring the future of tech with curiosity and ambition.",
     "specs": {
-      "title": "System_Specs_Snapshot:",
-      "os": "LINUX_UBUNTU",
-      "phase": "GO_DOCKER_LEARNING",
-      "arch": "CLEAN_ARCHITECTURE",
-      "reg": "KWZ_DRC",
-      "cluster_ready": "MULTI_SERVICE_READY (conceptual)"
+      "title": "My Work Environment:",
+      "os": "Linux / Ubuntu",
+      "phase": "Learning Go & Docker",
+      "arch": "Clean Architecture",
+      "reg": "Kolwezi, DRC",
+      "cluster_ready": "Service-oriented architecture"
     },
     "stats": {
-      "exp": "Compile_Time_Years",
-      "services": "Services_Built",
-      "repositories": "OpenSource_Modules"
+      "exp": "Years of Experience",
+      "services": "Completed Projects",
+      "repositories": "Open Source Contributions"
     }
   },
   "journey": {
-    "title": "Sequence_Evolution.log",
-    "mode": "READ_ONLY",
+    "title": "My Journey",
+    "mode": "History",
     "logs": [
       {
         "date": "2025",
-        "event": "JKANTECH_FULLSTACK",
-        "detail": "Joined Jkantech as Full-stack Developer. Building production systems with Laravel, Vue.js, TypeScript. Learning Go & Docker."
+        "event": "Full-Stack Developer at Jkantech",
+        "detail": "Building production applications with Laravel, Vue.js, and TypeScript. Deepening my knowledge in Go & Docker."
       },
       {
         "date": "2024",
-        "event": "GRADUATION_FREELANCE",
-        "detail": "Graduated from ISC Lubumbashi. Launched freelance career delivering web apps, dashboards, and APIs."
+        "event": "Graduation & Freelance Journey",
+        "detail": "Graduated from ISC Lubumbashi. Started freelancing, building web apps, dashboards, and APIs for various clients."
       },
       {
         "date": "2023",
-        "event": "PHP_LARAVEL_AFRISOFT",
-        "detail": "Started programming studies at ISC Lubumbashi. Learning PHP, MySQL, and web development fundamentals. Deep dive into Laravel ecosystem. Internship at Afrisoft building internal tools and improving UIs."
+        "event": "Discovering Laravel & Internship at Afrisoft",
+        "detail": "Started my studies at ISC Lubumbashi. Learned PHP, MySQL, and web fundamentals. Completed an internship at Afrisoft building internal tools."
       }
     ]
   },
   "tech_stack": {
-    "config_file": "config_stack.yaml",
-    "languages": "core_languages",
-    "frameworks": "frameworks_used",
-    "infrastructure": "infrastructure_tools",
-    "orientation": "future_backend_direction",
-    "learning": "[GO_DOCKER_ACCEL]",
-    "proficiency": "# Current Proficiency",
-    "end_config": "# End of Configuration"
+    "config_file": "My Tech Stack",
+    "languages": "Main Languages",
+    "frameworks": "Frameworks & Tools",
+    "infrastructure": "Infrastructure",
+    "orientation": "Learning Goals",
+    "learning": "Mastering Go & Docker",
+    "proficiency": "Current Level",
+    "end_config": "Constantly Evolving"
   },
   "projects": {
-    "section_id": "03/PRODUCTION",
-    "title": "FEATURED_PROJECTS.",
-    "listing": "Featured: {count} selected projects // Source: Portfolio_Showcase",
-    "debug_note": "TIP: TOGGLE DEBUG MODE TO ACCESS FUTURE ARCH SCHEMATICS AND METRICS.",
+    "section_id": "03 / Projects",
+    "title": "Featured Projects.",
+    "listing": "Selection of {count} relevant projects",
+    "debug_note": "Note: More architecture details and metrics will be added soon.",
     "uzaraka": {
       "title": "Uzaraka",
       "description": "Modern classifieds platform for DRC. Post, browse, and manage listings easily. Features include smart search, secure messaging, and performance tracking.",
@@ -92,42 +92,42 @@
     "jumpdatatable": {
       "title": "Jump Datatable",
       "description": "Composer package for dynamic tables in PHP. Responsive, sortable, searchable, and paginated tables. Optimized for TailwindCSS and Bootstrap.",
-      "infra": "OpenSource Library / PHP"
+      "infra": "Open Source Library / PHP"
     },
     "laraapistarter": {
       "title": "LaraApiStarter",
-      "description": "Production-ready Laravel 12 REST API starter with clean Action & DTO architecture. Focused on security, performance, and developer experience.",
-      "infra": "Laravel 12 / Actions / DTOs / Security-First"
+      "description": "Production-ready Laravel 12 REST API starter with a clean architecture (Actions & DTOs). Focused on security, performance, and developer experience.",
+      "infra": "Laravel 12 / Actions / DTOs / Security"
     },
-    "cta_doc": "[Access_Doc]",
-    "cta_live": "[Visit_Site]",
-    "cta_docs": "[View_Source_Code]",
+    "cta_doc": "View Documentation",
+    "cta_live": "Visit Website",
+    "cta_docs": "Source Code",
     "cta_footer": "Want to see more of my work?",
-    "cta_github": "Explore My Code on GitHub"
+    "cta_github": "Check out my GitHub profile"
   },
   "contact": {
-    "section_id": "04/CONTACT",
-    "title": "LET'S_BUILD_TOGETHER.",
-    "description": "Looking for a developer who understands clean code and scalable architecture? Let's connect and build something great.",
-    "availability": "Available for freelance projects",
+    "section_id": "04 / Contact",
+    "title": "Let's work together.",
+    "description": "Looking for a developer who understands clean code and scalable architecture? Let's discuss your project.",
+    "availability": "Available for freelance work",
     "response_time": "Response within 24h",
-    "shell_id": "Interactive_Shell",
-    "shell_msg": "Awaiting technical transmission...",
-    "privacy": "NO_TRACKERS_ALLOWED // PRIVACY_BY_DEFAULT",
+    "shell_id": "Contact Form",
+    "shell_msg": "Waiting for your message...",
+    "privacy": "Your data remains private. No trackers used.",
     "channels": [
       "Email",
       "LinkedIn",
       "GitHub",
       "WhatsApp",
-      "API_Handshake"
+      "Book a Meeting"
     ]
   },
   "mobile_menu": {
-    "system_config": "System_Configuration",
-    "layout_init": "Layout_Init: OK",
-    "module_nav": "Module_Nav: LOADED",
-    "state": "State: ACTIVE",
-    "viewport": "MOBILE_OPTIMIZED",
-    "animations": "LIGHTWEIGHT_ENABLED"
+    "system_config": "Settings",
+    "layout_init": "Navigation Menu",
+    "module_nav": "Loaded Modules",
+    "state": "Online",
+    "viewport": "Mobile Version",
+    "animations": "Animations Enabled"
   }
 }
