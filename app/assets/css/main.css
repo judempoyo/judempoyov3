@@ -95,12 +95,4 @@
         @apply bg-zinc-400 dark:bg-zinc-700;
     }
 
-
-    @supports (scrollbar-color: auto) {
-        * {
-            scrollbar-width: thin;
-            scrollbar-color: var(--border) transparent;
-        }
-    }
-
 }

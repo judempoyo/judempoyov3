@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   },
   fonts: {
     families: [
-      { name: 'JetBrains Mono', provider: 'google' }
+      { name: 'JetBrains Mono', provider: 'google', display: 'swap' }
     ]
   },
   css: ['~/assets/css/main.css'],

@@ -4,7 +4,7 @@ const { t } = useI18n()
 <template>
   <div class="bg-zinc-800 dark:bg-black p-4 sm:p-6 border border-zinc-700 dark:border-zinc-800 rounded-2xl
     shadow-xl dark:shadow-green-glow
-    relative overflow-hidden group transition-all duration-200 ease-out w-full max-w-full">
+    relative overflow-hidden group transition-[transform,box-shadow] duration-200 ease-out w-full max-w-full will-change-transform">
 
     <div
       class="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none">

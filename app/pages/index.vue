@@ -3,12 +3,11 @@ const { t } = useI18n();
 const localePath = useLocalePath();
 const { level } = useLogLevel();
 
-const { staggerIn, fadeIn, slideIn } = useScrollAnimations()
+const { staggerIn, fadeIn } = useScrollAnimations()
 const badgesRef = ref<HTMLElement | null>(null)
 const titleRef = ref<HTMLElement | null>(null)
 const descriptionRef = ref<HTMLElement | null>(null)
 const ctaRef = ref<HTMLElement | null>(null)
-const yamlRef = ref<HTMLElement | null>(null)
 
 onMounted(() => {
 
@@ -28,15 +27,6 @@ onMounted(() => {
   if (ctaRef.value) {
     const buttons = ctaRef.value.querySelectorAll('a')
     staggerIn(buttons as any, { stagger: 0.15, y: 20, delay: 0.2 })
-  }
-
-  if (yamlRef.value) {
-    const isMobile = window.innerWidth < 1024
-    if (isMobile) {
-      slideIn(yamlRef.value, 'bottom', { delay: 0.1 })
-    } else {
-      slideIn(yamlRef.value, 'right', { delay: 0.1 })
-    }
   }
 })
 
@@ -70,18 +60,19 @@ useHead({
 <template>
   <div class="font-mono">
     <section
-      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 overflow-hidden bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center">
-      <div
-        class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20 select-none pointer-events-none">
-        0xJM93
-      </div>
-
-      <div class="absolute inset-0 pointer-events-none opacity-10">
+      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center"> 
+      <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div
-          class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+          class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20">
+          0xJM93
         </div>
-        <div
-          class="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+          </div>
+          <div
+            class="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+          </div>
         </div>
       </div>
 
@@ -140,7 +131,7 @@ useHead({
             </div>
           </div>
 
-          <div ref="yamlRef" class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
+          <div class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
             <YAMLStack />
 
             <div class="absolute -bottom-4 -left-4 bg-green-700 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">
