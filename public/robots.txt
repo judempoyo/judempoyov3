@@ -1,3 +1,22 @@
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /_fonts/
+Disallow: /_nuxt/
+Disallow: /_payload.json
+Disallow: /offline.html
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 Sitemap: https://jude.jkantech.net/jude/sitemap.xml
