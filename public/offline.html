@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline – Jude Mpoyo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green: #22c55e; --bg: #0d0d0f; --fg: #e4e4e7; --muted: #71717a; }
+    body {
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .container { max-width: 480px; text-align: center; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--green);
+      color: var(--green);
+      font-size: 0.625rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: var(--fg);
+      color: var(--bg);
+      font-size: 0.625rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+    }
+    a:hover { background: var(--green); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">STATUS: OFFLINE</div>
+    <h1>Connection_Lost</h1>
+    <p>
+      // No network detected.<br>
+      // Cached version unavailable for this route.<br>
+      // Restore connection to continue.
+    </p>
+    <a href="/jude/">Retry_Connection</a>
+  </div>
+</body>
+</html>

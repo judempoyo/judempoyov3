@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <section id="projects" class="py-24 px-6 bg-background dark:bg-zinc-900 text-foreground">
+    <section id="projects" aria-label="Featured Projects by Jude Mpoyo" class="py-24 px-6 bg-background dark:bg-zinc-900 text-foreground">
         <div class="container mx-auto max-w-350">
 
             <div ref="headerRef" class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">

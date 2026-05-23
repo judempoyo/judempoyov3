@@ -30,37 +30,17 @@ onMounted(() => {
   }
 })
 
-useHead({
-  title: "Jude Mpoyo | Full-stack Developer",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker. Based in Kolwezi, DRC.",
-    },
-    { property: "og:title", content: "Jude Mpoyo | Full-stack Developer" },
-    {
-      property: "og:description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    },
-    { property: "og:image", content: "/og-image.png" },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Jude Mpoyo | Full-stack Developer" },
-    {
-      name: "twitter:description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    },
-    { name: "twitter:image", content: "/og-image.png" },
-  ],
-});
+useSeoMeta({
+  title: 'Jude Mpoyo | Full-stack Developer',
+  description: 'Full-stack developer specialized in Laravel, Vue.js, TypeScript, Go and Docker. Building robust backend systems. Based in Kolwezi, DRC.',
+  ogUrl: 'https://jude.jkantech.net/jude/',
+})
 </script>
 <template>
   <div class="font-mono">
     <section
-      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center"> 
+      aria-label="Hero – Jude Mpoyo, Full-stack Developer"
+      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center">
       <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div
           class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20">

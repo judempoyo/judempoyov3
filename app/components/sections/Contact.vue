@@ -10,7 +10,7 @@ const terminalRef = ref<HTMLElement | null>(null)
 onMounted(() => {
   // Section header animation
   if (sectionHeaderRef.value) {
-    fadeIn(sectionHeaderRef.value, { y: 30, duration: 0.8 })
+    fadeIn(sectionHeaderRef.value, { y: 30 })
   }
 
   // Contact methods stagger
@@ -23,9 +23,9 @@ onMounted(() => {
   if (terminalRef.value) {
     const isMobile = window.innerWidth < 1024
     if (isMobile) {
-      slideIn(terminalRef.value, 'bottom', { y: 40, duration: 0.8 })
+      slideIn(terminalRef.value, 'bottom')
     } else {
-      slideIn(terminalRef.value, 'right', { x: 40, duration: 0.8 })
+      slideIn(terminalRef.value, 'right')
     }
   }
 })
@@ -46,7 +46,7 @@ const methods = [
 </script>
 
 <template>
-  <section id="contact" class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors">
+  <section id="contact" aria-label="Contact Jude Mpoyo" class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors">
     <div class="container mx-auto max-w-350">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div ref="sectionHeaderRef" class="space-y-8 min-w-0 w-full">

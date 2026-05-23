@@ -1,5 +1,5 @@
 <template>
-    <footer class="py-6 border-t border-zinc-200 dark:border-zinc-800
+    <footer aria-label="Site footer" class="py-6 border-t border-zinc-200 dark:border-zinc-800
     bg-white dark:bg-zinc-900
     font-bold text-[11px] uppercase tracking-wide text-center
     text-zinc-600 dark:text-zinc-400 px-6 transition-colors">
@@ -14,15 +14,21 @@
                 DESIGNED_BY: JUDE.MPOYO // BUILD: {{ new Date().getFullYear() }}
             </div>
 
-            <div class="flex gap-4">
+            <nav aria-label="Social links" class="flex gap-4">
                 <a class="text-green-700 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://github.com/judempoyo"
-                    target="_blank">GITHUB</a>
+          hover:scale-105 active:scale-95 hover:underline underline-offset-4"
+                    href="https://github.com/judempoyo"
+                    target="_blank"
+                    rel="noopener noreferrer me"
+                    aria-label="Jude Mpoyo on GitHub">GITHUB</a>
 
                 <a class="text-green-700 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://linkedin.com/in/jude-mpoyo"
-                    target="_blank">LINKEDIN</a>
-            </div>
+          hover:scale-105 active:scale-95 hover:underline underline-offset-4"
+                    href="https://linkedin.com/in/jude-mpoyo"
+                    target="_blank"
+                    rel="noopener noreferrer me"
+                    aria-label="Jude Mpoyo on LinkedIn">LINKEDIN</a>
+            </nav>
 
         </div>
     </footer>

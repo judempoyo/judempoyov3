@@ -68,6 +68,7 @@ onMounted(() => {
   <PhotoModal v-model:show="showPhoto" />
 
   <section id="about"
+    aria-label="About Jude Mpoyo – Full-stack Developer"
     class="py-24 px-6 bg-white dark:bg-black border-b border-zinc-300 dark:border-zinc-700 min-h-screen">
     <div class="container mx-auto max-w-350">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">

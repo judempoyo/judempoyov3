@@ -1,0 +1,65 @@
+{
+  "name": "Jude Mpoyo – Full-stack Developer",
+  "short_name": "Jude Mpoyo",
+  "description": "Portfolio of Jude Mpoyo, Full-stack Developer specializing in Laravel, Vue.js, Go and Docker. Based in Kolwezi, DRC.",
+  "start_url": "/jude/",
+  "scope": "/jude/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#18181b",
+  "background_color": "#18181b",
+  "lang": "en",
+  "categories": ["portfolio", "developer", "technology"],
+  "icons": [
+    {
+      "src": "/jude/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/jude/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/jude/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/jude/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/jude/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Projects",
+      "url": "/jude/#projects",
+      "description": "View Jude Mpoyo's featured projects"
+    },
+    {
+      "name": "Contact",
+      "url": "/jude/#contact",
+      "description": "Get in touch with Jude Mpoyo"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/jude/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Jude Mpoyo Portfolio"
+    }
+  ]
+}
