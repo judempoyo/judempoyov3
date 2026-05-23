@@ -7,7 +7,7 @@ import Footer from '../components/layout/Footer.vue'
     <div class="min-h-screen flex flex-col selection:bg-primary/30 transition-colors duration-500">
         <Header />
 
-        <main class="flex-grow pt-24">
+        <main class="grow pt-24">
             <slot />
         </main>
 

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', '@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/i18n', '@nuxtjs/color-mode', '@nuxt/fonts'],
 
   // SSG Configuration
   ssr: true,
@@ -16,6 +16,11 @@ export default defineNuxtConfig({
       crawlLinks: true,
       routes: ['/']
     }
+  },
+  fonts: {
+    families: [
+      { name: 'JetBrains Mono', provider: 'google' }
+    ]
   },
   css: ['~/assets/css/main.css'],
   vite: {
