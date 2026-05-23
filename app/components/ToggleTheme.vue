@@ -19,7 +19,7 @@ const toggleTheme = () => {
         active:scale-95 overflow-hidden"
       :title="colorMode.value === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
 
-      <div class="absolute inset-y-1 w-[36px] bg-white dark:bg-green-400
+      <div class="absolute inset-y-1 w-9 bg-white dark:bg-green-400
           rounded-md flex items-center justify-center shadow-md
           transition-all duration-200 ease-out
           group-hover:scale-105 active:scale-95"

@@ -61,7 +61,7 @@ const closeMenu = (() => {
                         04/{{ $t('nav.contact') }}
                     </NuxtLink>
 
-                    <div class="h-4 w-[1px] bg-border mx-3"></div>
+                    <div class="h-4 w-px bg-border mx-3"></div>
 
                     <div class="flex items-center gap-2">
                         <ToggleTheme />

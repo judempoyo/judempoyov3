@@ -47,7 +47,7 @@ const methods = [
 
 <template>
   <section id="contact" class="py-24 px-6 bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors">
-    <div class="container mx-auto max-w-[1400px]">
+    <div class="container mx-auto max-w-350">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div ref="sectionHeaderRef" class="space-y-8 min-w-0 w-full">
           <div class="space-y-4">
@@ -55,7 +55,7 @@ const methods = [
               <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-widest-xl">
                 {{ t("contact.section_id") }}
               </span>
-              <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
+              <div class="h-0.5 w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
             </div>
             <h2 class="text-2xl md:text-4xl font-extrabold tracking-tight">
               {{ t("contact.title") }}

@@ -32,7 +32,7 @@ onMounted(() => {
 
             <!-- Glow Effect -->
             <div
-              class="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent">
+              class="absolute top-0 inset-x-0 h-px bg-linear-to-r from-transparent via-green-500/50 to-transparent">
             </div>
 
             <!-- Image Section -->
@@ -41,7 +41,7 @@ onMounted(() => {
                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
 
               <!-- Gradient Overlay -->
-              <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent opacity-90">
+              <div class="absolute inset-0 bg-linear-to-t from-zinc-900 via-zinc-900/20 to-transparent opacity-90">
               </div>
 
               <!-- Floating Badge -->

@@ -77,7 +77,7 @@ onMounted(() => {
 
   <section id="about"
     class="py-24 px-6 bg-white dark:bg-black border-b border-zinc-300 dark:border-zinc-700 min-h-screen">
-    <div class="container mx-auto max-w-[1400px]">
+    <div class="container mx-auto max-w-350">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-20">
         <div class="lg:col-span-8 space-y-8">
           <div ref="sectionHeaderRef" class="space-y-4">
@@ -85,7 +85,7 @@ onMounted(() => {
               <span class="text-xs font-extrabold text-green-600 dark:text-green-400 uppercase tracking-widest-xl">
                 {{ t("about.section_id") }}
               </span>
-              <div class="h-[2px] w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
+              <div class="h-0.5 w-14 bg-green-600 dark:bg-green-400 opacity-70"></div>
             </div>
             <h2 class="text-lg md:text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 cursor-help"
               @click="handleNameClick">
@@ -106,28 +106,28 @@ onMounted(() => {
             </h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-[11px] md:text-xs font-mono">
-              <div class="break-words">
+              <div class="wrap-break-word">
                 <span class="text-green-600 dark:text-green-400">OS_ENV:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.os")
                 }}</span>
               </div>
 
-              <div class="break-words">
+              <div class="wrap-break-word">
                 <span class="text-green-600 dark:text-green-400">ENGINE_PHASE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.phase")
                 }}</span>
               </div>
 
-              <div class="break-words">
+              <div class="wrap-break-word">
                 <span class="text-green-600 dark:text-green-400">ARCH_PREF:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.arch")
                 }}</span>
               </div>
 
-              <div class="break-words">
+              <div class="wrap-break-word">
                 <span class="text-green-600 dark:text-green-400">REG_CODE:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.reg")
@@ -152,7 +152,7 @@ onMounted(() => {
                 </span>
               </div>
 
-              <div class="overflow-y-auto pr-2 pl-4 custom-scrollbar max-h-[300px] sm:max-h-none">
+              <div class="overflow-y-auto pr-2 pl-4 custom-scrollbar max-h-75 sm:max-h-none">
                 <JourneyLogs />
               </div>
             </div>

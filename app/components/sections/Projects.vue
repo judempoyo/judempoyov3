@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
     <section id="projects" class="py-24 px-6 bg-background dark:bg-zinc-900 text-foreground">
-        <div class="container mx-auto max-w-[1400px]">
+        <div class="container mx-auto max-w-350">
 
             <div ref="headerRef" class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
                 <div class="space-y-4">
@@ -37,7 +37,7 @@ onMounted(() => {
                         <span class="text-xs font-black text-primary dark:text-green-500 uppercase tracking-widest-2xl">
                             {{ t('projects.section_id') }}
                         </span>
-                        <div class="h-[1px] w-12 bg-primary dark:bg-green-500"></div>
+                        <div class="h-px w-12 bg-primary dark:bg-green-500"></div>
                     </div>
                     <h2 class="text-2xl md:text-4xl font-black tracking-tighter text-foreground dark:text-zinc-100">
                         {{ t('projects.title') }}

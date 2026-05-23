@@ -44,7 +44,7 @@ const dismiss = () => {
 
                     <!-- Progress Bar -->
                     <div
-                        class="absolute top-0 left-0 h-1 bg-gradient-to-r from-green-500 to-emerald-400 w-full animate-[shrink_10s_linear_forwards] origin-left">
+                        class="absolute top-0 left-0 h-1 bg-linear-to-r from-green-500 to-emerald-400 w-full animate-[shrink_10s_linear_forwards] origin-left">
                     </div>
 
                     <div class="p-5 flex items-start gap-4">

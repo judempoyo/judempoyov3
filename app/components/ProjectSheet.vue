@@ -58,7 +58,7 @@ const linkUrl = computed(() => {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           <div class="space-y-1">
             <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">INFRA:</span>
-            <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 whitespace-pre-line break-words">
+            <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 whitespace-pre-line wrap-break-word">
               {{ t(project.metrics.infraKey) }}
             </p>
           </div>
@@ -66,13 +66,13 @@ const linkUrl = computed(() => {
           <div class="space-y-2">
             <div v-if="project.metrics.dockerSize" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">DOCKER SIZE:</span>
-              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 break-words">
+              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 wrap-break-word">
                 {{ project.metrics.dockerSize }}
               </p>
             </div>
             <div v-if="project.metrics.loadTime" class="space-y-1">
               <span class="text-[9px] font-black uppercase text-green-600 dark:text-green-400">LATENCY:</span>
-              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 break-words">
+              <p class="text-[10px] font-mono text-zinc-800 dark:text-zinc-400 wrap-break-word">
                 {{ project.metrics.loadTime }}
               </p>
             </div>

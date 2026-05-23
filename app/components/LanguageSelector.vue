@@ -48,7 +48,7 @@ onUnmounted(() => window.removeEventListener('click', clickOutside))
                 </span>
             </div>
 
-            <div class="h-4 w-[1px] bg-zinc-400/40"></div>
+            <div class="h-4 w-px bg-zinc-400/40"></div>
 
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4"
                 class="w-2.5 h-2.5 text-zinc-500 transition-transform duration-300"
@@ -57,7 +57,7 @@ onUnmounted(() => window.removeEventListener('click', clickOutside))
             </svg>
 
             <div
-                class="absolute bottom-0 left-0 h-[1px] bg-green-500/20 w-0 group-hover:w-full transition-all duration-500">
+                class="absolute bottom-0 left-0 h-px bg-green-500/20 w-0 group-hover:w-full transition-all duration-500">
             </div>
         </button>
 

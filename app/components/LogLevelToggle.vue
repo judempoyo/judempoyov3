@@ -15,7 +15,7 @@ const { level, toggleLevel } = useLogLevel()
           rounded-md shadow-sm transition-all duration-150 ease-out
           bg-white dark:bg-green-500 text-zinc-900 dark:text-white
           group-hover:scale-105"
-                :class="level === 'INFO' ? 'left-1 w-[46px]' : 'left-[56px] w-[54px] opacity-90 animate-pulse'">
+                :class="level === 'INFO' ? 'left-1 w-11.5' : 'left-14 w-13.5 opacity-90 animate-pulse'">
                 <span v-if="level === 'DEBUG'" class="absolute -top-0.5 -right-0.5 flex h-2 w-2">
                     <span
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-zinc-100 dark:bg-zinc-600 opacity-75"></span>
@@ -34,7 +34,7 @@ const { level, toggleLevel } = useLogLevel()
             </div>
 
             <div v-if="level === 'DEBUG'"
-                class="absolute inset-0 bg-gradient-to-b from-transparent via-green-500/10 to-transparent h-[2px] w-full animate-scan pointer-events-none">
+                class="absolute inset-0 bg-linear-to-b from-transparent via-green-500/10 to-transparent h-0.5 w-full animate-scan pointer-events-none">
             </div>
         </button>
     </div>
