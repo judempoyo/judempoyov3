@@ -2,7 +2,6 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const currentTime = ref('')
-
 let timer: any
 
 onMounted(() => {
@@ -21,29 +20,29 @@ onUnmounted(() => {
 
 <template>
     <div class="fixed top-0 w-full z-50 h-8
-      bg-zinc-50/70 dark:bg-black/80
-      text-zinc-800 dark:text-zinc-300
+      bg-zinc-50/90 dark:bg-black/90
+      text-zinc-800 dark:text-zinc-200
       backdrop-blur-lg border-b border-zinc-200 dark:border-zinc-800
       flex items-center justify-between px-6 font-bold text-[10px] transition-colors">
 
         <div class="flex items-center gap-6 text-[9px] sm:text-[10px]">
             <div class="flex items-center gap-2">
-                <span
-                    class="w-2 h-2 rounded-full bg-green-500/70 dark:bg-green-400/80 animate-pulse transition-opacity"></span>
-                <span class="text-zinc-900 dark:text-white">{{ $t('system_status.online') }}</span>
+                <span class="w-2 h-2 rounded-full bg-green-600 dark:bg-green-400 animate-pulse"></span>
+                <span class="text-zinc-900 dark:text-zinc-100">{{ $t('system_status.online') }}</span>
             </div>
 
-            <div class="hidden sm:flex gap-4 uppercase opacity-70">
+            <div class="hidden sm:flex gap-4 uppercase text-zinc-600 dark:text-zinc-400">
                 <span>{{ $t('system_status.location') }}</span>
                 <span>{{ $t('system_status.tz') }}</span>
-                <span class="text-zinc-400 dark:text-zinc-600">|</span>
+                <span class="text-zinc-400 dark:text-zinc-700">|</span>
                 <span>{{ $t('system_status.learning') }}</span>
             </div>
         </div>
 
         <div class="flex items-center gap-4">
-            <span class="font-mono text-zinc-900 dark:text-white">{{ currentTime }}</span>
-            <span class="hidden sm:inline opacity-50 uppercase">{{ $t('system_status.uptime') }}</span>
+            <span class="font-mono text-zinc-900 dark:text-zinc-100">{{ currentTime }}</span>
+            <span class="hidden sm:inline text-zinc-500 dark:text-zinc-400 uppercase">{{ $t('system_status.uptime')
+                }}</span>
         </div>
     </div>
 </template>

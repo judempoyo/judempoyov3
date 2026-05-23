@@ -146,10 +146,12 @@ useHead({
           <div ref="yamlRef" class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
             <YAMLStack />
 
-            <div class="absolute -bottom-4 -left-4 bg-green-600 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">
-              <span class="text-[10px] text-white dark:text-zinc-900  uppercase tracking-widest">
-                Transition_In_Progress >> Go
+            <div class="absolute -bottom-4 -left-4 bg-green-700 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">
+
+              <span class="text-[10px] text-white dark:text-zinc-950 font-black uppercase tracking-widest">
+                TRANSITION_IN_PROGRESS >> GO
               </span>
+
             </div>
           </div>
         </div>
