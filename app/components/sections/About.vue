@@ -100,28 +100,28 @@ onMounted(() => {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-[11px] md:text-xs font-mono">
               <div class="wrap-break-word">
-                <span class="text-green-600 dark:text-green-400">OS_ENV:</span>
+                <span class="text-green-600 dark:text-green-400">OS:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.os")
                 }}</span>
               </div>
 
               <div class="wrap-break-word">
-                <span class="text-green-600 dark:text-green-400">ENGINE_PHASE:</span>
+                <span class="text-green-600 dark:text-green-400">Focus:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.phase")
                 }}</span>
               </div>
 
               <div class="wrap-break-word">
-                <span class="text-green-600 dark:text-green-400">ARCH_PREF:</span>
+                <span class="text-green-600 dark:text-green-400">Pattern:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.arch")
                 }}</span>
               </div>
 
               <div class="wrap-break-word">
-                <span class="text-green-600 dark:text-green-400">REG_CODE:</span>
+                <span class="text-green-600 dark:text-green-400">Location:</span>
                 <span class="ml-2 text-zinc-800 dark:text-zinc-300">{{
                   t("about.specs.reg")
                 }}</span>

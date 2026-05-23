@@ -44,7 +44,7 @@ useSeoMeta({
       <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div
           class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20">
-          0xJM93
+          DEVELOPER
         </div>
         <div class="absolute inset-0 opacity-10">
           <div
@@ -62,15 +62,15 @@ useSeoMeta({
             <div ref="badgesRef" class="flex flex-wrap gap-2 mb-4">
               <span
                 class="px-2 py-0.5 border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 text-[9px] font-bold uppercase tracking-wider">
-                Object: Developer_Profile
+                Vue & Nuxt
               </span>
               <span
                 class="px-2 py-0.5 border border-green-500 bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-[9px] font-bold uppercase tracking-wider">
-                Priority: High_Availability
+                Laravel & PHP
               </span>
               <span
                 class="px-2 py-0.5 border border-zinc-300 bg-transparent text-zinc-500 dark:text-zinc-400 text-[9px] font-bold uppercase tracking-wider">
-                Ver: 2026.01_STABLE
+                Go & Docker
               </span>
             </div>
 
@@ -117,7 +117,7 @@ useSeoMeta({
             <div class="absolute -bottom-4 -left-4 bg-green-700 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">
 
               <span class="text-[10px] text-white dark:text-zinc-950 font-black uppercase tracking-widest">
-                TRANSITION_IN_PROGRESS >> GO
+                Focus : Go & Docker
               </span>
 
             </div>

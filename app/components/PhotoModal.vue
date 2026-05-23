@@ -49,7 +49,7 @@ onMounted(() => {
                 <div
                   class="px-3 py-1.5 rounded-full bg-zinc-950/30 backdrop-blur-md border border-white/10 flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-                  <span class="text-[10px] font-black uppercase tracking-widest text-white/90">Identity_Revealed</span>
+                  <span class="text-[10px] font-black uppercase tracking-widest text-white/90">Profile Photo</span>
                 </div>
 
                 <button @click="close"
@@ -72,13 +72,13 @@ onMounted(() => {
               <div class="grid grid-cols-2 gap-3">
                 <div
                   class="p-3 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 text-center space-y-1">
-                  <span class="block text-[10px] uppercase font-bold text-zinc-400">Level</span>
+                  <span class="block text-[10px] uppercase font-bold text-zinc-400">Status</span>
                   <span class="block text-sm font-black text-zinc-700 dark:text-zinc-200">2026.1</span>
                 </div>
                 <div
                   class="p-3 rounded-2xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/50 text-center space-y-1">
-                  <span class="block text-[10px] uppercase font-bold text-zinc-400">Class</span>
-                  <span class="block text-sm font-black text-zinc-700 dark:text-zinc-200">Builder</span>
+                  <span class="block text-[10px] uppercase font-bold text-zinc-400">Role</span>
+                  <span class="block text-sm font-black text-zinc-700 dark:text-zinc-200">Engineer</span>
                 </div>
               </div>
 
