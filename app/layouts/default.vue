@@ -4,7 +4,7 @@ import Footer from '../components/layout/Footer.vue'
 </script>
 
 <template>
-    <div class="min-h-screen flex flex-col selection:bg-primary/30 transition-colors duration-500">
+    <div class="min-h-screen flex flex-col selection:bg-green-600/30 transition-colors duration-500">
         <Header />
 
         <main class="grow pt-24">
