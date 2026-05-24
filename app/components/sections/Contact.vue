@@ -89,7 +89,7 @@ const methods = [
 
           <div ref="contactMethodsRef" class="space-y-4 pt-4">
             <a v-for="m in methods" :key="m.label" :href="m.action" target="_blank"
-              class="flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:scale-103 active:scale-97 hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black">
+              class="group flex items-center justify-between p-4 border border-zinc-300 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 rounded-xl shadow-sm transform transition-all duration-150 ease-out hover:-translate-y-1 hover:border-green-500 dark:hover:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-black">
               <div class="space-y-1">
                 <span class="text-[10px] font-black uppercase text-zinc-500 dark:text-zinc-600">
                   {{ m.label }}
