@@ -8,6 +8,11 @@ const badgesRef = ref<HTMLElement | null>(null)
 const titleRef = ref<HTMLElement | null>(null)
 const descriptionRef = ref<HTMLElement | null>(null)
 const ctaRef = ref<HTMLElement | null>(null)
+const heroBgRef = ref<HTMLElement | null>(null)
+const yamlWrapRef = ref<HTMLElement | null>(null)
+
+useParallax(heroBgRef, 0.25)
+useTilt(yamlWrapRef, { maxDeg: 5, scale: 1.02 })
 
 onMounted(() => {
 
@@ -32,7 +37,7 @@ onMounted(() => {
 
 useSeoMeta({
   title: 'Jude Mpoyo | Full-stack Developer',
-  description: 'Full-stack developer specialized in Laravel, Vue.js, TypeScript, Go and Docker. Building robust backend systems. Based in Kolwezi, DRC.',
+  description: 'Full-stack developer specialized in Laravel, Nuxt, Go and Docker. Building robust backend systems. Based in Kolwezi, DRC.',
   ogUrl: 'https://jude.jkantech.net/jude/',
 })
 </script>
@@ -41,9 +46,9 @@ useSeoMeta({
     <section
       aria-label="Hero – Jude Mpoyo, Full-stack Developer"
       class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center">
-      <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
+      <div ref="heroBgRef" class="absolute inset-0 overflow-hidden pointer-events-none select-none">
         <div
-          class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20">
+          class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20 animate-float-slow">
           DEVELOPER
         </div>
         <div class="absolute inset-0 opacity-10">
@@ -78,9 +83,8 @@ useSeoMeta({
               <h1
                 class="text-2xl sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-compact text-zinc-900 dark:text-zinc-100">
                 <span
-                  class="inline-block bg-linear-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300 bg-clip-text text-transparent">{{
-                    t("hero.role_primary") }}</span>
-                <span class="block mt-2"> {{ t("hero.role_secondary") }}. </span>
+                  class="inline-block animate-shimmer-text">{{ t("hero.role_primary") }}</span>
+                <span class="block mt-2 text-zinc-900 dark:text-zinc-100"> {{ t("hero.role_secondary") }}. </span>
               </h1>
               <div class="flex items-center gap-4 py-3">
                 <div class="h-0.5 w-20 bg-linear-to-r from-green-600 to-transparent dark:from-green-400"></div>
@@ -111,7 +115,7 @@ useSeoMeta({
             </div>
           </div>
 
-          <div class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
+          <div ref="yamlWrapRef" class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
             <YAMLStack />
 
             <div class="absolute -bottom-4 -left-4 bg-green-700 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">

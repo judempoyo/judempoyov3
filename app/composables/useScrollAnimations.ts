@@ -1,12 +1,10 @@
 export const useScrollAnimations = () => {
   const prefersReducedMotion = ref(false)
   const observers = ref<IntersectionObserver[]>([])
-  const pendingElements = ref<Array<{ el: HTMLElement; className: string }>>([])
 
   onMounted(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     prefersReducedMotion.value = mediaQuery.matches
-
     mediaQuery.addEventListener('change', (e) => {
       prefersReducedMotion.value = e.matches
     })
@@ -45,7 +43,6 @@ export const useScrollAnimations = () => {
     observers.value.push(observer)
   }
 
-
   const observeStagger = (
     elements: NodeListOf<HTMLElement> | HTMLElement[],
     animClass: string,
@@ -75,7 +72,6 @@ export const useScrollAnimations = () => {
     }
     observe(element, dirMap[direction], { delay: options.delay })
   }
-
 
   const staggerIn = (
     elements: NodeListOf<HTMLElement> | HTMLElement[],
@@ -110,4 +106,101 @@ export const useScrollAnimations = () => {
     reveal,
     prefersReducedMotion,
   }
+}
+
+export const useParallax = (
+  element: Ref<HTMLElement | null>,
+  speed: number = 0.3
+) => {
+  if (import.meta.server) return
+  let rafId: number
+
+  const update = () => {
+    const el = element.value
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const centerY = rect.top + rect.height / 2 - window.innerHeight / 2
+    el.style.transform = `translateY(${centerY * speed}px)`
+    rafId = requestAnimationFrame(update)
+  }
+
+  onMounted(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (!mq.matches) {
+      rafId = requestAnimationFrame(update)
+    }
+  })
+
+  onUnmounted(() => cancelAnimationFrame(rafId))
+}
+
+export const useTilt = (
+  element: Ref<HTMLElement | null>,
+  options: { maxDeg?: number; scale?: number } = {}
+) => {
+  if (import.meta.server) return
+  const maxDeg = options.maxDeg ?? 6
+  const scale = options.scale ?? 1.02
+
+  const onMove = (e: MouseEvent) => {
+    const el = element.value
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    el.style.transform = `perspective(800px) rotateY(${x * maxDeg}deg) rotateX(${-y * maxDeg}deg) scale(${scale})`
+  }
+
+  const onLeave = () => {
+    const el = element.value
+    if (!el) return
+    el.style.transform = 'perspective(800px) rotateY(0deg) rotateX(0deg) scale(1)'
+  }
+
+  onMounted(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mq.matches) return
+    const isTouchDevice = window.matchMedia('(hover: none)').matches
+    if (isTouchDevice) return
+    const el = element.value
+    if (!el) return
+    el.style.transition = 'transform 0.15s ease-out'
+    el.addEventListener('mousemove', onMove)
+    el.addEventListener('mouseleave', onLeave)
+  })
+
+  onUnmounted(() => {
+    const el = element.value
+    if (!el) return
+    el.removeEventListener('mousemove', onMove)
+    el.removeEventListener('mouseleave', onLeave)
+  })
+}
+
+export const useSectionFocus = (
+  element: Ref<HTMLElement | null>
+) => {
+  if (import.meta.server) return
+  const visibility = ref(0)
+  let rafId: number
+
+  const update = () => {
+    const el = element.value
+    if (el) {
+      const rect = el.getBoundingClientRect()
+      const vh = window.innerHeight
+      const visible = Math.max(0, Math.min(rect.bottom, vh) - Math.max(rect.top, 0))
+      visibility.value = Math.min(visible / vh, 1)
+    }
+    rafId = requestAnimationFrame(update)
+  }
+
+  onMounted(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (!mq.matches) rafId = requestAnimationFrame(update)
+  })
+
+  onUnmounted(() => cancelAnimationFrame(rafId))
+
+  return visibility
 }

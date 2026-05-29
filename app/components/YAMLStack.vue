@@ -1,16 +1,21 @@
 <script setup lang="ts">
 const { t } = useI18n()
+const cardRef = ref<HTMLElement | null>(null)
+useTilt(cardRef, { maxDeg: 8, scale: 1.03 })
 </script>
-<template>
-  <div class="bg-zinc-800 dark:bg-black p-4 sm:p-6 border border-zinc-700 dark:border-zinc-800 rounded-2xl
-    shadow-xl dark:shadow-green-glow
-    relative overflow-hidden group transition-[transform,box-shadow] duration-200 ease-out w-full max-w-full will-change-transform">
 
+<template>
+  <div
+    ref="cardRef"
+    class="bg-zinc-800 dark:bg-black p-4 sm:p-6 border border-zinc-700 dark:border-zinc-800 rounded-2xl
+    shadow-xl dark:shadow-green-glow
+    relative overflow-hidden group animate-scan-line w-full max-w-full"
+  >
     <div
       class="absolute top-2 sm:top-3 left-2 sm:left-3 flex gap-1.5 opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none">
       <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500/90"></div>
       <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-500/90"></div>
-      <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/90"></div>
+      <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/90 animate-pulse"></div>
     </div>
 
     <div
@@ -22,7 +27,7 @@ const { t } = useI18n()
 <span class="text-green-400 font-bold">stack</span>:
   <span class="text-green-400">{{ t('tech_stack.languages') }}</span>: <span class="text-zinc-400">{{ t('tech_stack.proficiency') }}</span>
     <span class="text-zinc-300">- PHP [PRO]</span>
-    <span class="text-green-400">- GO [{{ t('tech_stack.learning') }}]</span>
+    <span class="text-green-400 animate-pulse">- GO [{{ t('tech_stack.learning') }}]</span>
     <span class="text-zinc-300">- TS [BASIC]</span>
 
   <span class="text-green-400">{{ t('tech_stack.frameworks') }}</span>:

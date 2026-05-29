@@ -1,7 +1,4 @@
 export const useSeoSchema = () => {
-  const { locale } = useI18n()
-  const route = useRoute()
-
   const baseUrl = 'https://jude.jkantech.net/jude'
 
   const personSchema = {
@@ -10,6 +7,16 @@ export const useSeoSchema = () => {
     '@id': `${baseUrl}/#person`,
     name: 'Jude Mpoyo',
     url: baseUrl,
+    mainEntityOfPage: {
+      '@type': 'ProfilePage',
+      '@id': `${baseUrl}/`,
+      url: baseUrl,
+      name: 'Jude Mpoyo | Full-stack Developer – Portfolio',
+      description:
+        'Official portfolio of Jude Mpoyo, Full-stack Developer specializing in Laravel, Nuxt, Go and Docker. Based in Kolwezi, DRC.',
+      about: { '@id': `${baseUrl}/#person` },
+      dateModified: new Date().toISOString().split('T')[0],
+    },
     image: {
       '@type': 'ImageObject',
       url: `${baseUrl}/judepic.jpeg`,
@@ -18,7 +25,7 @@ export const useSeoSchema = () => {
     },
     jobTitle: 'Full-stack Developer',
     description:
-      'Full-stack developer specializing in Laravel, Vue.js, TypeScript, Go and Docker. Based in Kolwezi, DRC. Building robust backend systems and production-ready web applications.',
+      'Full-stack developer specializing in Laravel, Nuxt, Go and Docker. Based in Kolwezi, DRC. Building robust backend systems and production-ready web applications.',
     knowsAbout: [
       'Laravel',
       'Vue.js',
@@ -51,6 +58,7 @@ export const useSeoSchema = () => {
       url: 'https://jkantech.net',
     },
     sameAs: [
+      baseUrl,
       'https://github.com/judempoyo',
       'https://linkedin.com/in/jude-mpoyo',
     ],
@@ -66,6 +74,26 @@ export const useSeoSchema = () => {
     description:
       'Portfolio of Jude Mpoyo, Full-stack Developer specializing in Laravel, Vue.js, Go and Docker.',
     author: { '@id': `${baseUrl}/#person` },
+    publisher: { '@id': `${baseUrl}/#person` },
+    inLanguage: ['en', 'fr'],
+    potentialAction: {
+      '@type': 'ReadAction',
+      target: baseUrl,
+    },
+  }
+
+  const profilePageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': `${baseUrl}/`,
+    url: baseUrl,
+    name: 'Jude Mpoyo | Full-stack Developer – Portfolio',
+    description:
+      'Official portfolio of Jude Mpoyo, Full-stack Developer specializing in Laravel, Nuxt, Go and Docker. Based in Kolwezi, DRC.',
+    isPartOf: { '@id': `${baseUrl}/#website` },
+    about: { '@id': `${baseUrl}/#person` },
+    mainEntity: { '@id': `${baseUrl}/#person` },
+    dateModified: new Date().toISOString().split('T')[0],
     inLanguage: ['en', 'fr'],
   }
 
@@ -131,6 +159,11 @@ export const useSeoSchema = () => {
         type: 'application/ld+json',
         innerHTML: JSON.stringify(websiteSchema),
         key: 'schema-website',
+      },
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify(profilePageSchema),
+        key: 'schema-profilepage',
       },
       {
         type: 'application/ld+json',
