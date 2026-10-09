@@ -70,7 +70,7 @@ Options +FollowSymLinks
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteBase /jude/
+    RewriteBase __APP_BASE_URL__
 
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
