@@ -75,7 +75,7 @@ The default experience uses a warm paper, ink and copper palette, a system sans-
 
 ## Deployment base and contact configuration
 
-for publishing at the domain root or under a subdirectory. `.env.example` documents `NUXT_APP_BASE_URL`, `NUXT_PUBLIC_SITE_URL` and `NUXT_PUBLIC_WHATSAPP_NUMBER`. Static output must be regenerated after configuration changes.
+The site can be published at the domain root or under a subdirectory. `.env.example` documents `NUXT_APP_BASE_URL`, `NUXT_PUBLIC_SITE_URL` and `NUXT_PUBLIC_WHATSAPP_NUMBER`. Static output must be regenerated after configuration changes.
 
 ## Floating terminal and interactions
 
@@ -84,3 +84,38 @@ The terminal is a non-modal floating window: visitors can drag it, move it with 
 Motion entrances replay on viewport re-entry in either scroll direction. Hover and focus interactions add spring feedback to projects, tools, calls to action and the portrait. The delivery diagram loops only while in view and pauses in background tabs. All animation remains optional under reduced-motion preferences.
 
 The About section now includes the existing portrait, while the original shortcut and timed invitation remain available. A dedicated toolbench separates current tools from Go, which is explicitly marked as a learning direction.
+
+
+### Preview the static site locally
+
+```sh
+npm run generate:local
+npm run preview
+```
+
+Open the local URL printed by the preview command. `generate:local` builds with
+`NUXT_APP_BASE_URL=/`, so assets resolve correctly when the output is served at
+localhost's root. It does not modify `.env`. Alternatively, after this local
+build, use `npx serve .output/public`.
+
+A build generated with `/jude/` expects the **entire** output directory to be
+mounted under `/jude/`, including its assets. Serving that output at `/` does not
+simulate the production mount and can leave the page without styles.
+
+### Build for deployment
+
+```sh
+# Subdirectory: publish the output contents in the host's jude directory.
+NUXT_APP_BASE_URL=/jude/ npm run generate
+
+# Domain root: publish the output contents in the host's public root.
+NUXT_APP_BASE_URL=/ npm run generate
+```
+
+Each generation replaces `.output/public`. Regenerate with the deployment base
+before publishing after a local preview. `NUXT_PUBLIC_SITE_URL` is the production
+origin only, without a path.
+
+The unused Bunny font provider is disabled. JetBrains Mono still uses the Google
+provider during generation; uncached font downloads therefore require network
+access. This setting does not change Google site verification or analytics.

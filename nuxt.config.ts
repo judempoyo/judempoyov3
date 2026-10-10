@@ -61,6 +61,7 @@ export default defineNuxtConfig({
     }
   },
   fonts: {
+    providers: { bunny: false },
     families: [
       { name: 'JetBrains Mono', provider: 'google', display: 'swap' }
     ]
