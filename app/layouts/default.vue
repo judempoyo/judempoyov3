@@ -2,6 +2,7 @@
 import Header from '../components/layout/Header.vue'
 import Footer from '../components/layout/Footer.vue'
 const { t } = useI18n()
+const { terminalOpen } = useTerminal()
 </script>
 
 <template>
@@ -10,5 +11,6 @@ const { t } = useI18n()
     <Header />
     <main id="main-content"><slot /></main>
     <Footer />
+    <LazyTerminalPanel v-if="terminalOpen" />
   </div>
 </template>

@@ -23,6 +23,7 @@ const followLink = async (id: string) => {
   section?.setAttribute('tabindex', '-1')
   section?.focus({ preventScroll: true })
 }
+const launchTerminal = () => { closeMenu(); openTerminal() }
 const closeOnDesktop = () => { if (desktop?.matches) menuOpen.value = false }
 watch(() => route.fullPath, () => { menuOpen.value = false })
 onMounted(() => {
@@ -46,7 +47,10 @@ onBeforeUnmount(() => desktop?.removeEventListener('change', closeOnDesktop))
         <NuxtLink :to="localePath('/') + '#contact'">{{ t('nav.contact') }} <span aria-hidden="true">↗</span></NuxtLink>
       </nav>
       <div class="header-tools">
-
+        <button class="terminal-trigger" type="button" @click="openTerminal">
+          <span aria-hidden="true">&gt;_</span><span class="terminal-trigger-label">{{ t('terminal.open') }}</span>
+          <span class="sr-only terminal-mobile-label">{{ t('terminal.open') }}</span>
+        </button>
         <LanguageSelector />
         <ToggleTheme />
         <button ref="menuButton" class="mobile-toggle" :class="{ 'is-open': menuOpen }" type="button"
@@ -72,7 +76,9 @@ onBeforeUnmount(() => desktop?.removeEventListener('change', closeOnDesktop))
           </NuxtLink>
           <NuxtLink class="mobile-contact-link" :to="localePath('/') + '#contact'" @click="followLink('contact')">{{
             t('hero.cta_connect') }} <span aria-hidden="true">↗</span></NuxtLink>
-        
+          <div class="mobile-menu-footer"><button type="button" @click="launchTerminal"><span
+                aria-hidden="true">&gt;_</span> {{ t('terminal.open') }}</button><span class="annotation">{{
+                  t('mobile_menu.optional') }}</span></div>
         </nav>
       </div>
     </Transition>
