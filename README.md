@@ -119,3 +119,29 @@ origin only, without a path.
 The unused Bunny font provider is disabled. JetBrains Mono still uses the Google
 provider during generation; uncached font downloads therefore require network
 access. This setting does not change Google site verification or analytics.
+
+### Apache / nginx hosting
+
+The exported `.htaccess` intentionally contains comments only. Static EN/FR pages
+are served from their generated directories without a rewrite fallback. This
+avoids `Options`, `Header`, and rewrite directives that restricted hosting can
+reject with HTTP 500. Replace the previously deployed `.htaccess` too; uploading
+only visible files may leave the old hidden file in place. Publish the contents
+of `.output/public`, not the source `public` directory.
+
+An nginx response header does not identify which server ultimately reads
+`.htaccess`; nginx may proxy to Apache. If HTTP 500 persists with the minimal
+file, consult the hosting error log or ask the host for the exact rejected
+directive. No root access is required to replace the site's own `.htaccess`.
+
+### Offline fallback
+
+A small service worker caches only `offline.html` after a successful connected
+visit. It intercepts navigation failures within the configured base path and
+shows a self-contained EN/FR profile and contact page. It does not cache the live
+portfolio, analytics, or third-party requests. Registration requires HTTPS (or
+localhost) and is disabled in development. A first-ever visit without a network
+connection cannot download this fallback. The retry button reloads the original
+URL; network detection alone is not proof that the server is reachable.
+
+When changing the fallback page, increment the cache version in `public/sw.js`.

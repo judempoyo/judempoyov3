@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Offline · Jude Mpoyo</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #f3efe7;
+      --ink: #242824;
+      --muted: #65665c;
+      --accent: #0b5f5c;
+      --rule: #c9c5b9
+    }
+
+    @media(prefers-color-scheme:dark) {
+      :root {
+        --paper: #1c201e;
+        --ink: #f0ece2;
+        --muted: #b2b5a8;
+        --accent: #5cc2ba;
+        --rule: #474d43
+      }
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 17px/1.7 system-ui, sans-serif
+    }
+
+    main {
+      max-width: 760px;
+      margin: auto;
+      padding: clamp(24px, 6vw, 64px)
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 20px
+    }
+
+    .dot {
+      color: var(--accent)
+    }
+
+    nav {
+      display: flex;
+      gap: 8px
+    }
+
+    button,
+    a {
+      touch-action: manipulation
+    }
+
+    button {
+      min-height: 44px;
+      padding: 8px 14px;
+      border: 1px solid var(--rule);
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      cursor: pointer
+    }
+
+    button[aria-pressed=true] {
+      border-color: var(--accent);
+      color: var(--accent)
+    }
+
+    .status {
+      font: 13px/1.6 ui-monospace, monospace;
+      color: var(--accent);
+      margin-top: 36px
+    }
+
+    h1 {
+      font-size: clamp(38px, 8vw, 64px);
+      line-height: 1.1;
+      letter-spacing: -.05em;
+      margin: 24px 0
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 30px
+    }
+
+    p {
+      margin: 16px 0
+    }
+
+    .muted {
+      color: var(--muted)
+    }
+
+    .facts {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0
+    }
+
+    .facts li {
+      padding: 12px 0;
+      border-top: 1px solid var(--rule)
+    }
+
+    .facts li:last-child {
+      border-bottom: 1px solid var(--rule)
+    }
+
+    .facts strong {
+      display: block
+    }
+
+    .time {
+      font: 14px/1.6 ui-monospace, monospace;
+      color: var(--muted)
+    }
+
+    .contact {
+      border-block: 1px solid var(--rule);
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 4px;
+      overflow-wrap: anywhere
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px
+    }
+
+    .retry {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 12px 20px
+    }
+
+    [hidden] {
+      display: none !important
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header><strong>Jude Mpoyo<span class="dot">.</span></strong>
+      <nav aria-label="Language"><button type="button" data-language="en" aria-pressed="true">EN</button><button
+          type="button" data-language="fr" aria-pressed="false">FR</button></nav>
+    </header>
+
+    <section data-locale="en" aria-labelledby="title-en">
+      <p class="status">Offline</p>
+      <h1 id="title-en">You’re offline.</h1>
+      <p>Your connection dropped, or the site can’t be reached right now. This page is saved on your device, so you can
+        still see who I am and how to get in touch.</p>
+      <h2>Jude Mpoyo, full-stack developer</h2>
+      <p>I’m based in Kolwezi, DRC. I build web products with Laravel and Nuxt, deploy them with Docker, and run them on
+        my own servers.</p>
+      <ul class="facts">
+        <li><strong>Uzaraka</strong><span class="muted">Classifieds platform for the DRC, built by a team. I did the
+            frontend in Nuxt 3.</span></li>
+        <li><strong>Miabi</strong><span class="muted">Self-hosted PaaS. Merged PRs on its web console, plus several
+            installs with applications deployed on them.</span></li>
+        <li><strong>GoPosta</strong><span class="muted">Self-hosted email platform. Merged PRs on its
+            interface.</span></li>
+      </ul>
+      <p>I take freelance missions, remote contracts and team roles. Tell me what you need and when you need it.</p>
+      <h2>Get in touch</h2>
+      <p class="muted">Email and WhatsApp links open the apps on your device. GitHub and LinkedIn need a connection.</p>
+    </section>
+
+    <section data-locale="fr" aria-labelledby="title-fr" hidden>
+      <p class="status">Hors connexion</p>
+      <h1 id="title-fr">Vous êtes hors ligne.</h1>
+      <p>Votre connexion a coupé, ou le site est injoignable pour le moment. Cette page est enregistrée sur votre
+        appareil : vous pouvez quand même voir qui je suis et comment me joindre.</p>
+      <h2>Jude Mpoyo, développeur full-stack</h2>
+      <p>Je suis à Kolwezi, en RDC. Je construis des produits web avec Laravel et Nuxt, je les déploie avec Docker et je
+        les fais tourner sur mes propres serveurs.</p>
+      <ul class="facts">
+        <li><strong>Uzaraka</strong><span class="muted">Plateforme de petites annonces pour la RDC, construite en
+            équipe. J’ai fait le frontend en Nuxt 3.</span></li>
+        <li><strong>Miabi</strong><span class="muted">PaaS auto-hébergé. PR fusionnées sur sa console web, plus
+            plusieurs installations avec des applications déployées dessus.</span></li>
+        <li><strong>GoPosta</strong><span class="muted">Plateforme d’email auto-hébergée. PR fusionnées sur son
+            interface.</span></li>
+      </ul>
+      <p>Je prends des missions freelance, des contrats à distance et des postes en équipe. Dites-moi ce dont vous avez
+        besoin et pour quand.</p>
+      <h2>Me contacter</h2>
+      <p class="muted">Les liens email et WhatsApp ouvrent les applications de votre appareil. GitHub et LinkedIn
+        demandent une connexion.</p>
+    </section>
+
+    <p class="time" id="local-time" aria-live="off"></p>
+
+    <div class="contact">
+      <a id="mail-link" href="mailto:mpoyojude0@gmail.com">mpoyojude0@gmail.com</a>
+      <a id="wa-link" href="#" hidden></a>
+      <a href="https://github.com/judempoyo">GitHub / judempoyo</a>
+      <a href="https://www.linkedin.com/in/judempoyo">LinkedIn / judempoyo</a>
+    </div>
+
+    <p id="connection" class="muted" role="status" aria-live="polite"></p>
+    <p id="copied" class="muted" role="status" aria-live="polite"></p>
+
+    <div class="actions">
+      <button type="button" class="retry" id="retry">Try again</button>
+      <button type="button" id="copy-email">Copy email</button>
+    </div>
+
+    <noscript>
+      <p>JavaScript is disabled. Reload this page once you’re back online.</p>
+    </noscript>
+  </main>
+
+  <script>
+    const WHATSAPP = '243975889135'
+    const EMAIL = 'mpoyojude0@gmail.com'
+
+    const text = {
+      en: {
+        title: 'Offline · Jude Mpoyo',
+        retry: 'Try again',
+        copy: 'Copy email',
+        copied: 'Email copied.',
+        copyFailed: 'Couldn’t copy. Select the address above instead.',
+        online: 'A network is back. You can try loading the site again.',
+        offline: 'Your browser reports that you’re offline.',
+        time: t => `It’s ${t} in Kolwezi (UTC+2).`,
+        subject: 'Project inquiry',
+        wa: 'WhatsApp'
+      },
+      fr: {
+        title: 'Hors connexion · Jude Mpoyo',
+        retry: 'Réessayer',
+        copy: 'Copier l’email',
+        copied: 'Email copié.',
+        copyFailed: 'Copie impossible. Sélectionnez l’adresse ci-dessus.',
+        online: 'Le réseau est de retour. Vous pouvez réessayer de charger le site.',
+        offline: 'Votre navigateur indique que vous êtes hors connexion.',
+        time: t => `Il est ${t} à Kolwezi (UTC+2).`,
+        subject: 'Demande de projet',
+        wa: 'WhatsApp'
+      }
+    }
+
+    let language = location.pathname.split('/').includes('fr') ? 'fr' : 'en'
+    const $ = selector => document.querySelector(selector)
+
+    const updateConnection = () => {
+      $('#connection').textContent = navigator.onLine ? text[language].online : text[language].offline
+    }
+
+    const updateTime = () => {
+      try {
+        const formatted = new Intl.DateTimeFormat(language === 'fr' ? 'fr-FR' : 'en-GB', {
+          hour: '2-digit', minute: '2-digit', timeZone: 'Africa/Lubumbashi'
+        }).format(new Date())
+        $('#local-time').textContent = text[language].time(formatted)
+      } catch {
+        $('#local-time').textContent = ''
+      }
+    }
+
+    const updateContact = () => {
+      $('#mail-link').href = `mailto:${EMAIL}?subject=${encodeURIComponent(text[language].subject)}`
+      const link = $('#wa-link')
+      if (/^\d{8,15}$/.test(WHATSAPP)) {
+        link.href = `https://wa.me/${WHATSAPP}`
+        link.textContent = `${text[language].wa} / +${WHATSAPP}`
+        link.hidden = false
+      } else {
+        link.hidden = true
+      }
+    }
+
+    const selectLanguage = value => {
+      language = value
+      document.documentElement.lang = value
+      document.title = text[value].title
+      document.querySelectorAll('[data-locale]').forEach(section => { section.hidden = section.dataset.locale !== value })
+      document.querySelectorAll('[data-language]').forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.language === value)) })
+      $('#retry').textContent = text[value].retry
+      $('#copy-email').textContent = text[value].copy
+      $('#copied').textContent = ''
+      updateConnection()
+      updateTime()
+      updateContact()
+    }
+
+    document.querySelectorAll('[data-language]').forEach(button => { button.addEventListener('click', () => selectLanguage(button.dataset.language)) })
+
+    $('#retry').addEventListener('click', () => {
+      if (location.pathname.endsWith('/offline.html')) location.assign(new URL('./', location.href))
+      else location.reload()
+    })
+
+    $('#copy-email').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(EMAIL)
+        $('#copied').textContent = text[language].copied
+      } catch {
+        $('#copied').textContent = text[language].copyFailed
+      }
+    })
+
+    window.addEventListener('online', updateConnection)
+    window.addEventListener('offline', updateConnection)
+    setInterval(updateTime, 30000)
+    selectLanguage(language)
+  </script>
+</body>
+
+</html>
