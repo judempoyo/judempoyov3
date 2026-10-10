@@ -1,155 +1,69 @@
 <script setup lang="ts">
-const { t } = useI18n();
-const localePath = useLocalePath();
-const { level } = useLogLevel();
-
-const { staggerIn, fadeIn } = useScrollAnimations()
-const badgesRef = ref<HTMLElement | null>(null)
-const titleRef = ref<HTMLElement | null>(null)
-const descriptionRef = ref<HTMLElement | null>(null)
-const ctaRef = ref<HTMLElement | null>(null)
-
-onMounted(() => {
-
-  if (badgesRef.value) {
-    const badges = badgesRef.value.querySelectorAll('span')
-    staggerIn(badges as any, { stagger: 0.1, y: 20 })
-  }
-
-  if (titleRef.value) {
-    fadeIn(titleRef.value, { y: 40 })
-  }
-
-  if (descriptionRef.value) {
-    fadeIn(descriptionRef.value, { y: 30, delay: 0.1 })
-  }
-
-  if (ctaRef.value) {
-    const buttons = ctaRef.value.querySelectorAll('a')
-    staggerIn(buttons as any, { stagger: 0.15, y: 20, delay: 0.2 })
-  }
+const { t } = useI18n()
+const localePath = useLocalePath()
+const page = ref<HTMLElement | null>(null)
+usePageMotion(page)
+useSeoMeta({
+  title: () => t('design.seo_title'),
+  description: () => t('design.seo_description'),
+  ogTitle: () => `Jude Mpoyo | ${t('design.seo_title')}`,
+  ogDescription: () => t('design.seo_description'),
+  twitterTitle: () => `Jude Mpoyo | ${t('design.seo_title')}`,
+  twitterDescription: () => t('design.seo_description'),
 })
-
-useHead({
-  title: "Jude Mpoyo | Full-stack Developer",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker. Based in Kolwezi, DRC.",
-    },
-    { property: "og:title", content: "Jude Mpoyo | Full-stack Developer" },
-    {
-      property: "og:description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    },
-    { property: "og:image", content: "/og-image.png" },
-    { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Jude Mpoyo | Full-stack Developer" },
-    {
-      name: "twitter:description",
-      content:
-        "Full-stack developer passionate about building robust web solutions. Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    },
-    { name: "twitter:image", content: "/og-image.png" },
-  ],
-});
 </script>
+
 <template>
-  <div class="font-mono">
-    <section
-      class="relative min-h-screen pt-6 sm:pt-24 pb-16 px-6 border-b border-zinc-200 dark:border-zinc-800 bg-linear-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-zinc-900 dark:to-black shadow-xl sm:justify-center place-content-center"> 
-      <div class="absolute inset-0 overflow-hidden pointer-events-none select-none">
-        <div
-          class="absolute -top-12 -right-12 text-[12vw] font-black text-zinc-200 dark:text-zinc-800 opacity-20">
-          0xJM93
+  <div ref="page">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-topline annotation"><span><span class="location-mark" aria-hidden="true"></span> Kolwezi, {{
+        t('design.country') }} / UTC+2</span><span>{{ t('design.edition') }}</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">{{ t('design.hero_role') }}</p>
+          <h1 id="hero-title">{{ t('design.hero_line_1') }}<br /><span>{{ t('design.hero_line_2') }}</span><br />{{
+            t('design.hero_line_3') }}<span class="hero-period">.</span></h1>
+          <p class="hero-description">{{ t('hero.description_2') }}</p>
+          <div class="hero-actions">
+            <NuxtLink :to="localePath('/') + '#contact'" class="button-primary">{{ t('hero.cta_connect') }} <span
+                aria-hidden="true">↗</span></NuxtLink>
+            <NuxtLink :to="localePath('/') + '#projects'" class="text-link">{{ t('hero.cta_services') }} <span
+                aria-hidden="true">↓</span></NuxtLink>
+          </div>
+          <p class="hero-proof annotation">{{ t('hero.social_proof') }}</p>
         </div>
-        <div class="absolute inset-0 opacity-10">
-          <div
-            class="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
+        <div class="hero-aside">
+          <div class="infrastructure-plate" :aria-label="t('design.diagram_label')" role="group">
+            <div class="plate-heading annotation"><span>JM / KWZ</span><span>{{ t('design.field_note') }}</span></div>
+            <span class="delivery-packet" aria-hidden="true"></span>
+            <div class="plate-route">
+              <div class="route-node"><span class="node-square" aria-hidden="true"></span><span>{{ t('design.build')
+                  }}<small>Laravel · Nuxt / Vue</small></span></div>
+              <div class="route-wire" aria-hidden="true"><span></span></div>
+              <div class="route-node route-node-offset"><span class="node-square" aria-hidden="true"></span><span>{{
+                t('design.deploy') }}<small>Docker · Miabi</small></span></div>
+              <div class="route-wire route-wire-offset" aria-hidden="true"><span></span></div>
+              <div class="route-node"><span class="node-square node-solid" aria-hidden="true"></span><span>{{
+                t('design.operate') }}<small>{{ t('design.own_infrastructure') }}</small></span></div>
+            </div>
+            <div class="plate-footer annotation"><span>{{ t('design.diagram_note') }}</span><button type="button"
+                class="replay-motion" :aria-label="t('design.replay')">↻</button></div>
           </div>
-          <div
-            class="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-zinc-400 dark:via-zinc-600 to-transparent">
-          </div>
-        </div>
-      </div>
-
-      <div class="container mx-auto max-w-350 px-4 sm:px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-20 items-start lg:items-center">
-          <div class="lg:col-span-8 space-y-4 lg:space-y-6 relative z-10">
-            <div ref="badgesRef" class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-2 py-0.5 border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 text-[9px] font-bold uppercase tracking-wider">
-                Object: Developer_Profile
-              </span>
-              <span
-                class="px-2 py-0.5 border border-green-500 bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-[9px] font-bold uppercase tracking-wider">
-                Priority: High_Availability
-              </span>
-              <span
-                class="px-2 py-0.5 border border-zinc-300 bg-transparent text-zinc-500 dark:text-zinc-400 text-[9px] font-bold uppercase tracking-wider">
-                Ver: 2026.01_STABLE
-              </span>
-            </div>
-
-            <div ref="titleRef" class="space-y-6">
-              <h1
-                class="text-2xl sm:text-[2.5rem] md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tighter uppercase leading-compact text-zinc-900 dark:text-zinc-100">
-                <span
-                  class="inline-block bg-linear-to-r from-green-600 to-emerald-500 dark:from-green-400 dark:to-emerald-300 bg-clip-text text-transparent">{{
-                    t("hero.role_primary") }}</span>
-                <span class="block mt-2"> {{ t("hero.role_secondary") }}. </span>
-              </h1>
-              <div class="flex items-center gap-4 py-3">
-                <div class="h-0.5 w-20 bg-linear-to-r from-green-600 to-transparent dark:from-green-400"></div>
-                <span class="text-xs font-black uppercase tracking-widest-3xl text-zinc-500 dark:text-zinc-400">
-                  {{ t("hero.manifesto_ver") }}
-                </span>
-              </div>
-            </div>
-
-            <div ref="descriptionRef" class="space-y-4">
-              <p class="text-sm md:text-base lg:text-lg leading-relaxed font-medium text-zinc-700 dark:text-zinc-300">
-                {{ t("hero.description_1") }} <br />
-                {{ t("hero.description_2", { target: "Go & Docker" }) }} <br />
-                {{ t("hero.description_3") }}
-              </p>
-            </div>
-
-            <div ref="ctaRef" class="flex flex-col sm:flex-row gap-4 pt-4">
-              <NuxtLink :to="localePath('/') + '#projects'"
-                class="inline-flex items-center justify-center h-11 px-8 min-w-40 bg-zinc-900 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-900 text-xs uppercase tracking-widest rounded-md shadow-sm transform transition-all duration-200 ease-out hover:bg-green-600 hover:dark:bg-green-600  hover:text-white dark:hover:text-white hover:scale-103 active:scale-97 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
-                {{ t("hero.cta_services") }}
-              </NuxtLink>
-
-              <NuxtLink :to="localePath('/') + '#contact'"
-                class="inline-flex items-center justify-center h-11 px-8 min-w-40 border-2 border-zinc-300 dark:border-zinc-700 text-xs uppercase tracking-widest text-zinc-900 dark:text-zinc-300 rounded-md shadow-sm transform transition-all duration-200 ease-out hover:border-zinc-900 dark:hover:border-green-500 hover:scale-103 active:scale-97 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900">
-                {{ t("hero.cta_connect") }}
-              </NuxtLink>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 relative mt-8 lg:mt-0 min-w-0">
-            <YAMLStack />
-
-            <div class="absolute -bottom-4 -left-4 bg-green-700 dark:bg-green-400 px-3 py-1.5 shadow-xl -rotate-2">
-
-              <span class="text-[10px] text-white dark:text-zinc-950 font-black uppercase tracking-widest">
-                TRANSITION_IN_PROGRESS >> GO
-              </span>
-
-            </div>
-          </div>
+          <NuxtLink class="go-note" :to="localePath('/') + '#golang'"><span class="go-lettering"
+              aria-hidden="true">Go<span>↗</span></span><span class="go-note-copy"><span class="annotation">Golang /
+                DevOps</span><strong>{{ t('design.go_title') }}</strong><span>{{ t('design.go_status') }}</span></span>
+          </NuxtLink>
         </div>
       </div>
+      <div class="hero-baseline"><span class="annotation">{{ t('hero.engagement') }}</span><span
+          class="hero-stack">Laravel <span>/</span> Vue <span>/</span> TypeScript <span>/</span> Docker <span>/</span>
+          <a href="#golang">Go ↗</a></span><a href="#projects" class="scroll-link annotation">{{ t('design.scroll') }}
+          ↓</a></div>
     </section>
-
-    <div class="relative bg-zinc-50 dark:bg-zinc-900">
-      <SectionsAbout />
-      <LazySectionsProjects />
-      <LazySectionsContact />
-    </div>
+    <SectionsProjects />
+    <SectionsOperations />
+    <SectionsAbout />
+    <SectionsTools />
+    <SectionsContact />
   </div>
 </template>
