@@ -91,7 +91,7 @@
       "infra": "Nuxt 3 frontend",
       "role": "Frontend with Nuxt 3, as part of the team. The repository is private.",
       "result": "The platform is live. I built the frontend; the full product is the whole team’s work.",
-      "details": "What I learned there: WebSocket, Redis caching, Git Flow and good Git practice on a team."
+      "details": "What I learned there: WebSocket, Redis caching and good Git practice on a team."
     },
     "laraapistarter": {
       "title": "LaraApiStarter",
