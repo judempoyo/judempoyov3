@@ -2,6 +2,10 @@ export interface Project {
     id: string
     titleKey: string
     descriptionKey: string
+    roleKey: string
+    resultKey: string
+    detailsKey?: string
+    contributions?: { number: number; descriptionKey: string; url: string }[]
     stack: string[]
     metrics: {
         loadTime?: string
@@ -21,33 +25,56 @@ export const useProjects = () => {
             id: 'uzaraka',
             titleKey: 'projects.uzaraka.title',
             descriptionKey: 'projects.uzaraka.description',
-            stack: ['Nuxt', 'TailwindCSS', 'TypeScript'],
+            roleKey: 'projects.uzaraka.role',
+            resultKey: 'projects.uzaraka.result',
+            detailsKey: 'projects.uzaraka.details',
+            stack: ['Nuxt 3'],
             metrics: {
-                loadTime: '< 300ms (local render)',
                 infraKey: 'projects.uzaraka.infra'
             },
-            archDiagram: 'UI_ONLY (Front built with Nuxt 3)',
-            archKey: 'projects.uzaraka.arch',
             isLive: true,
-            liveUrl: 'https://uzaraka.com',
+            liveUrl: 'https://www.uzaraka.com',
             docsUrl: undefined
         },
         {
-            id: 'jumpdatatable',
-            titleKey: 'projects.jumpdatatable.title',
-            descriptionKey: 'projects.jumpdatatable.description',
-            stack: ['PHP 8.x', 'TailwindCSS', 'Bootstrap'],
-            metrics: {
-                loadTime: 'Latency Optimized',
-                infraKey: 'projects.jumpdatatable.infra'
-            },
+            id: 'miabi',
+            titleKey: 'projects.miabi.title',
+            descriptionKey: 'projects.miabi.description',
+            roleKey: 'projects.miabi.role',
+            resultKey: 'projects.miabi.result',
+            detailsKey: 'projects.miabi.details',
+            stack: ['Vue 3', 'Go'],
+            metrics: { infraKey: 'projects.miabi.infra' },
             isLive: false,
-            docsUrl: 'https://github.com/judempoyo/jumpDatatable'
+            docsUrl: 'https://github.com/miabi-io/miabi',
+            contributions: [50, 52, 58, 90, 214, 251].map(number => ({
+                number,
+                descriptionKey: `projects.miabi.pr_${number}`,
+                url: `https://github.com/miabi-io/miabi/pull/${number}`
+            }))
+        },
+        {
+            id: 'goposta',
+            titleKey: 'projects.goposta.title',
+            descriptionKey: 'projects.goposta.description',
+            roleKey: 'projects.goposta.role',
+            resultKey: 'projects.goposta.result',
+            stack: ['Vue', 'Go'],
+            metrics: { infraKey: 'projects.goposta.infra' },
+            isLive: false,
+            docsUrl: 'https://github.com/goposta/posta',
+            contributions: [61, 69, 126].map(number => ({
+                number,
+                descriptionKey: `projects.goposta.pr_${number}`,
+                url: `https://github.com/goposta/posta/pull/${number}`
+            }))
         },
         {
             id: 'laraapistarter',
             titleKey: 'projects.laraapistarter.title',
             descriptionKey: 'projects.laraapistarter.description',
+            roleKey: 'projects.laraapistarter.role',
+            resultKey: 'projects.laraapistarter.result',
             stack: ['Laravel 12', 'Actions', 'DTOs', 'REST API'],
             metrics: {
                 infraKey: 'projects.laraapistarter.infra'

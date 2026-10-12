@@ -1,30 +1,14 @@
+<script setup lang="ts">
+const { t } = useI18n()
+const { openTerminal } = useTerminal()
+</script>
+
 <template>
-    <footer class="py-6 border-t border-zinc-200 dark:border-zinc-800
-    bg-white dark:bg-zinc-900
-    font-bold text-[11px] uppercase tracking-wide text-center
-    text-zinc-600 dark:text-zinc-500 px-6 transition-colors">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-
-            <div class="flex gap-4 opacity-70">
-                <span>VER: 0.0.1_STABLE</span>
-                <span>ENV: PRODUCTION</span>
-            </div>
-
-            <div class="opacity-80 text-zinc-700 dark:text-zinc-400">
-                DESIGNED_BY: JUDE.MPOYO // BUILD: {{ new Date().getFullYear() }}
-            </div>
-
-            <div class="flex gap-4">
-                <a class="text-green-600 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://github.com/judempoyo"
-                    target="_blank">GITHUB</a>
-
-                <a class="text-green-600 dark:text-green-400 transition-all duration-150
-          hover:scale-105 active:scale-95 hover:underline underline-offset-4" href="https://linkedin.com/in/jude-mpoyo"
-                    target="_blank">LINKEDIN</a>
-            </div>
-
-        </div>
-    </footer>
-
+  <footer class="site-footer shell">
+    <span class="footer-signature">Jude Mpoyo<span class="accent">.</span></span>
+    <span class="annotation">Kolwezi, {{ t('design.country') }} · UTC+2</span>
+    <button type="button" class="text-link" @click="openTerminal"><span aria-hidden="true">&gt;_</span> {{
+      t('terminal.open') }}</button>
+    <a href="https://github.com/judempoyo" target="_blank" rel="noopener noreferrer" class="text-link">GitHub ↗</a>
+  </footer>
 </template>
