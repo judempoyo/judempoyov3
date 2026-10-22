@@ -1,73 +1,45 @@
 <script setup lang="ts">
-defineProps<{
-  show: boolean
-}>()
-
-const emit = defineEmits(['update:show'])
-
-const close = () => {
-  emit('update:show', false)
+import { trapDialogFocus } from '~/utils/dialogFocus'
+const props = defineProps<{ show: boolean }>()
+const emit = defineEmits<{ 'update:show': [value: boolean] }>()
+const { t } = useI18n()
+const asset = usePublicAsset()
+const dialog = ref<HTMLDialogElement | null>(null)
+const titleId = useId()
+const imageUrl = asset('judepic.jpeg')
+let previousFocus: HTMLElement | null = null
+let previousOverflow = ''
+const close = () => emit('update:show', false)
+const restore = () => {
+  document.body.style.overflow = previousOverflow
+  previousFocus?.focus()
+  previousFocus = null
 }
-
-
-onMounted(() => {
-  const handleEsc = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') close()
+watch(() => props.show, async (show) => {
+  await nextTick()
+  if (show && dialog.value) {
+    previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null
+    previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    dialog.value.showModal()
+  } else if (dialog.value?.open) {
+    dialog.value.close()
+    restore()
   }
-  window.addEventListener('keydown', handleEsc)
-  onUnmounted(() => window.removeEventListener('keydown', handleEsc))
 })
+onBeforeUnmount(() => { if (dialog.value?.open) { dialog.value.close(); restore() } })
 </script>
 
 <template>
-  <Teleport to="body">
-    <Transition name="fade">
-      <div v-if="show" @click="close"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer">
-        <div class="relative max-w-md w-full mx-4" @click.stop>
-          <div class="bg-zinc-900 border-2 border-green-500 rounded-2xl p-6 shadow-2xl">
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-3">
-                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                <span class="text-xs font-black uppercase tracking-wider text-green-400">IDENTITY_REVEALED</span>
-              </div>
-              <button @click="close"
-                class="text-zinc-400 hover:text-white transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-              </button>
-            </div>
-            
-            <div class="relative overflow-hidden rounded-xl border border-zinc-700">
-              <img src="/judepic.jpeg" alt="Jude Mpoyo" 
-                class="w-full h-auto object-cover" />
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <p class="text-white font-bold text-lg">Jude Mpoyo</p>
-                <p class="text-green-400 text-sm font-mono">Full-stack Developer</p>
-              </div>
-            </div>
-            
-            <div class="mt-4 text-center">
-              <p class="text-xs text-zinc-500 font-mono">
-                Easter egg activated! Press ESC or click outside to close.
-              </p>
-            </div>
-          </div>
-        </div>
+  <dialog ref="dialog" @keydown.tab="trapDialogFocus" class="photo-dialog" :aria-labelledby="titleId"
+    @cancel.prevent="close" @click="($event.target === dialog) && close()"><template v-if="show">
+      <div class="photo-topline"><span class="annotation">{{ t('design.photo_label') }}</span><button type="button"
+          autofocus :aria-label="t('design.close')" @click="close">×</button></div><img :src="imageUrl" alt="Jude Mpoyo"
+        width="440" height="440" />
+      <div class="photo-caption">
+        <h2 :id="titleId">Jude Mpoyo<span class="accent">.</span></h2>
+        <p>{{ t('design.photo_role') }}</p>
       </div>
-    </Transition>
-  </Teleport>
+    </template>
+  </dialog>
 </template>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

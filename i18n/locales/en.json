@@ -3,131 +3,308 @@
     "menu": "Menu"
   },
   "nav": {
-    "home": "Index",
-    "about": "Identity",
-    "projects": "Projects",
-    "contact": "Contact"
+    "home": "Home",
+    "about": "About",
+    "projects": "Work",
+    "contact": "Contact",
+    "tools": "Tools"
   },
   "system_status": {
-    "online": "SYS_ONLINE",
-    "location": "LOC: KOLWEZI, DRC",
-    "tz": "TZ: CAT (UTC+2)",
-    "learning": "LEARNING_MODE: [GO, DOCKER, CLEAN_ARCH] // future backend direction",
-    "uptime": "AVAILABILITY: 99.9%",
-    "version": "ENGINE_v0.0 .1"
+    "online": "Jude Mpoyo",
+    "location": "Kolwezi, DRC",
+    "tz": "UTC+2",
+    "learning": "Full-stack, leaning DevOps. Learning Go.",
+    "uptime": "Freelance / remote",
+    "version": "2026 edition"
   },
   "hero": {
-    "role_primary": "FULLSTACK_DEVELOPER",
-    "role_secondary": "BACKEND_FOCUS",
-    "manifesto_ver": "Manifesto_v1.0",
-    "description_1": "// Domain: Backend systems, API resilience, modular architectures.",
-    "description_2": "// Future Target: Designing high-performance services with {target}.",
-    "description_3": "// Core Focus: Performance, code integrity, system availability.",
-    "description_4": "// Principle: Container-ready design and scalable system thinking (future-oriented).",
-    "social_proof": "4+ Years Experience | 15+ Systems Built | Laravel Specialist | Future Stack: Go + Docker",
-    "cta_services": "[Browse_Projects]",
-    "cta_connect": "[Init_Connection]"
+    "role_primary": "I build web products.",
+    "role_secondary": "And keep them running.",
+    "manifesto_ver": "From code to server",
+    "description_1": "Laravel, Nuxt/Vue, TypeScript and Docker.",
+    "description_2": "I build web products, then deploy them and look after them on my own infrastructure.",
+    "description_3": "A product to build, an interface to rework or an app to put online? Get in touch.",
+    "social_proof": "Frontend contributor to Miabi and GoPosta. I’ve installed Miabi on servers and deployed apps on it.",
+    "cta_services": "See my work",
+    "cta_connect": "Let’s work together",
+    "identity": "Jude Mpoyo · Full-stack developer",
+    "location": "Kolwezi, DRC",
+    "engagement": "Freelance · Remote · Contracts",
+    "stack_note": "Build · Deploy · Operate"
   },
   "about": {
-    "section_id": "02/IDENTITY",
-    "title": "BUILDING_ROBUST_SOLUTIONS. CLEAN_CODE_MINDSET.",
-    "bio_1": "Full-stack developer passionate about building robust and elegant web solutions. Main stack: Laravel, Vue.js, TypeScript, Go, Flutter, Docker.",
-    "bio_2": "Based in Kolwezi, DRC. Strong commitment to clean code, problem-solving, and delivering production-ready systems. Exploring Cloud, AI, and DevOps for scalable innovation.",
-    "bio_3": "Core values: Building reliable applications, contributing to open source, and exploring the future of IT with curiosity and ambition.",
+    "section_id": "02 / About",
+    "title": "I’m Jude, a developer in Kolwezi.",
+    "bio_1": "I do full-stack work with Laravel/PHP, Nuxt/Vue, TypeScript and Docker, from Kolwezi in the DRC.",
+    "bio_2": "I built the frontend of Uzaraka with a team, sent fixes and interface components to Miabi and GoPosta, and deploy applications on my own infrastructure.",
+    "bio_3": "I’m getting deeper into DevOps and learning Go. My merged contributions to Miabi and GoPosta are frontend work.",
     "specs": {
-      "title": "System_Specs_Snapshot:",
-      "os": "LINUX_UBUNTU",
-      "phase": "GO_DOCKER_LEARNING",
-      "arch": "CLEAN_ARCHITECTURE",
-      "reg": "KWZ_DRC",
-      "cluster_ready": "MULTI_SERVICE_READY (conceptual)"
-    },
-    "stats": {
-      "exp": "Compile_Time_Years",
-      "services": "Services_Built",
-      "repositories": "OpenSource_Modules"
+      "title": "In practice",
+      "os": "Laravel / Nuxt / TypeScript / Docker",
+      "phase": "Go",
+      "arch": "Build, deploy, operate",
+      "reg": "Kolwezi, DRC",
+      "stack_label": "Stack",
+      "learning_label": "Learning",
+      "practice_label": "Practice",
+      "location_label": "Based in"
     }
   },
   "journey": {
-    "title": "Sequence_Evolution.log",
-    "mode": "READ_ONLY",
+    "title": "Production notes",
+    "mode": "Selection",
     "logs": [
       {
-        "date": "2025",
-        "event": "JKANTECH_FULLSTACK",
-        "detail": "Joined Jkantech as Full-stack Developer. Building production systems with Laravel, Vue.js, TypeScript. Learning Go & Docker."
+        "date": "Jul – Sep 2026",
+        "event": "Miabi",
+        "detail": "Six frontend PRs merged into the console. I’ve also installed the platform on servers and deployed applications on it."
       },
       {
-        "date": "2024",
-        "event": "GRADUATION_FREELANCE",
-        "detail": "Graduated from ISC Lubumbashi. Launched freelance career delivering web apps, dashboards, and APIs."
+        "date": "May – Jun 2026",
+        "event": "GoPosta",
+        "detail": "Three merged PRs: inbound filters and pagination, mobile navigation, template editing and theme fixes."
       },
       {
-        "date": "2023",
-        "event": "PHP_LARAVEL_AFRISOFT",
-        "detail": "Started programming studies at ISC Lubumbashi. Learning PHP, MySQL, and web development fundamentals. Deep dive into Laravel ecosystem. Internship at Afrisoft building internal tools and improving UIs."
+        "date": "Team",
+        "event": "Uzaraka",
+        "detail": "Frontend in Nuxt 3, with a team, for a classifieds platform built for the DRC."
       }
     ]
   },
   "tech_stack": {
     "config_file": "config_stack.yaml",
-    "languages": "core_languages",
-    "frameworks": "frameworks_used",
-    "infrastructure": "infrastructure_tools",
-    "orientation": "future_backend_direction",
-    "learning": "[GO_DOCKER_ACCEL]",
-    "proficiency": "# Current Proficiency",
-    "end_config": "# End of Configuration"
+    "languages": "languages",
+    "frameworks": "frameworks",
+    "infrastructure": "operations",
+    "learning": "learning",
+    "proficiency": "# What I use; Go is in progress",
+    "end_config": "# Development, deployment, operations"
   },
   "projects": {
-    "section_id": "03/PRODUCTION",
-    "title": "FEATURED_PROJECTS.",
-    "listing": "Featured: {count} selected projects // Source: Portfolio_Showcase",
-    "debug_note": "TIP: TOGGLE DEBUG MODE TO ACCESS FUTURE ARCH SCHEMATICS AND METRICS.",
+    "section_id": "03 / Work",
+    "title": "Products, contributions, operations.",
+    "listing": "{count} projects, with my role and what backs it up.",
+    "debug_note": "My role and the results are here. The details give context and PR links.",
     "uzaraka": {
       "title": "Uzaraka",
-      "description": "Modern classifieds platform for DRC. Post, browse, and manage listings easily. Features include smart search, secure messaging, and performance tracking.",
-      "infra": "Nuxt3"
-    },
-    "jumpdatatable": {
-      "title": "Jump Datatable",
-      "description": "Composer package for dynamic tables in PHP. Responsive, sortable, searchable, and paginated tables. Optimized for TailwindCSS and Bootstrap.",
-      "infra": "OpenSource Library / PHP"
+      "description": "A classifieds platform for the DRC, built by a team: publishing and managing listings, search, secure messaging and performance tracking.",
+      "infra": "Nuxt 3 frontend",
+      "role": "Frontend with Nuxt 3, as part of the team. The repository is private.",
+      "result": "The platform is live. I built the frontend; the full product is the whole team’s work.",
+      "details": "What I learned there: WebSocket, Redis caching and good Git practice on a team."
     },
     "laraapistarter": {
       "title": "LaraApiStarter",
-      "description": "Production-ready Laravel 12 REST API starter with clean Action & DTO architecture. Focused on security, performance, and developer experience.",
-      "infra": "Laravel 12 / Actions / DTOs / Security-First"
+      "description": "A Laravel 12 REST API starter that keeps application logic in Actions and uses typed DTOs. The repository includes authentication routes and a login Action that takes a LoginDTO.",
+      "infra": "Laravel 12 / Actions / DTOs / REST API",
+      "role": "Personal project, published on my GitHub.",
+      "result": "Public source code."
     },
-    "cta_doc": "[Access_Doc]",
-    "cta_live": "[Visit_Site]",
-    "cta_docs": "[View_Source_Code]",
-    "cta_footer": "Want to see more of my work?",
-    "cta_github": "Explore My Code on GitHub"
+    "cta_doc": "Read the documentation",
+    "cta_live": "Visit Uzaraka",
+    "cta_docs": "View the code",
+    "cta_footer": "Want to see the rest?",
+    "cta_github": "My GitHub",
+    "role_label": "My role",
+    "result_label": "Evidence",
+    "details_label": "Context and contributions",
+    "status_label": "Access:",
+    "live_status": "Live product",
+    "source_status": "Public repository",
+    "miabi": {
+      "title": "Miabi",
+      "description": "A self-hosted PaaS written in Go and Vue 3. I contribute to its web console and use it to deploy and manage applications.",
+      "infra": "Platform: Go + Vue 3 · My contributions: frontend",
+      "role": "Frontend contributor: admin layouts, responsive controls, workspace settings, interface fixes. On the side, I install the platform on servers and use it to deploy applications.",
+      "result": "Six PRs merged into the web console, plus several server installations with application deployment and management.",
+      "details": "Operations note: TLS incident\nSymptom: a certificate error blocked builds, which go through the built-in registry served by Goma Gateway.\nWhat I did: I deleted the certificates by hand inside the Goma Gateway container.\nOutcome: they regenerated on their own and builds started working again.\nI didn’t identify the original cause. My PRs are on the web console, not the Go backend.",
+      "pr_50": "Admin layout, dashboard and custom select",
+      "pr_52": "Dropdown and workspace-switching fixes",
+      "pr_58": "Responsive headers, controls and tabs",
+      "pr_90": "Fix access to the app form before it was initialized",
+      "pr_214": "Workspace settings: secret picker, danger zone and description",
+      "pr_251": "UI components and file field for database restore"
+    },
+    "goposta": {
+      "title": "GoPosta / Posta",
+      "description": "A self-hosted email platform written in Go and Vue. I work on the interface.",
+      "infra": "Platform: Go + Vue · My contributions: frontend",
+      "role": "Frontend contributor: inbound page filters and fields, pagination, responsive navigation, template editing, theme fixes.",
+      "result": "Three PRs merged into the Vue interface.",
+      "pr_61": "Inbound filters and fields, pagination",
+      "pr_69": "Mobile sidebar and responsive layout",
+      "pr_126": "Template-editing modal and UI/theme fixes"
+    }
   },
   "contact": {
-    "section_id": "04/CONTACT",
-    "title": "LET'S_BUILD_TOGETHER.",
-    "description": "Looking for a developer who understands clean code and scalable architecture? Let's connect and build something great.",
-    "availability": "Available for freelance projects",
-    "response_time": "Response within 24h",
-    "shell_id": "Interactive_Shell",
-    "shell_msg": "Awaiting technical transmission...",
-    "privacy": "NO_TRACKERS_ALLOWED // PRIVACY_BY_DEFAULT",
+    "section_id": "04 / Contact",
+    "title": "Write to me about your project.",
+    "description": "Tell me what you want to build, what’s stuck and your timeline. Freelance assignment, remote contract or a role on your team: we’ll look at it together.",
+    "availability": "Freelance · Remote · Contracts",
+    "response_time": "Kolwezi · UTC+2",
+    "shell_id": "Contact preview",
+    "shell_msg": "Email me to get started.",
+    "privacy": "The email link opens your mail app.",
     "channels": [
       "Email",
       "LinkedIn",
       "GitHub",
       "WhatsApp",
-      "API_Handshake"
+      "X"
     ]
   },
   "mobile_menu": {
-    "system_config": "System_Configuration",
-    "layout_init": "Layout_Init: OK",
-    "module_nav": "Module_Nav: LOADED",
-    "state": "State: ACTIVE",
-    "viewport": "MOBILE_OPTIMIZED",
-    "animations": "LIGHTWEIGHT_ENABLED"
+    "system_config": "Navigation",
+    "layout_init": "Menu loaded",
+    "module_nav": "Available sections",
+    "state": "Open",
+    "viewport": "Mobile version",
+    "animations": "Light animations",
+    "explore": "Browse the site",
+    "optional": "Optional",
+    "descriptions": {
+      "projects": "Products and contributions",
+      "about": "Profile and background",
+      "tools": "Tools and learning"
+    }
+  },
+  "design": {
+    "header_role": "Full-stack / DevOps",
+    "navigation": "Main navigation",
+    "close": "Close",
+    "toggle_theme": "Switch color theme",
+    "skip": "Skip to content",
+    "country": "DRC",
+    "edition": "Independent production journal",
+    "hero_role": "Jude Mpoyo / Full-stack developer",
+    "hero_line_1": "I build it.",
+    "hero_line_2": "I deploy it.",
+    "hero_line_3": "I keep it running.",
+    "diagram_label": "How I work: build with Laravel and Nuxt, deploy with Docker and Miabi, operate on my own infrastructure.",
+    "field_note": "Field notes",
+    "build": "Build",
+    "deploy": "Deploy",
+    "operate": "Operate",
+    "own_infrastructure": "My own infrastructure",
+    "diagram_note": "From the interface to the server",
+    "go_title": "Go, next.",
+    "go_status": "Learning Go",
+    "scroll": "Work",
+    "work_title": "What I’ve actually done.",
+    "work_intro": "A product built with a team, contributions to open-source interfaces, and infrastructure I run myself.",
+    "work_note": "Miabi and GoPosta are written in Go. My merged contributions are to their frontend.",
+    "platform_stack": "Project technologies",
+    "explore_contributions": "See the contributions",
+    "project_types": {
+      "uzaraka": "Team project / Frontend",
+      "miabi": "Open source / Operations",
+      "goposta": "Open source / Frontend",
+      "laraapistarter": "Developer tool / Laravel"
+    },
+    "production_journal": "Production journal",
+    "operations_title": "Putting it online isn’t the end.",
+    "operations_intro": "Miabi is an open-source project I contribute to, and a platform I install to deploy applications. Here’s what I’ve done with it.",
+    "interactive": "Scroll or pick a step",
+    "pipeline_label": "My work with Miabi",
+    "pipeline": {
+      "contribute": {
+        "title": "Contribute",
+        "heading": "Improve the console.",
+        "body": "My merged PRs touch admin layouts, responsive navigation, workspace settings and several forms. It’s frontend work on the Vue console."
+      },
+      "install": {
+        "title": "Install",
+        "heading": "Install it on a server.",
+        "body": "I’ve installed Miabi on several servers, then deployed and managed applications on it. That’s operations work, separate from my interface contributions."
+      },
+      "operate": {
+        "title": "Operate",
+        "heading": "Unblock things when they break.",
+        "body": "Managing applications also means fixing them. The note below covers a blockage on the registry the builds depend on."
+      }
+    },
+    "incident_label": "Operations note / TLS",
+    "incident_title": "When the builds stopped.",
+    "incident_caveat": "I haven’t confirmed the original cause. This note describes what I saw and what I did.",
+    "incident": {
+      "symptom": {
+        "title": "01 / Symptom",
+        "body": "A TLS certificate error blocked builds. They go through Miabi’s built-in registry, served by Goma Gateway."
+      },
+      "intervention": {
+        "title": "02 / What I did",
+        "body": "I deleted the certificates by hand inside the Goma Gateway container."
+      },
+      "result": {
+        "title": "03 / Outcome",
+        "body": "The certificates regenerated automatically and builds started working again."
+      }
+    },
+    "about_title": "In Kolwezi, from interface to server.",
+    "about_location": "Build, deploy, learn.",
+    "go_heading": "Learning Go.",
+    "go_body": "I’m learning Go alongside my DevOps practice. Miabi and GoPosta are written in Go, which gives that learning a concrete setting. For now, my contributions stay on the frontend.",
+    "daily_tools": "My tools",
+    "contact_line_1": "Got something to build?",
+    "contact_line_2": "Let’s talk.",
+    "next_step": "To get started",
+    "contact_note": "A few lines on what you need, your timeline and the context are enough. We continue from there.",
+    "seo_title": "Freelance Full-stack Developer · Laravel, Nuxt & DevOps",
+    "seo_description": "Jude Mpoyo, full-stack developer in Kolwezi, DRC. Laravel, Nuxt/Vue, Docker and self-hosted infrastructure. Learning Go. Open to freelance and remote work.",
+    "photo_label": "The face behind the code",
+    "photo_role": "Full-stack developer · Kolwezi, DRC",
+    "easter_title": "You’re still here.",
+    "easter_body": "There’s someone behind this site.",
+    "easter_action": "Meet Jude",
+    "replay": "Replay the walkthrough",
+    "show_photo": "Enlarge Jude’s portrait",
+    "social_image_alt": "Jude Mpoyo, full-stack developer in Kolwezi, DRC"
+  },
+  "terminal": {
+    "open": "Terminal mode",
+    "title": "jude / kolwezi · optional terminal",
+    "welcome": "Browse my work, the production notes or ways to reach me. This is a portfolio interface, not a shell on a server. Pick a shortcut or type help.",
+    "command": "Command",
+    "run": "Run command",
+    "help": "EXPLORE\nwhoami / about: my profile\nprojects / ls: selected work\nproject miabi / uzaraka / goposta / laraapistarter: project details\nproofs: direct links to contributions\ntools / stack: technologies\ngo: learning Go\nservices: work I can take on\nincident tls: the Miabi incident\nlocation / date: Kolwezi and local time\nsearch [word]: search the projects\n\nCONTACT\ncontact / whatsapp / github / linkedin: contact links\n\nNAVIGATE & CUSTOMIZE\nopen work / tools / about / contact / go\ntheme light / dark / system\nlang en / fr\nminimize / maximize / exit\n\nSESSION\nhistory / clear / shortcuts / readme\nArrow keys browse previous commands. Tab completes a suggestion.",
+    "projects": "Uzaraka: Nuxt frontend, team project.\nMiabi: Vue console contributions, and running the platform.\nGoPosta: frontend contributions.\nLaraApiStarter: Laravel API starter.\nThe Work link below opens that section.",
+    "go": "Go: learning, with a DevOps direction.\nMiabi and GoPosta are written in Go; my merged contributions are frontend.",
+    "contact": "Email: mpoyojude0{'@'}gmail.com\nLinkedIn: linkedin.com/in/judempoyo\nFreelance, remote and contract work.\nThe email link below opens your mail app.",
+    "unknown": "Command not found. Try help, projects, go, stack, contact, clear or exit.",
+    "opening": "Opening that section on the page. The terminal is minimized so you can read it.",
+    "theme_set": "Theme set to:",
+    "language_set": "Language set to:",
+    "whatsapp_pending": "To reach me on WhatsApp, use the link below.",
+    "move": "Move terminal. Drag, or use arrow keys; Shift moves faster.",
+    "minimize": "Minimize terminal",
+    "restore": "Restore window size",
+    "maximize": "Maximize terminal",
+    "window_hint": "Drag to move · The page stays usable",
+    "explorer": "Explore",
+    "intro_title": "Another way through the portfolio.",
+    "placeholder": "Type a command…",
+    "local_session": "Local session",
+    "history_label": "history",
+    "complete": "complete",
+    "resume": "Resume terminal",
+    "proofs": "A selection of merged frontend contributions to Miabi and GoPosta. The links go to the work itself; this list is not a live counter.",
+    "services": "Work I can take on:\n- Web products with Laravel/PHP and Nuxt/Vue.\n- Interfaces, responsive layouts and TypeScript.\n- Deploying and running applications with Docker and Miabi.\n\nGo is still something I’m learning. Tell me what you need and when, and we’ll work out the scope.",
+    "readme": "Jude Mpoyo / Production journal\n\nThe site is built with Nuxt, Vue and Tailwind CSS. Motion powers the optional animations. English is the default language; French is available.\n\nThe terminal is optional. Its history stays in this page session and isn’t sent to any server. Commands don’t run any system code.\n\nMinimize the window to explore the page, or drag its title bar to move it.",
+    "shortcuts": "↑ / ↓: previous or next command\nTab: complete the suggestion\nEnter: run the command\nCtrl+L: clear the output while typing\nEscape: close the window\n\nFocus the grip in the title bar and use the arrow keys to move the window. Hold Shift for bigger steps.\n\nUse the window controls to minimize, maximize or restore.",
+    "no_results": "No matching project. Try Laravel, Vue, Go, Miabi or Docker."
+  },
+  "tools": {
+    "title": "My everyday setup.",
+    "intro": "The tools I use, grouped by purpose. Go and Okapi are things I’m still learning.",
+    "learning": "Learning",
+    "categories": {
+      "environment": "Editor & shell",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "infrastructure": "Infrastructure",
+      "data": "Databases",
+      "collaboration": "Collaboration",
+      "philosophy": "Philosophy"
+    }
   }
 }
